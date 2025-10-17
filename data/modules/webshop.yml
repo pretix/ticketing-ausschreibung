@@ -1,0 +1,8 @@
+- title: Barrierefreiheit
+  level: MUST
+  description: |
+    Der Ticketshop muss die Anforderungen blabla erfüllen. Das ist wichtig, weil
+  comment: |
+    Dies ist ein Kommentar
+  tags:
+    - messe

@@ -1,0 +1,84 @@
+site_name: Ticketing-Ausschreibung
+repo_url: https://github.com/pretix/ticketing-ausschreibung
+site_url: https://ticketing-ausschreibungen.de
+site_author: pretix
+site_description: "Mustervorlage für Leistungsbeschreibungen für Ticketing-Ausschreibungen"
+copyright: |
+  <a href="https://pretix.eu/about/de/imprint" target="_blank">Impressum</a> ·
+  <a href="https://pretix.eu/about/de/privacy" target="_blank">Datenschutz</a> ·
+  Licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode.de" target="_blank">CC0 1.0 Universal</a>
+validation:
+  omitted_files: info
+  absolute_links: warn
+  unrecognized_links: warn
+extra_css:
+  - stylesheets/extra.css
+theme:
+  name: material
+  custom_dir: overrides
+  icon:
+    logo: material/ticket-confirmation-outline
+  favicon: assets/favicon.png
+  language: de
+  features:
+    - navigation.tabs
+    - navigation.prune
+    - navigation.path
+    - navigation.indexes
+    - navigation.footer
+    - toc.follow
+    - search.highlight
+    - content.tooltips
+  font:
+    text: Open Sans
+  palette:
+    - media: "(prefers-color-scheme)"
+      primary: custom
+      toggle:
+        icon: material/brightness-auto
+        name: Hell
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      toggle:
+        icon: material/brightness-7
+        name: Dunkel
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      toggle:
+        icon: material/brightness-4
+        name: Automatisch
+markdown_extensions:
+  - toc:
+      permalink: "#"
+  - sane_lists
+  - tables
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - def_list
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+plugins:
+  - search
+  - privacy
+  - awesome-nav
+  - social:
+      cards_layout_options:
+        background_color: "#3B1C4A"
+        font_family: "Titillium Web"
+extra:
+  generator: false
+hooks:
+  - overrides/hooks/path.py

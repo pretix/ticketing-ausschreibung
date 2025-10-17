@@ -1,0 +1,201 @@
+:root {
+    --md-text-font: "Open Sans";
+    --md-code-font: "Roboto Mono";
+    --md-primary-fg-color: #00a186;
+    --md-primary-fg-color--light: #00C2A2;
+    --md-primary-fg-color--dark: #008c74;
+    --md-accent-fg-color: #A63BF7;
+    --md-accent-fg-color--light: #A63BF7;
+    --md-accent-fg-color--dark: #A63BF7;
+}
+[data-md-color-scheme="default"] {
+    --md-typeset-a-color: #7537A4;
+    --md-accent-fg-color: #A63BF7;
+    --md-accent-fg-color--transparent: #A63BF71a;
+}
+[data-md-color-scheme="slate"] {
+    --md-typeset-a-color: #A15CD6;
+    --md-accent-fg-color: #A63BF7;
+    --md-accent-fg-color--transparent: #da7df81a;
+}
+.md-source__facts {
+	display: none;
+}
+
+/* Typo */
+h1, .md-header__title, .md-typeset .admonition-title, .md-typeset details summary {
+    font-family: "Titillium Web", "Open Sans", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+}
+.md-typeset h1 {
+	color: var(--md-typeset-color);
+}
+.md-typeset h2 {
+	color: var(--md-typeset-color);
+	font-weight: normal;
+}
+.md-typeset h3 {
+	color: var(--md-typeset-color);
+}
+
+/* Admonitions */
+.md-typeset .admonition.note, .md-typeset details.note,
+.md-typeset .admonition.abstract, .md-typeset details.abstract,
+.md-typeset .admonition.example, .md-typeset details.example,
+.md-typeset .admonition.info, .md-typeset details.info {
+    border-color: #5f9cd4;
+}
+
+.md-typeset .note > .admonition-title::before, .md-typeset .note > summary::before,
+.md-typeset .abstract > .admonition-title::before, .md-typeset .abstract > summary::before,
+.md-typeset .example > .admonition-title::before, .md-typeset .example > summary::before,
+.md-typeset .info > .admonition-title::before, .md-typeset .info > summary::before {
+    background-color: #5f9cd4;
+}
+
+.md-typeset .note > .admonition-title, .md-typeset .note > summary,
+.md-typeset .abstract > .admonition-title, .md-typeset .abstract > summary,
+.md-typeset .example > .admonition-title, .md-typeset .example > summary,
+.md-typeset .info > .admonition-title, .md-typeset .info > summary {
+    background-color: #e4eef8;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .note > .admonition-title, [data-md-color-scheme="slate"] .md-typeset .note > summary,
+[data-md-color-scheme="slate"] .md-typeset .abstract > .admonition-title, [data-md-color-scheme="slate"] .md-typeset .abstract > summary,
+[data-md-color-scheme="slate"] .md-typeset .example > .admonition-title, [data-md-color-scheme="slate"] .md-typeset .example > summary,
+[data-md-color-scheme="slate"] .md-typeset .info > .admonition-title, [data-md-color-scheme="slate"] .md-typeset .info > summary {
+    background-color: #2e6591;
+}
+
+.md-typeset .admonition.tip, .md-typeset details.tip,
+.md-typeset .admonition.success, .md-typeset details.success {
+    border-color: #50a167;
+}
+
+.md-typeset .tip > .admonition-title::before, .md-typeset .tip > summary::before,
+.md-typeset .success > .admonition-title::before, .md-typeset .success > summary::before {
+    background-color: #50a167;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .tip > .admonition-title, [data-md-color-scheme="slate"] .md-typeset .tip > summary,
+[data-md-color-scheme="slate"] .md-typeset .success > .admonition-title, [data-md-color-scheme="slate"] .md-typeset .success > summary {
+    background-color: #2a773e;
+}
+
+.md-typeset .tip > .admonition-title, .md-typeset .tip > summary,
+.md-typeset .success > .admonition-title, .md-typeset .success > summary {
+    background-color: #eff7f1;
+}
+
+.md-typeset .admonition.question, .md-typeset details.question,
+.md-typeset .admonition.warning, .md-typeset details.warning {
+    border-color: #ffb419;
+}
+
+.md-typeset .question > .admonition-title::before, .md-typeset .question > summary::before,
+.md-typeset .warning > .admonition-title::before, .md-typeset .warning > summary::before {
+    background-color: #ffb419;
+}
+
+.md-typeset .question > .admonition-title, .md-typeset .question > summary,
+.md-typeset .warning > .admonition-title, .md-typeset .warning > summary {
+    background-color: #fff8ea;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .question > .admonition-title, [data-md-color-scheme="slate"] .md-typeset .question > summary,
+[data-md-color-scheme="slate"] .md-typeset .warning > .admonition-title, [data-md-color-scheme="slate"] .md-typeset .warning > summary {
+    background-color: #93712e;
+}
+
+.md-typeset .admonition.danger, .md-typeset details.danger,
+.md-typeset .admonition.bug, .md-typeset details.bug {
+    border-color: #c44f4f;
+}
+
+.md-typeset .danger > .admonition-title::before, .md-typeset .danger > summary::before,
+.md-typeset .bug > .admonition-title::before, .md-typeset .bug > summary::before {
+    background-color: #c44f4f;
+}
+
+.md-typeset .danger > .admonition-title, .md-typeset .danger > summary,
+.md-typeset .bug > .admonition-title, .md-typeset .bug > summary {
+    background-color: #fbf3f3;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .danger > .admonition-title, [data-md-color-scheme="slate"] .md-typeset .danger > summary,
+[data-md-color-scheme="slate"] .md-typeset .bug > .admonition-title, [data-md-color-scheme="slate"] .md-typeset .bug > summary {
+    background-color: #803030;
+}
+
+
+[data-md-color-scheme="slate"] {
+    /* Dark mode */
+    --md-hue: 280;
+    --md-primary-fg-color: #00a186;
+    --md-primary-fg-color--light: #00C2A2;
+    --md-primary-fg-color--dark: #008c74;
+}
+
+
+/* Utilities */
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+}
+
+/* External links */
+.md-typeset a[href*="//"]:not(.glightbox):not(.md-social__link):not(:where(
+  /* exclude hash only links */
+  [href^="#"],
+  /* exclude javascript only links */
+  [href^="javascript:" i],
+  /* exclude data URLs */
+  [href^="data:" i],
+  /* exclude relative but not double slash only links */
+  [href^="/"]:not([href^="//"]),
+  /* domains to exclude */
+  [href*="//ticketing-ausschreibung.de"]
+)) {
+    padding-right: 0.9em;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 0.8em;
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%20-4%2016%2020%22%3E%3Cpath%20fill%3D%22%237f4a91%22%20d%3D%22M3.75%202h3.5a.75.75%200%200%201%200%201.5h-3.5a.25.25%200%200%200-.25.25v8.5c0%20.138.112.25.25.25h8.5a.25.25%200%200%200%20.25-.25v-3.5a.75.75%200%200%201%201.5%200v3.5A1.75%201.75%200%200%201%2012.25%2014h-8.5A1.75%201.75%200%200%201%202%2012.25v-8.5C2%202.784%202.784%202%203.75%202Zm6.854-1h4.146a.25.25%200%200%201%20.25.25v4.146a.25.25%200%200%201-.427.177L13.03%204.03%209.28%207.78a.751.751%200%200%201-1.042-.018.751.751%200%200%201-.018-1.042l3.75-3.75-1.543-1.543A.25.25%200%200%201%2010.604%201Z%22%2F%3E%3C%2Fsvg%3E");
+}
+
+/* Internal links */
+.md-typeset a:not([href*="//"]):not([href^="mailto:"]):not([href^="tel:"]):not(.glightbox):not(.headerlink) {
+    padding-left: 1.1em;
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: 1em;
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23999%22%20d%3D%22M13%209h5.5L13%203.5V9M6%202h8l6%206v12a2%202%200%200%201-2%202H6a2%202%200%200%201-2-2V4c0-1.11.89-2%202-2m9%2016v-2H6v2h9m3-4v-2H6v2h12Z%22%2F%3E%3C%2Fsvg%3E");
+}
+.md-typeset p .twemoji {
+    --md-icon-size: 1em;
+    vertical-align: middle;
+    position: relative;
+    top: -.1em;
+}
+
+.level {
+    display: inline-block;
+    font-size: 0.8em;
+    border-radius: 4px;
+    padding: 2px 4px;
+}
+.level-must {
+    border: 2px solid #FF3698;
+}
+.level-should {
+    border: 2px solid #FFD100;
+}
+.level-may {
+    border: 2px solid #0496FF;
+}
