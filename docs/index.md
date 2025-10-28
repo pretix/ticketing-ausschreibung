@@ -15,3 +15,5 @@ Herzlich Willkommen!
 ## Wie benutze ich es
 
 ## Wofür darf ich das benutzen?
+
+## Tipps für eine gute Ausschreibung

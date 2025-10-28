@@ -1,8 +1,93 @@
-- title: TBD
+- title: ISO-Zertifizierung Anbieter
   level: MUST
   description: |
-    TBD
-  comment: |
-    TBD
-  tags:
-    - messe
+    Der Systemanbieter betreibt ein Informationssicherheitsmanagementsystem (ISMS), das nach ISO/IEC 27001 zertifiziert ist.
+    Der Anwendungsbereich der Zertifizierung umfasst mindestens die Entwicklungsprozesse der Software sowie den Betrieb
+    der SaaS-Dienstleistung.
+
+- title: ISO-Zertifizierung Rechenzentrum
+  level: MUST
+  description: |
+    Die Betreiber aller verwendeten Rechenzentren betreiben ein Informationssicherheitsmanagementsystem (ISMS), das nach
+    ISO/IEC 27001 zertifiziert ist.
+
+- title: Verfügbarkeit
+  level: MUST
+  description: |
+    Das System ist im Jahresmittel 99,9% der Zeit verfügbar (das entspricht maximal 8h 45m Ausfall pro Jahr, Wartungsfenster
+    nicht eingerechnet).
+
+- title: Verschlüsselung
+  level: MUST
+  description: |
+    Alle internen und externen Datenübertragungen erfolgen verschlüsselt nach Stand der Technik. Alle Webserver sind nur
+    mit aktuellen TLS-Versionen erreichbar und erreichen eine Note von A oder besser im Qualys SSL Server Test oder einem
+    vergleichbaren unabhängigen Test.
+
+- title: Mandantentrennung
+  level: MUST
+  description: |
+    Der Systemanbieter hat eine wirksame Mandantentrennung umgesetzt, durch die die Daten des Auftraggebers von anderen
+    Auftraggebern getrennt gehalten werden. Die technische Umsetzung dieser Mandantentrennung ist dokumentiert und wurde
+    z.B. durch externe Pentests überprüft.
+
+- title: Auftragsverarbeitung
+  level: MUST
+  description: |
+    Der Systemanbieter verarbeitet die Daten als weisungsgebundener Auftragsverarbeiter im Auftrag des Auftraggebers im Sinne
+    von Art. 28 DSGVO und verwendet die Daten zu keinen eigenen Zwecken. Der Systemanbieter ist bereitet, einen entsprechenden
+    Vertrag zur Auftragsverarbeitung (AVV) mit dem Auftraggeber zu verhandeln und stellt dafür auch eine Vorlage bereit.
+
+- title: Skalierbare Architektur
+  level: MUST
+  description: |
+    Der Systemanbieter implementiert eine skalierbare Architektur, bei der der Betrieb der Applikation auch sehr kurzfristig
+    auf größere Kapazitätsbedarfe angepasst werden kann.
+
+- title: Redundanz
+  level: MUST
+  description: |
+    Der Systemanbieter vermeidet in der kompletten Systemarchitektur jeden möglichen Single Point of Failure und legt alle
+    Komponenten redundant aus.
+
+- title: Georedundanz
+  level: MUST
+  description: |
+    Der Systemanbieter speichert die Daten des Auftraggebers georedundant, d.h. in mehr als einem Rechenzentrum.
+
+- title: Monitoring
+  level: MUST
+  description: |
+    Der Systemanbieter implementiert ein umfangreiches Monitoringkonzept, mit dem die Verfügbarkeit und Performance des
+    Systems kontinuierlich überwacht wird. Bei signifikanten Störungen wird 24/7 automatisch technisches Personal alarmiert.
+
+- title: Backups
+  level: MUST
+  description: |
+    Der Systemanbieter implementiert ein Backupkonzept, mit dem er die Verfügbarhaltung der Daten des Auftraggebers auch
+    bei Datenverlusten im Produktivsystem sicherstellt. Backups werden mehrfach täglich angefertigt und mindestens 4 Wochen
+    gespeichert.
+
+- title: Wartungsarbeiten
+  level: MUST
+  description: |
+    Geplante Wartungsarbeiten werden, wenn nicht aus Gründen der IT-Sicherheit kurzfristiger notwendig, dem Auftraggeber
+    mindestens eine Woche vorher angekündigt und nach Möglichkeit so terminiert, dass diese nicht mit dem Veranstaltungsbetrieb
+    bzw. den Öffnungszeiten des Auftraggebers überschneiden.
+
+- title: Statusinformationen
+  level: MUST
+  description: |
+    Der Systemanbieter verfügt über eine öffentliche Statusseite, über die bei Systemstörungen Details zu Ursachen und 
+    voraussichtlicher Dauer kommuniziert werden **oder** verfügt über einen Mechanismus, den Auftraggeber in solchen Fällen
+    per E-Mail zu informieren.
+
+- title: Patching
+  level: MUST
+  description: |
+    Der Systemanbieter patcht alle Sicherheitslücken in beteiligten Softwarekomponenten risikogerecht und schnellstmöglich.
+
+- title: Responsible Disclosure
+  level: MUST
+  description: |
+    Der Systemanbieter verfügt über einen öffentlichen dokumentieren Prozess zur Meldung von Sicherheitslücken.

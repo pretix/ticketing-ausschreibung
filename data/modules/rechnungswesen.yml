@@ -1,8 +1,68 @@
-- title: TBD
+- title: Erstellung von Rechnungen
   level: MUST
   description: |
-    TBD
-  comment: |
-    TBD
-  tags:
-    - messe
+    Das System ist in der Lage, Rechnungen zu erstellen, die allen Anforderungen des Steuerrechts (z.B. § 14 UStG)
+    entsprechen.
+
+- title: E-Rechnungen
+  level: MUST
+  description: |
+    Das System ist in der Lage, valide E-Rechnungen nach der europäischen Norm EN 16931 zu erstellen. Hierbei ist mindestens
+    eines der Formate ZUGFeRD oder XRechnung zu unterstützen.
+
+- title: Leitweg-ID
+  level: SHOULD
+  description: |
+    Beim Kauf eines Tickets durch eine öffentliche Stelle kann eine Leitweg-ID eingegeben werden.
+
+- title: Versand von Rechnungen
+  level: MUST
+  description: |
+    Das System ist in der Lage, Rechnungen per E-Mail zu versenden.
+
+- title: E-Rechnungs-Netzwerke
+  level: MAY
+  description: |
+    Das System ist in der Lage, Rechnungen über ein E-Rechnungs-Netzwerk wie z.B. Peppol zu versenden.
+
+- title: Gestaltung der Inhalte
+  level: MUST
+  description: |
+    Die Inhalte der Rechnung (Absender, Fußzeile, wichtige Texte, etc.) können vom Auftraggeber angepasst werden.
+
+- title: Nummernkreis
+  level: MUST
+  description: |
+    Der Nummernkreis der Rechnungen kann vom Auftraggeber vorgegeben werden.
+
+- title: Leistungsdatum
+  level: MUST
+  description: |
+    Das Leistungsdatum für die abgerechneten Leistungen wird auf Basis der Ticketing-Konfiguration und des Gültigkeitszeitraums
+    des jeweiligen Tickets berechnet.
+
+- title: Teilnehmernamen
+  level: MUST
+  description: |
+    Die Rechnung kann optional die Namen aller Teilnehmer:innen enthalten.
+  tags: [ event, messe ]
+
+- title: Rechnungskorrektur
+  level: MUST
+  description: |
+    Bei der Notwendigkeit von Korrekturen an den Inhalten der Rechnung wird für die ursprüngliche Rechnung ein Stornobeleg
+    oder eine Rechnungskorrektur erstellt und eine neue, korrekte Rechnung erstellt. Alle alten Rechnungen bleiben im System
+    erhalten. Einmal verschickte Rechnungen werden nicht modifiziert.
+
+- title: Übergabe an die Buchhaltung
+  level: MUST
+  description: |
+    Das System ist in der Lage, Rechnungen automatisiert an die Buchhaltung zu übergeben, z.B. über einen Datenexport oder
+    eine Schnittstelle zum Buchhaltungssystem.
+
+- title: GoBD
+  level: MUST
+  description: |
+    Das System erfüllt die Grundsätze Grundsätze zur ordnungsmäßigen Führung und Aufbewahrung von Büchern, Aufzeichnungen und
+    Unterlagen in elektronischer Form sowie zum Datenzugriff (GoBD) in Bezug auf die vom System übernommenen Funktionen,
+    insbesondere in Bezug auf die Nachvollziehbarkeit aller Vorgänge.

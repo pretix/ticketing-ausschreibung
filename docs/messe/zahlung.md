@@ -1,3 +1,0 @@
-# Zahlung
-
-::: zahlung messe

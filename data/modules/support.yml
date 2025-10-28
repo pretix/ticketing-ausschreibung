@@ -1,8 +1,56 @@
-- title: TBD
+- title: Support während der Geschäftszeiten
   level: MUST
   description: |
-    TBD
+    Der Support des Systemanbieters ist Montags bis Freitags für mindestens 8 Stunden zu üblichen Bürozeiten per Telefon
+    und per E-Mail erreichbar.
+
+- title: Support außerhalb der Geschäftszeiten
+  level: MUST
+  description: |
+    Ein Bereitschaftsdienst des Systemanbieters ist für dringende technische Störungen 365 Tage im Jahr rund um die Uhr
+    per Telefon erreichbar.
+
+- title: Ticketsystem
+  level: MUST
+  description: |
+    Der Support erfolgt über ein Ticketsystem, über das alle Supportvorgänge nachvollziehbar bleiben.
+
+- title: Schulungen
+  level: MUST
+  description: |
+    Der Systemanbieter bietet Schulungen zur Einführung in das System an.
   comment: |
-    TBD
-  tags:
-    - messe
+    Der Preis einer Schulung sollte im Preisblatt der Ausschreibung explizit abgefragt werden.
+
+- title: Dokumentation
+  level: MUST
+  description: |
+    Für das System ist ein Anwenderhandbuch in deutscher oder englischer Sprache verfügbar.
+
+- title: Fernwartung
+  level: MUST
+  description: |
+    Der Systemanbieter kann über Fernwartung auf Anforderung auch direkt auf Geräten (Kassensystemen, Scannern, etc.)
+    aktiv werden und den Auftraggeber bei Konfiguration und Problemlösung unterstützen. Die Fernwartung erfolgt hierbei
+    über sichere Kanäle nach Stand der Technik.
+
+- title: Hardware-Reparatur
+  level: SHOULD
+  description: |
+    Die Reparatur oder der Austausch von Hardware kann zentral über den Systemanbieter vorgenommen werden.
+    Die Kosten für Reparatur oder Austausch außerhalb der Gewährleistungs- und Garantiefristen trägt der Auftraggeber.
+
+- title: On-Site-Support
+  level: SHOULD
+  description: |
+    Der Systemanbieter bietet auf Anfrage auch den Support in Person vor Ort auf der Veranstaltung an.
+  comment: |
+    Der Preis hierfür sollte im Preisblatt der Ausschreibung explizit abgefragt werden.
+  tags: [ messe, event ]
+
+- title: Lebenszyklus
+  level: MUST
+  description: |
+    Der Systemanbieter wird für das angebotene System noch mindestens 10 Jahre Support, Updates und Weiterentwicklung
+    anbieten.
+  tags: [ messe, museum, park, theater ]

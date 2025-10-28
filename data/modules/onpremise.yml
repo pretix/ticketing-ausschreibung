@@ -1,8 +1,60 @@
-- title: TBD
+- title: ISO-Zertifizierung Anbieter
   level: MUST
   description: |
-    TBD
-  comment: |
-    TBD
-  tags:
-    - messe
+    Der Systemanbieter betreibt ein Informationssicherheitsmanagementsystem (ISMS), das nach ISO/IEC 27001 zertifiziert ist.
+    Der Anwendungsbereich der Zertifizierung umfasst mindestens die Entwicklungsprozesse der Software sowie den Betrieb
+    der Software Supply Chain für Updates etc.
+
+- title: Hochverfügbarkeit
+  level: MUST
+  description: |
+    Die Systemarchitektur ist für Hochverfügbarkeit ausgelegt, sodass das System bei geeigneter Konfiguration auf eine
+    Verfügbarkeit von 99,9% im Jahresmittel ausgelegt werden kann. Alle Komponenten können bei Bedarf redundant ausgelegt werden.
+
+- title: Datenbank
+  level: MUST
+  description: |
+    Das System basiert auf einer etablierten und industrieüblichen SQL-Datenbank, z.B. PostgreSQL, MySQL, MariaDB, Oracle,
+    oder MSSQL. Im Fall von Oralce und MSSQL werden die Lizenzen durch den Systemanbieter beschafft und sind in den angebotenen
+    Lizenzpreis der Software mit eingerechnet.
+
+- title: Skalierbare Architektur
+  level: MUST
+  description: |
+    Das System ist für eine skalierbare Architektur ausgelegt, bei der der Betrieb der Applikation auch sehr kurzfristig
+    auf größere Kapazitätsbedarfe angepasst werden kann.
+
+- title: Monitoring- und Backupkonzept
+  level: MUST
+  description: |
+    Der Systemanbieter stellt Empfehlungen für ein Monitoring- und Backupkonzept zur Verfügung, das durch den Auftraggeber
+    implementiert werden kann.
+
+- title: Updates
+  level: MUST
+  description: |
+    Updates werden durch den Systemanbieter regelmäßig zur Verfügung gestellt und enthalten einen Changelog, aus dem der
+    Auftraggeber den Aufwand des Updates abschätzen kann. Die Terminierung der Updates obliegt dem Auftraggeber.
+    Bei dringlichen Sicherheitsupdates weist der Systemanbieter den Anbieter gesondert auf die Dringlichkeit hin.
+
+- title: Responsible Disclosure
+  level: MUST
+  description: |
+    Der Systemanbieter verfügt über einen öffentlichen dokumentieren Prozess zur Meldung von Sicherheitslücken in der Software.
+
+- title: Quellcode
+  level: MAY
+  description: |
+    Der Systemanbieter stellt dem Anbieter den Quellcode der Anwendung zur Verfügung.
+
+  sub:
+  - title: Weiternutzung des Quellcodes
+    level: MAY
+    description: |
+      Der Systemanbieter stellt dem Anbieter den Quellcode der Anwendung unter Lizenzbedingungen zur Verfügung, die die
+      Weiternutzung und die interne Weiterentwicklung ermöglichen, sollte der Systemanbieter nicht mehr existieren oder
+      das Produkt nicht mehr am Markt anbieten.
+  - title: Open Source
+    level: MAY
+    description: |
+      Der Systemanbieter stellt dem Anbieter den Quellcode unter einer anerkannten Open-Source-Lizenz zur Verfügung.

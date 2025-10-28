@@ -133,6 +133,26 @@
   description: |
     Der Ticketshop kann unter einer eigenen, auch veranstaltungsspezifischen Domain betrieben werden.
 
+- title: Kein Tracking vom Anbieter
+  level: MUST
+  description: |
+    Der Webshop enthält standardmäßig keine Trackingfunktionen, die personenbezogene Daten im Sinne der DSGVO tracken, die für
+    den Betrieb des Ticketshops nicht notwendig sind (privacy by default).
+
+- title: Tracking anbindbar
+  level: MUST
+  description: |
+    Der Webshop erlaubt die Einbindung der Trackingcodes gängiger Tools (Google Analytics, Matomo, Google Tag Manager, etc.) und
+    Werbeplattformen (Google Ads, Meta, LinkedIn, …) und ermöglicht hierbei auch die Übermittlung von E-Commerce-Events zum
+    Conversion-Tracking.
+
+  sub:
+    - title: Cookie-Management
+      level: MUST
+      description: |
+        Der Webshop verfügt über ein integriertes Cookie-Management zur Verwaltung von Einwilligungen in das Tracking mit Cookies
+        entsprechend der Anforderungen des TTDSG **oder** arbeitet mit externen Cookie-Management-Lösungen störungsfrei zusammen.
+
 - title: Veranstaltungsdaten
   level: MUST
   description: |
@@ -144,6 +164,16 @@
     * Veranstaltungsort als Text
     * Veranstaltungsort als geografische Position
     * Veranstaltungsbeschreibung oder Infotexte
+
+- title: Verkaufszeitraum
+  level: MUST
+  description: |
+    Der Auftraggeber kann einen Verkaufszeitraum definieren, in dem Tickets über den Webshop erworben werden können.
+
+- title: Shop-Aktivierung
+  level: MUST
+  description: |
+    Der Webshop kann vom Auftraggeber jederzeit aktiviert oder deaktiviert werden.
 
 - title: Warenkorbfunktion
   level: MUST
@@ -159,6 +189,49 @@
       description: |
         Die im Warenkorb befindlichen Tickets sind für die Ticketkäufer:in für einen vom Auftraggeber konfigurierbaren
         Zeitraum reserveriert.
+    - title: Kauf für Dritte
+      level: MUST
+      description: |
+        Der Warenkorb ermöglicht den Kauf für Tickets auf den Namen Dritter, z.B. den zentralen Einkauf von Tickets
+        für mehrere Teilnehmer:innen eines Unternehmens oder einer Besuchergruppe. Hierbei unterscheidet das System
+        übersichtlich und konsistent in die Daten der kaufenden Person und der ticketnutzenden Person.
+      tags: [ messe, event ]
+    - title: Gutscheincodes
+      level: MUST
+      description: |
+        Es können mehrere Gutscheincodes im selben Warenkorb eingelöst werden.
+
+- title: Saalplanbuchung
+  level: MUST
+  description: |
+    Die Ticketbuchung kann sitzplatzgenau erfolgen.
+  tags: [ event, theater ]
+  sub:
+    - title: Saalplandarstellung
+      level: MUST
+      description: |
+        Ticketkäufer:innen können ihren Sitzplatz in einem grafischen Saalplan selbst auswählen.
+    - title: Mobile Nutzung
+      level: MUST
+      description: |
+        Der Saalplan ist auch auf mobilen Endgeräten einwandfrei bedienbar.
+    - title: Barrierefreiheit
+      level: MUST
+      description: |
+        Der Saalplan erfüllt die Barrierefreiheitsanforderungen und kann auch von Screenreader-Usern navigiert werden **oder**
+        es wird eine angemessen Alternative zur Verfügung gestellt.
+    - title: Saalplanerstellung
+      level: SHOULD
+      description: |
+        Der Saalplan kann vom Auftraggeber über einen WYSIWYG-Editor eigenständig erstellt und bearbeitet werden.
+    - title: Verhinderung der Mehrfachbuchung
+      level: MUST
+      description: |
+        Die Mehrfachbuchung des gleichen Platzes wird vom System wirksam verhindert.
+    - title: Bestplatzwahl
+      level: MAY
+      description: |
+        Ticketkäufer:innen können statt einer Auswahl des Saalplatzes einen Platz vom System zugewiesen bekommen.
 
 - title: Datenerfassung
   level: MUST
@@ -202,13 +275,145 @@
     - title: Namensformat
       level: SHOULD
       description: |
-        Der Name wird in einem strukturierten Format (z.B. Title, Vorname, Nachname) erfasst, das vom Auftraggeber
+        Der Name wird in einem strukturierten Format (z.B. Anrede, Titel, Vorname, Nachname) erfasst, das vom Auftraggeber
         definiert werden kann.
     - title: Auswahl von Titeln
       level: SHOULD
       description: |
         Die Auswahl von Titeln (z.B. Prof, Dr) kann sowohl aus einer vordefinierten Liste, als auch als Freitextfeld
         gestaltet werden.
+    - title: Auswahl der Anrede
+      level: MUST
+      description: |
+        Die Auswahl einer Anrede (z.B. Herr, Frau) muss möglich sein und einen geschlechtsneutralen Eintrag zulassen.
+        Die Auswahl muss optional sein.
+      comment: |
+        Der EuGH hat [in einem Verfahren gegen die französische Bahn geurteilt](https://www.lto.de/recht/nachrichten/n/europaeischer-gerichtshof-datenschutz-dsgvo-diskriminierung-geschlechtsidentitaet),
+        dass die Anrede keine Pflichtfeld sein darf, da sie für das Bahnfahren nicht zwingend notwendig ist. Vermutlich
+        lassen sich diese Grundsätze auf den Veranstaltungsbesuch übertragen.
+
+- title: Autofill-Funktion
+  level: SHOULD
+  description: |
+    Alle Namens-, Adress-, Telefon- und E-Mail-Felder beim Kauf sind für die "Autofill"-Funktionen der kompatiblen Browser
+    als solche erkennbar und ermöglichen die komfortable Vorbefüllung durch den Browser.
+
+- title: Kauf als Gast
+  level: MUST
+  description: |
+    Der Kauf von Tickets ist ohne Erstellung eines Benutzerkontos möglich.
+
+- title: Kauf mit Kundenkonto
+  level: SHOULD
+  description: |
+    Ticketkäufer:innen haben die Möglichkeit, ein Kundenkonto anzulegen.
+  sub:
+  - title: Erstellung des Kundenkontos im Kaufprozess
+    level: SHOULD
+    description: |
+      Die Erstellung des Kundenkontos ist möglich, ohne den laufenden Kaufprozess zu unterbrechen.
+  - title: Authentifizierung mit Passwort
+    level: SHOULD
+    description: |
+      Die Authentifizierung für Kundenkonten ist mit E-Mail-Adresse und Passwort möglich. Kund:innen können das Passwort
+      bei Bedarf über einen sicher gestalteten Self-Service-Prozess zurücksetzen.
+  - title: Authentifizierung mit IdP
+    level: SHOULD
+    description: |
+      Für die Authentifizierung von Kundenkonten kann ein bestehender Identity Provider (IdP) des Auftraggebers über eine
+      brachenübliche Schnittstelle (OpenID Connect, OAuth2 oder SAML) angebunden werden.
+  - title: Authentifizierung mit Social Login
+    level: SHOULD
+    description: |
+      Für die Authentifizierung von Kundenkonten können soziale Netzwerke (z.B. LinkedIn, Facebook, Google) als
+      Identity Provider verwendet werden.
+  - title: Ticketsystem als IdP
+    level: MAY
+    description: |
+      Das Ticketsystem kann einen Identity Provider (IdP) für andere Systeme über eine branchenübliche Schnittstelle (OpenID Connect,
+      OAuth2 oder SAML) zur Verfügung stellen.
+  - title: Speicherung von Adressen und Profilen
+    level: SHOULD
+    description: |
+      Kunden mit Kundenkonto ist es möglich, Rechnungsadressen und Daten von Teilnehmern im Kundenkonto zu speichern, um
+      erneute Käufe zu vereinfachen.
+  - title: Loginbereich
+    level: SHOULD
+    description: |
+      Kunden mit Kundenkonto können sich in einen Loginbereich einloggen, in dem sie veranstaltungsübergreifend ihre bisherigen
+      Ticketbestellungen abrufen, ihre gespeicherten Adressen und Profile einsehen und ihre persönlichen Daten einschließlich
+      ihres Passworts ändern können.
+
+- title: Rechnungsadresse
+  level: MUST
+  description: |
+    Das System erlaubt die Erfassung einer Rechnungsadresse für den Kaufvorgang. Der Auftraggeber kann konfigurieren, ob diese
+    ein Pflichtfeld darstellt.
+  sub:
+  - title: Keine Erfassung für kostenlose Tickets
+    level: MUST
+    description: |
+      Das System bietet eine Option an, um die Rechnungsadresse zu überspringen, wenn nur kostenlose Tickets verkauft werden.
+  - title: Erfassung der USt-ID
+    level: MUST
+    description: |
+      Bei Rechnungsadressen aus dem europäischen Ausland kann die Umsatzsteuer-Identifikationsnummer erfasst werden.
+  - title: Validierung der USt-ID
+    level: SHOULD
+    description: |
+      Bei Rechnungsadressen aus dem europäischen Ausland wird die Umsatzsteuer-Identifikationsnummer gegen die entsprechende
+      Schnittstelle der EU-Kommission validiert.
+  - title: Länderspezifische Steuerberechnung
+    level: MUST
+    description: |
+      Auf Basis der eingegebenen Rechnungsadresse kann der Steuersatz der gekauften Produkte angepasst werden, z.B. auf 0% für
+      das Reverse-Charge-Verfahren innerhalb der EU oder auf den Steuersatz eines anderen Lands für Verbraucher.
+    comment: |
+      Diese Anforderung ist vor allem für Veranstaltungen relevant, deren umsatzsteuerlicher Leistungsort nicht am Veranstaltungsort
+      liegt, z.B. für Veranstaltungen im digitalen Raum. Für andere Veranstaltungen kann diese Anforderung in der Regel gestrichen
+      werden.
+
+- title: Zahlungsarten
+  level: MUST
+  description: |
+    Der Webshop ermöglicht die Integration mehrere Zahlungsarten über digitale Schnittstellen.
+  sub:
+  - title: Zahlungsarten konfigurierbar
+    level: MUST
+    description: |
+      Die Zahlungsarten können für jede Veranstaltung einzeln aktiviert oder deaktiviert werden.
+  - title: Zahlungsarten nach Betrag
+    level: SHOULD
+    description: |
+      Die Zahlungsarten können auf bestimmte Minimal- oder Maximalbeträge beschränkt werden.
+  - title: Rechnungskauf
+    level: MUST
+    description: |
+      Der Webshop ermöglicht den Kauf per Vorkasse oder auf Rechnung über die Konten des Auftraggebers.
+  - title: PayPal
+    level: MUST
+    description: |
+      Der Webshop ermöglicht die Anbindung des PayPal-Händlerkontos des Auftraggebers über eine direkte Schnittstelle zu PayPal.
+      Die Abwicklung der Zahlung sowie eventueller Rückerstattungen erfolgt vollautomatisch.
+  - title: Payment Service Provider
+    level: MUST
+    description: |
+      Der Webshop verfügt über direkte Schnittstellen zu mindestens zwei weiteren Payment Service Providern, die Kreditkartenzahlung
+      sowie weitere Zahlungsarten (z.B. Wero, Lastschrift, Klarna, etc.) anbieten.
+      Mindestens einer der angebundenen Payment Service Provider sitzt in Europa.
+      Die Abwicklung der Zahlung sowie eventueller Rückerstattungen erfolgt vollautomatisch.
+    comment: |
+      Soll stattdessen ein bereits feststehender Payment Service Provider verwendet werden, sollte dieser hier direkt genannt
+      werden.
+  - title: PCI DSS
+    level: MUST
+    description: |
+      Die Einbindung von Kreditkartenformularen erfolgt so, dass für den Auftraggeber keine höhere Zertifizierung nach dem
+      Payment Card Industry Data Security Standard (PCI DSS) notwendig ist als der Self-Assessment Questionnaire A (SAQ-A).
+  - title: Lastschrift
+    level: MAY
+    description: |
+      Der Webshop ermöglicht den Kauf per SEPA-Lastschrift über die Konten des Auftraggebers.
 
 - title: Versand von E-Mails
   level: MUST
@@ -227,15 +432,133 @@
     - title: Anpassbarkeit der Texte
       level: SHOULD
       description: |
-        Die Texte aller E-Mails, die vom System verschickt werden, können von der Auftraggeberin frei angepasst werden,
+        Die Texte aller E-Mails, die vom System verschickt werden, können vom Auftraggeber frei angepasst werden,
         auch spezifisch für einzelne Veranstaltungen.
     - title: Signatur
       level: SHOULD
       description: |
-        Eine E-Mail-Signatur, die an alle E-Mails angehängt wird, kann von der Auftraggeberin zentral definiert werden.
+        Eine E-Mail-Signatur, die an alle E-Mails angehängt wird, kann vom Auftraggeber zentral definiert werden.
+    - title: Kalendereinladung
+      level: SHOULD
+      description: |
+        Das System kann eine Kalendereinladung für die Versanstaltung an Ticketkäufer:innen verschicken.
+      tags: [ messe, event, theater ]
+    - title: Ticketversand an Ticketinhaber
+      level: SHOULD
+      description: |
+        Beim Kauf für Dritte (s.o.) ist der Versand der Tickets an die jeweiligen Ticketinhaber:innen ebenfalls möglich.
+        Der Absender aller vom System verwendeten E-Mails kann frei eingestellt werden.
+      tags: [ messe, event ]
+
+- title: Ticketerstellung
+  level: MUST
+  description: |
+    Nach dem Kauf der Tickets werden der Ticketkäufer:in die erworbenen Tickets zur Verfügung gestellt.
+  sub:
+    - title: Produktabhängigkeit
+      level: MUST
+      description: |
+        Die Ausstellung von Tickets kann für einzelne Produkte abgestellt werden.
+    - title: PDF-Tickets
+      level: MUST
+      description: |
+        Die Tickets werden im Format PDF zur Verfügung gestellt. Das Layout der PDF-Datei kann vom Auftraggeber in einem
+        WYSIWYG-Editor ohne Mitwirkung des Systemanbieters frei konfiguriert und auf die Veranstaltung angepasst werden.
+    - title: Produktabhängige Layouts
+      level: MUST
+      description: |
+        Für verschiedene Produkte können unterschiedliche Ticket-Layouts verwendet werden.
+    - title: Apple Wallet
+      level: MUST
+      description: |
+        Die Tickets werden im Passbook-Format für Apple Wallet und weitere Wallet Apps zur Verfügung gestellt. Die Anbindung ist auf
+        eine Weise implementiert, auf die keine personenbezogenen Daten zu Apple oder anderen Drittanbietern übermittelt werden, bevor
+        die Ticketkäufer:in die Übertragung in die Apple Wallet explizit anfordert oder die Wallet-Datei selbstständig in eine Wallet-App lädt.
+    - title: Google Wallet
+      level: SHOULD
+      description: |
+        Die Tickets werden für Google Wallet zur Verfügung gestellt. Die Anbindung ist auf eine Weise implementiert, auf die
+        keine personenbezogenen Daten zu Google übermittelt werden, bevor die Ticketkäufer:in die Übertragung in die Google Wallet
+        explizit anfordert.
+    - title: Versandoptionen
+      level: MUST
+      description: |
+        Der Versand von Tickets per Post ist im System als Option vorgesehen. Die Ticketkäufer:in kann eine Auswahl zwischen verschiedenen
+        Versand-Methoden oder der Abholung erhalten und eine Versandadresse kann gesondert erfasst werden.
+      tags: [ theater, museum, event ]
+    - title: Ausstellung vor Zahlung
+      level: SHOULD
+      description: |
+        Die Ausstellung der Tickets vor Eingang einer Zahlung kann grundsätzlich oder für einzelne Bestellungen aktiviert werden.
+      tags: [ messe, museum, event ]
+
+- title: Freigabeprozesse
+  level: MUST
+  description: |
+    Für bestimmte Produkt- und Ticketarten kann ein Freigabe- oder Akkreditierungsprozess zwischengeschaltet werden, bei dem
+    der Ticketkauf zunächst vom Auftraggeber geprüft und freigegeben werden muss, bevor ein Ticket ausgestellt werden kann.
+  tags: [ event, messe ]
+
+- title: Integration Newslettersystem
+  level: MUST
+  description: |
+    Ticketkäufer:innen erhalten die Möglichkeit, im Kaufprozess in dem Empfang eines Newsletters einzuwilligen. Diese Information
+    wird automatisch an die Newslettersoftware **HIER EINFÜGEN** übertragen.
+
+- title: Integration ÖPNV-Tickets
+  level: MUST
+  description: |
+    Beim Kauf bestimmter Produkt- und Ticketarten wird ein ÖPNV-KombiTicket des Verkehrsverbunds **HIER EINFÜGEN** erstellt.
+    Hierzu stellt der Nahverkehrsbetreiber die Schnittstelle **HIER EINFÜGEN** bereit, die vom Ticketingsystem angebunden werden
+    muss.
+  comment: |
+    Diese Anforderung sollte gestrichen werden, wenn keine entsprechende Kooperation oder Schnittstelle besteht.
 
 - title: Kauf in Echtzeit
   level: MUST
   description: |
     Im Webshop erworbene Tickets sind binnen weniger Sekunden im gesamten System verfügbar und können von der Zutrittskontrolle
     validiert werden.
+
+- title: Warteliste
+  level: SHOULD
+  description: |
+    Ist eine Veranstaltung oder eine einzelne Ticketart ausverkauft, kann eine Warteliste aktiviert werden, die die Kontaktdaten
+    weiterer interessierter Käufer:innen sammelt und diese bei Verfügbarkeit weiterer Tickets automatisch benachrichtigt oder zum Kauf
+    einlädt.
+
+- title: Self-Service-Bereich
+  level: MUST
+  description: |
+    Der Webshop beinhaltet einen Self-Service-Bereich, in dem Ticketkäufer:innen typische Aktionen selbstständig durchführen
+    können.
+  sub:
+  - title: Für alle nutzbar
+    level: MUST
+    description: |
+      Der Self-Service-Bereich ist auch für Gastbesteller:innen ohne Kundenkonto nutzbar.
+  - title: Datenänderung
+    level: MUST
+    description: |
+      Der Self-Service-Bereich ermöglicht die Änderung von Namen oder anderen Personalisierungsdaten von Tickets innerhalb der
+      vom Auftraggeber definierten Fristen.
+  - title: Ticketstorno
+    level: MUST
+    description: |
+      Der Self-Service-Bereich ermöglicht die Stornierung einer Bestellung samt Rückerstattung innerhalb der vom Auftraggeber
+      definierten Fristen und unter Einbehalt der vom Auftraggeber definierten Stornogebühren.
+  - title: Teilnahmebescheinigung
+    level: MUST
+    description: |
+      Der Self-Service-Bereich ermöglicht den Download einer Teilnahmebescheinigung nach erfolgtem Zutritt zur Veranstaltung.
+    tags: [ event, messe ]
+
+- title: Downloadartikel
+  level: SHOULD
+  description: |
+    Der Webshop ermöglicht den Verkauf von Download-Artikeln oder vergleichbaren digitalen Produkten.
+
+- title: Gutscheinverkauf
+  level: MUST
+  description: |
+    Der Webshop ermöglicht den Verkauf von Einzweck- und Mehrzweckgutscheinen.

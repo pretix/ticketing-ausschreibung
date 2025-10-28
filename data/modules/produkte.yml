@@ -1,8 +1,290 @@
-- title: TBD
+- title: Einheitliche Konfiguration
   level: MUST
   description: |
-    TBD
-  comment: |
-    TBD
-  tags:
-    - messe
+    Die Produkt- und Ticketarten dürfen nur an einer Stelle gepflegt werden und müssen dann automatisch
+    auf allen Verkaufswegen (z.B. Webshop, Kassensystem, Self-Service-Terminsls oder Automaten, etc.)
+    zur Verfügung stehen.
+
+  sub:
+  - title: Einschränkung der Verkaufswege
+    level: MUST
+    description: |
+      Für Produkt- und Ticketarten kann ausgewählt werden, dass diese nur auf ausgewählten Verkaufswegen, z.B. nur am
+      Kassensystem, verkauft werden dürfen.
+
+- title: Anzahl Ticketarten
+  level: SHOULD
+  description: |
+    Die Anzahl Produkt- und Ticketarten in einer Veranstaltung ist nicht beschränkt.
+
+- title: Kostenlose Tickets
+  level: MUST
+  description: |
+    Das System erlaubt die Ausgabe kostenloser Tickets.
+
+- title: Produktkategorien
+  level: SHOULD
+  description: |
+    Die Produkt- und Ticketarten können zur Übersichtlichkeit sowohl für Käufer:innen als auch für den Auftraggeber in 
+    Produktkategorien eingeteilt werden.
+
+- title: Produktbeschreibung
+  level: MUST
+  description: |
+    Die Produkt- und Ticketarten können mit einer Beschreibung versehen werden. Diese kann Formatierung (z.B. Markdown, HTML, etc.)
+    enthalten.
+
+- title: Produktbilder
+  level: MUST
+  description: |
+    Die Produkt- und Ticketarten können mit Produktbildern versehen werden.
+
+- title: Personalisierung
+  level: MUST
+  description: |
+    Das System erlaubt die Unterscheidung von personalisierten und unpersonalisierten Ticketarten.
+    Unpersonalisierte Tickets erfordern keine Datenerfassung und sind nicht an eine feste Person gebunden.
+
+- title: Einzelkarten
+  level: MUST
+  description: |
+    Das System erlaubt die Konfiguration von Tickets, die einen einmaligen Einlass im Veranstaltungszeitraum
+    erlauben. Die Mehrfachverwendung wird vom System wirksam unterbunden. Der Gültigkeitszeitraum kann hierbei
+    sowohl vorher festgelegt sein, als auch die ganze Veranstaltung umfassen.
+  tags: [ messe, event ]
+
+- title: Einzelkarten
+  level: MUST
+  description: |
+    Das System erlaubt die Konfiguration von Tickets, die einen einmaligen Einlass im Gültigkeitszeitraum
+    erlauben. Die Mehrfachverwendung wird vom System wirksam unterbunden.
+  tags: [ park, museum ]
+
+- title: Mehrtageskarten
+  level: MUST
+  description: |
+    Das System erlaubt die Konfiguration von Tickets, die einen einmaligen Einlass an mehreren Veranstaltungstagen
+    erlauben. Hierbei kann je nach Ticketart spezifiziert werden, ob der Einlass pro Tag nur einmal oder mehrfach
+    möglich ist.
+  tags: [ messe, event ]
+
+- title: Mehrfachkarten
+  level: MUST
+  description: |
+    Das System erlaubt die Konfiguration von Tickets, die einen mehrmaligen Einlass im Gültigkeitszeitraum erlauben,
+    beispielsweise eine Zehnerkarte.
+  tags: [ park, museum ]
+
+- title: Dauerkarten
+  level: MUST
+  description: |
+    Das System erlaubt die Konfiguration von Tickets, die einen Einlass während des ganzen Veranstaltungszeitraums
+    erlauben. Hierbei kann je nach Ticketart spezifiziert werden, ob der Einlass pro Tag nur einmal oder mehrfach
+    möglich ist.
+  tags: [ messe, event ]
+
+- title: Dauerkarten
+  level: MUST
+  description: |
+    Das System erlaubt die Konfiguration von Tickets, die einen mehrmaligen Einlass im gesamten Gültigkeitszeitraum erlauben,
+    beispielsweise eine Monats-, Saison- oder Jahreskarte.
+  tags: [ park, museum ]
+  sub:
+    - title: Vorverkauf
+      level: SHOULD
+      description: |
+        Das System bietet die Möglichkeit zum Verkauf einer Dauerkarte, deren Gültigkeitszeitraum zu einem frei festgelegten
+        Zeitpunkt in der Zukunft beginnt.
+
+- title: Mengenbeschränkung
+  level: MUST
+  description: |
+    Das System erlaubt pro Ticketart eine Einschränkung auf die maximale Anzahl Tickets dieser Art pro Warenkorb.
+
+- title: Gruppenticket
+  level: MUST
+  description: |
+    Das System erlaubt pro Ticketart eine Einschränkung auf die minimale Anzahl Tickets dieser Art pro Warenkorb, sodass
+    ein Gruppenticket mindestens in einer bestimmten Anzahl erworben werden muss.
+
+- title: Zeitslots
+  level: MUST
+  description: |
+    Das System erlaubt die Definition von Zeitslots sowie die Anzahl und Art der verfügbaren Tickets pro Zeitslot.
+  tags: [ park, museum ]
+  sub:
+    - title: Serienerstellung
+      level: MUST
+      description: |
+        Das System verfügt über eine benutzerfreundliche Funktion zum Erstellen großer Mengen von Zeitslots.
+    - title: Dynamic Pricing
+      level: MUST
+      description: |
+        Das System erlaubt die Hinterlegung abweichender Preise pro Zeitslot.
+
+- title: Kontingentierung
+  level: MUST
+  description: |
+    Das System erlaubt die Kontingentierung von Produkt- und Ticketarten, d.h. die Beschränkung der möglichen Anzahl verkaufter
+    Tickets oder Produkte.
+  sub:
+    - title: Gemeinsame Kontingente
+      level: MUST
+      description: |
+        Das System erlaubt die gemeinsame Kontingentierung mehrerer Produkt- und Ticketarten, d.h. dass die Aufteilung eines
+        Gesamtkontingents auf die Produkt- und Ticketarten nicht vorab festgelegt werden muss.
+    - title: Mehrere Kontingente pro Produkt
+      level: MUST
+      description: |
+        Das System erlaubt die Bindung einer Produkt- oder Ticketart an mehrere Kontingente, sodass beim Kauf des Produkts oder
+        Tickets die Verfügbarkeit mehrerer Kontingenten reduziert wird.
+    - title: Unsichtbare Kontingentierung
+      level: MUST
+      description: |
+        Die Kontingentierung kann unsichtbar erfolgen, sodass Ticketkäufer:innen die Anzahl verfügbarer Produkte nicht sehen.
+    - title: Sichtbare Kontingentierung
+      level: SHOULD
+      description: |
+        Die Kontingentierung kann sichtbar erfolgen, sodass Ticketkäufer:innen die Anzahl verfügbarer Produkte sehen.
+    - title: Kontingentierung pro Zeitslots
+      level: MUST
+      description: |
+        Die Kontingentierung erfolgt pro Zeitslot.
+      tags: [ park, museum ]
+
+- title: Nicht-Ticket-Produkte
+  level: MUST
+  description: |
+    Das System erlaubt den Verkauf von Artikeln (z.B. Merchandise), für die kein Ticket ausgestellt wird.
+  sub:
+  - title: Varianten
+    level: MUST
+    description: |
+      Das System erlaubt die effiziente Verwaltung von Artikeln, die in mehreren Ausführungsarten (z.B. Größen) vorliegen.
+
+- title: Preisstufen
+  level: MUST
+  description: |
+    Das System erlaubt den Verkauf des gleichen Tickets zu verschiedenen Preisstufen (z.B. reduzierter Eintritt für Schüler).
+
+- title: Frühbucherrabatt
+  level: MUST
+  description: |
+    Das System erlaubt unterschiedliche Bepreisung des gleichen Tickets zu unterschiedlichen Zeitpunkten. Dies muss vorab
+    fertig konfiguriert werden können.
+
+- title: Verfügbarkeitszeiträume
+  level: MUST
+  description: |
+    Das System erlaubt die Beschränkung des Verkaufs von Produkt- und Ticketarten auf definierte Zeiträume.
+
+- title: Produktpakete
+  level: MUST
+  description: |
+    Das System erlaubt die Definition von Produktpaketen, bei denen der Kauf einer Produkt- oder Ticketart automatisch den
+    Kauf einer weiteren Produkt- oder Ticketart beinhaltet.
+
+- title: Produktpakete mit Auswahl
+  level: MUST
+  description: |
+    Das System erlaubt die Definition von Produktpaketen, bei denen der Kauf einer Produkt- oder Ticketart der Käufer:in
+    die Auswahl von weiteren Produkt- oder Ticketarten anbietet.
+  sub:
+    - title: Auswahl verpflichtend
+      level: MUST
+      description: |
+        Die Auswahl einer oder mehrerer der weiteren Produkt- oder Ticketarten kann verpflichtend sein.
+
+- title: Up- und Cross-Selling
+  level: SHOULD
+  description: |
+    Das System erlaubt die Definition von Up- oder Cross-Selling-Regeln, bei denen Käufer:innen beim Kauf einer Produkt- oder
+    Ticketart andere Produkt- oder Ticketarten zum Kauf empfohlen werden.
+
+- title: Freie Preiseingabe
+  level: SHOULD
+  tags: [ event, museum, theater ]
+  description: |
+    Das System erlaubt die Definition von Produkten, bei denen Ticketkäufer:innen den Preis erhöhen oder frei festlegen können,
+    z.B. für den Verkauf von Spendentickets.
+
+- title: Steuersätze
+  level: MUST
+  description: |
+    Das System ist in der Lage, mehrere Umsatzsteuersätze abzubilden. Jedes Produkt kann einem Umsatzsteuersatz zugeordnet
+    werden.
+  sub:
+  - title: Gemischte Besteuerung
+    level: SHOULD
+    description: |
+      Das System ist in der Lage, Produkte abzubilden, bei denen der Preis auf mehrere Umsatzsteuersätze aufgeteilt werden muss.
+
+- title: Versteckte Produkte
+  level: MUST
+  description: |
+    Das System erlaubt die Definition versteckter Produkten, die nur bei Verwendung eines bestimmten Gutscheincodes oder Links
+    sichtbar und kaufbar sind.
+
+- title: Eingeschränkter Personenkreis
+  level: SHOULD
+  description: |
+    Das System erlaubt die Definition versteckter Produkten, die nur für Kundenkonten mit bestimmten Eigenschaften (z.B. bestimmter
+    Status) sichtbar und kaufbar sind.
+
+- title: Gutscheincodes
+  level: MUST
+  description: |
+    Das System erlaubt die Erstellung von Gutscheincodes, die von Ticketkäufer:innen eingelöst werden können.
+  sub:
+    - title: Prozentuale Rabatte
+      level: MUST
+      description: |
+        Gutscheincodes können einen prozentualen Rabatt auf alle oder bestimmte Produkt- oder Ticketarten freischalten.
+    - title: Absolute Rabatte
+      level: MUST
+      description: |
+        Gutscheincodes können einen absoluten Rabatt auf alle oder bestimmte Produkt- oder Ticketarten freischalten.
+    - title: Versteckte Produkte
+      level: MUST
+      description: |
+        Gutscheincodes können versteckte Produkt- oder Ticketarten freischalten.
+    - title: Einmal-Codes
+      level: MUST
+      description: |
+        Es können Gutscheincodes erstellt werden, die nur einmal eingelöst werden können. Die Mehrfacheinlösung wird
+        wirksam verhindert.
+    - title: Mehrfach-Codes
+      level: MUST
+      description: |
+        Es können Gutscheincodes erstellt werden, die eine bestimmte Anzahl oder beliebig oft eingelöst werden können.
+    - title: E-Mail-Versand
+      level: SHOULD
+      description: |
+        Gutscheincodes können bei der Erstellung einzeln oder massenweise an E-Mail-Empfänger verschickt werden.
+
+- title: Rabattaktionen
+  level: SHOULD
+  description: |
+    Das System erlaubt die Definition von Rabattaktionen, die automatisch auf den Warenkorb angewendet werden.
+  sub:
+    - title: Mengenrabatte
+      level: SHOULD
+      description: |
+        Rabattaktionen der Form "erhalte X % Rabatt ab Y Stück" sind möglich.
+    - title: 2-für-1-Rabatte
+      level: SHOULD
+      description: |
+        Rabattaktionen der Form "erhalte N zum Preis für M Stück" sind möglich.
+    - title: Bonusartikel
+      level: SHOULD
+      description: |
+        Rabattaktionen der Form "erhalte einen Bonusartikel ab dem Kauf von M Tickets" oder "erhalte einen Bonusartikel 
+        ab dem Ticketkauf im Wert von X €" sind möglich.
+    - title: Zeitliche Beschränkung
+      level: SHOULD
+      description: |
+        Die Rabattaktionen können auf bestimmte Zeiträume beschränkt werden.
+    - title: Beschränkung auf Ticketarten
+      level: SHOULD
+      description: |
+        Die Rabattaktionen können auf bestimmte Produkt- und Ticketarten beschränkt werden.
