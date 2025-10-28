@@ -1,8 +1,241 @@
+- title: Responsiveness
+  level: MUST
+  description: |
+    Der Ticketshop muss auf allen verbreiteten Geräte- und Bildschirmgrößen einschränkungsfrei
+    funktionieren. Insbesondere für die folgenden Geräteklassen ist das Layout des Ticketshops
+    explizit optimiert und es bietet eine für die jeweilige Geräteklasse angemessene,
+    benutzerfreundliche Oberfläche:
+    
+    * Desktop-Computer/Laptops
+    * Tablets
+    * Smartphones
+
+- title: Kompatibilität
+  level: MUST
+  description: |
+    Der Ticketshop ist mit allen Webbrowsern ohne Einschränkung nutzbar, die der Baseline-Definition
+    des WebDX-Projekts entsprechen.
+    
+    Dies sind aktuell:
+    
+    * Apple Safari (iOS)
+    * Apple Safari (macOS)
+    * Google Chrome (Android)
+    * Google Chrome (Desktop)
+    * Microsoft Edge (Desktop)
+    * Mozilla Firefox (Android)
+    * Mozilla Firefox (Desktop)
+    
+    Infos zur Baseline-Definition:
+    [https://github.com/web-platform-dx/web-features/blob/main/docs/baseline.md](https://github.com/web-platform-dx/web-features/blob/main/docs/baseline.md)
+
 - title: Barrierefreiheit
   level: MUST
   description: |
-    Der Ticketshop muss die Anforderungen blabla erfüllen. Das ist wichtig, weil
-  comment: |
-    Dies ist ein Kommentar
-  tags:
-    - messe
+    Der Webshop entspricht gängigen Anforderungen an die Barrierefreiheit digitaler Inhalte und ist für
+    Assistenztechnologien wie z.B. Screenreader voll zugänglich. Hierbei wird auf die Bedürfnisse von
+    Ticketkäufer:innen mit unterschiedlichen Beeinträchtigungen eingegangen, unter anderem:
+    
+    * Sehbeeinträchtigung und Blindheit
+    * Hörbeeinträchtigung und Gehörlosigkeit
+    * Motorische Beeinträchtigungen
+    * Kognitive Beeinträchtigungen und Lernbehinderungen
+    * Photosensibilität
+    * Mehrfachbeeinträchtigungen
+    
+    Der Ticketshop erfüllt bei geeigneter Konfiguration alle Anforderungen des Barrierefreiheitstärkungsgesetzes (BFSG),
+    der europäischen Norm EN 301 549 und damit mittelbar auch alle Anforderungen der WCAG 2.1 oder 2.2 Level AA.
+  sub:
+  - title: Nachweis der Barrierefreiheit
+    level: SHOULD
+    description: |
+      Die Erfüllung der Kriterien nach EN 301 549 kann durch einen unabhängig durchgeführten Test an z.B. einem Beispielshop
+      belegt werden.
+
+- title: Anpassbarkeit des Designs
+  level: MUST
+  description: |
+    Der Webshop muss an das Corporate Design des Auftraggebers und auch einzelner Veranstaltungen anpassbar sein. Dies
+    umfasst mindestens:
+    
+    * Die Einbindung eines oder mehrere Logos und Grafiken
+    * Die Anpassung der verwendeten Farben
+    * Die Auswahl der verwendeten Schriftarten
+
+- title: Mehrsprachigkeit
+  level: MUST
+  description: |
+    Der Webshop unterstützt mehrere Sprachen, zwischen denen Ticketkäufer*innen jederzeit wechseln können, ohne den aktuellen
+    Kaufvorgang abzubrechen. Die verfügbaren Sprachen werden vom Auftraggeber ausgewählt. Die Mehrsprachigkeit bezieht sich auf die
+    Systemtexte sowie auf alle vom Auftraggeber pflegbaren Texte und Inhalte (z.B. Veranstaltungstitel, Produktbeschreibungen, etc.).
+  sub:
+    - title: "Automatische Erkennung der Sprache"
+      level: MUST
+      description: |
+        Der Webshop erkennt automatisch die Sprache der Ticketkäufer:in z.B. anhand von Browser-Einstellungen und stellt diese
+        als Standardauswahl ein.
+    - title: "Sprachen: Deutsch und Englisch"
+      level: MUST
+      description: |
+        Der Webshop unterstützt die Sprachen Deutsch und Englisch.
+    - title: "Sprachen: Weitere"
+      level: SHOULD
+      description: |
+        Der Webshop unterstützt ab Werk weitere Sprachen und kann auf Wunsch des Auftraggebers (ggf. kostenpflichtig) um weitere
+        Sprachen erweitert werden.
+    - title: "Sprachen mit RTL-Leserichtung"
+      level: MAY
+      description: |
+        Der Webshop unterstützt auch Sprachen, die eine Leserichtung von Rechts nach Links erfordern (z.B. Arabisch, Hebräisch).
+
+- title: Einwilligungen
+  level: MUST
+  description: |
+    Der Webshop unterstützt die Hinterlegung statischer Inhalte (z.B. AGB, Datenschutzhinweise, Widerrufsbelehrung), deren
+    Kenntnisnahme von Ticketkäufer:innen explizit bestätigt werden muss, um den Kauf abzuschließen.
+
+- title: Statische Inhalte
+  level: SHOULD
+  description: |
+    Der Webshop bietet die Möglichkeit, weitere statische Inhalte (z.B. Impressum, FAQ, etc.) zu hinterlegen.
+
+- title: Zeitzonen
+  level: SHOULD
+  description: |
+    Der Webshop kann bei digitalen Veranstaltungen kenntlich machen, in welcher Zeitzone die angegebenen Veranstaltungszeiträume
+    angegeben sind und diese automatisch in die Zeitzone der Ticketkäufer:in umrechnen. Unterschiedliche Veranstaltungen können
+    in unterschiedlichen Zeitzonen stattfinden.
+
+- title: Währungen
+  level: SHOULD
+  description: |
+    Für unterschiedliche Veranstaltungen können unterschiedliche Währungen zum Eisnatz kommen.
+
+- title: Validierung der E-Mail-Adresse
+  level: SHOULD
+  description: |
+    Die eingegebene E-Mail-Adresse wird beim Kauf von Tickets optional auf Gültigkeit validiert, z.B. über das Versenden eines
+    Validierungslinks oder Validierungscodes.
+
+- title: Ticketshop als Standalone-Variante
+  level: MUST
+  description: |
+    Der Ticketshop kann als eigenständie Website über eine URL angesteuert und beworben werden.
+
+- title: Ticketshop als Widget/iframe
+  level: MUST
+  description: |
+    Der Ticketshop kann in eine andere Website möglichst nahtlos eingebunden werden, z.B. über ein Widget, iFrame, eine Web Component
+    oder eine ähnliche Lösung. Der Ticketkauf ist hierbei möglich, ohne die einbindende Website verlassen zu müssen.
+
+- title: Eigene Domain
+  level: MUST
+  description: |
+    Der Ticketshop kann unter einer eigenen, auch veranstaltungsspezifischen Domain betrieben werden.
+
+- title: Veranstaltungsdaten
+  level: MUST
+  description: |
+    Für jede Veranstaltung können separate Stammdaten konfiguriert werden, beispielsweise:
+    
+    * Datum und Uhrzeit Beginn
+    * Datum und Uhrzeit Ende
+    * Datum und Uhrzeit Einlassbeginn
+    * Veranstaltungsort als Text
+    * Veranstaltungsort als geografische Position
+    * Veranstaltungsbeschreibung oder Infotexte
+
+- title: Warenkorbfunktion
+  level: MUST
+  description: |
+    Es können mehrere Tickets verschiedener Ticketarten gleichzeitig erworben werden.
+  sub:
+    - title: Größenbegrenzung
+      level: MUST
+      description: |
+        Die maximale Anzahl der im Warenkorb befindlichen Tickets kann vom Auftraggeber konfiguriert werden.
+    - title: Reservierungsdauer
+      level: MUST
+      description: |
+        Die im Warenkorb befindlichen Tickets sind für die Ticketkäufer:in für einen vom Auftraggeber konfigurierbaren
+        Zeitraum reserveriert.
+
+- title: Datenerfassung
+  level: MUST
+  description: |
+    Bei der Ticketbuchung müssen Ticketkäufer:innen Fragen beantworten, die vom Auftraggeber je nach Veranstaltung
+    und gewählter Ticketart frei konfiguriert werden können.
+
+  sub:
+    - title: Anzahl der Fragen
+      level: SHOULD
+      description: Es gibt keine Limitierung der Anzahl der Fragen.
+    - title: Fragetypen
+      level: MUST
+      description: |
+        Es werden verschiedene Fragetypen angeboten, z.B. Texteingabe, Zahleingabe, Auswahl aus einer Liste,
+        Mehrfachauswahl aus einer Liste, Ja/Nein-Frage.
+    - title: Dateiupload
+      level: SHOULD
+      description: |
+        Es können Fragen definiert werden, bei denen Ticketkäufer:innen zur Beantwortung eine Datei hochladen müssen
+        (z.B. Nachweis für eine Akkreditierung etc.).
+    - title: Hilfestellungen
+      level: SHOULD
+      description: |
+        Es können von der Auftraggeberin Hilfetexte eingegeben werden, die die Fragen für die Ticketkäufer:innen
+        weiter verständlich machen.
+    - title: Sortierung
+      level: SHOULD
+      description: Die Reihenfolge Fragefelder kann von der Aufttraggeberin frei konfiguriert werden.
+    - title: Abhängigkeiten
+      level: SHOULD
+      description: |
+        Es können Abhängigkeiten zwischen Fragen definiert werden, z.B. dass eine Frage nur angezeigt wird, wenn
+        bei einer anderen Frage eine bestimmte Option gewählt wurde.
+
+- title: Personalisierung
+  level: MUST
+  description: |
+    Bei personalisierten Ticketarten muss für jedes Ticket ein Name und ggf. weitere Informationen eingegeben werden.
+  sub:
+    - title: Namensformat
+      level: SHOULD
+      description: |
+        Der Name wird in einem strukturierten Format (z.B. Title, Vorname, Nachname) erfasst, das vom Auftraggeber
+        definiert werden kann.
+    - title: Auswahl von Titeln
+      level: SHOULD
+      description: |
+        Die Auswahl von Titeln (z.B. Prof, Dr) kann sowohl aus einer vordefinierten Liste, als auch als Freitextfeld
+        gestaltet werden.
+
+- title: Versand von E-Mails
+  level: MUST
+  description: |
+    Nach einem erfolgreichen Ticketkauf verschickt das System eine Bestätigungs-E-Mail.
+  sub:
+    - title: Absender
+      level: MUST
+      description: |
+        Der Absender aller vom System verwendeten E-Mails kann frei eingestellt werden.
+    - title: Mailserver
+      level: SHOULD
+      description: |
+        Der Versand von E-Mails erfolgt nach Wahl entweder über einen Mailserver des Ticketsystemanbieters oder über einen
+        Mailserver des Auftraggebers.
+    - title: Anpassbarkeit der Texte
+      level: SHOULD
+      description: |
+        Die Texte aller E-Mails, die vom System verschickt werden, können von der Auftraggeberin frei angepasst werden,
+        auch spezifisch für einzelne Veranstaltungen.
+    - title: Signatur
+      level: SHOULD
+      description: |
+        Eine E-Mail-Signatur, die an alle E-Mails angehängt wird, kann von der Auftraggeberin zentral definiert werden.
+
+- title: Kauf in Echtzeit
+  level: MUST
+  description: |
+    Im Webshop erworbene Tickets sind binnen weniger Sekunden im gesamten System verfügbar und können von der Zutrittskontrolle
+    validiert werden.

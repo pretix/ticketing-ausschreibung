@@ -29,27 +29,37 @@ class YamlDocProcessor(BlockProcessor):
             self.parser.parseBlocks(e, self._blocks(match.group("file"), match.group("tags").strip().split(" ")))
             blocks.pop(0)
 
+    def _criteria(self, data, tags, level):
+        blocks = []
+        if data.get("tags"):
+            if not any(t in data["tags"] for t in tags):
+                return blocks
+        blocks.append(f"{'#' * level} {data['title']}")
+
+        if data.get("level").upper() == "MUST":
+            blocks.append("<span class='level level-must'>Muss-Kriterium</span>")
+        elif data.get("level").upper() == "SHOULD":
+            blocks.append("<span class='level level-should'>Soll-Kriterium</span>")
+        elif data.get("level").upper() == "MAY":
+            blocks.append("<span class='level level-may'>Kann-Kriterium</span>")
+        for b in data['description'].split("\n\n"):
+            blocks.append(b)
+        if data.get("comment"):
+            blocks.append('!!! note "Kommentar"')
+            blocks.append('')
+            blocks.append(indent(data['comment'], "    "))
+        if data.get("sub"):
+            for l in data["sub"]:
+                blocks += self._criteria(l, tags, level + 1)
+        return blocks
+
     def _blocks(self, file, tags):
         with open("data/modules/" + file + ".yml", "r") as f:
             data = yaml.safe_load(f.read())
 
         blocks = []
         for l in data:
-            if l.get("tags"):
-                if not any(t in l["tags"] for t in tags):
-                    continue
-            blocks.append(f"## {l['title']}")
-            if l.get("level") == "MUST":
-                blocks.append("<span class='level level-must'>Muss-Kriterium</span>")
-            elif l.get("level") == "SHOULD":
-                blocks.append("<span class='level level-should'>Soll-Kriterium</span>")
-            elif l.get("level") == "MAY":
-                blocks.append("<span class='level level-may'>Kann-Kriterium</span>")
-            blocks.append(l['description'])
-            if l.get("comment"):
-                blocks.append('!!! note "Kommentar"')
-                blocks.append('')
-                blocks.append(indent(l['comment'], "    "))
+            blocks += self._criteria(l, tags, 2)
 
 
         return blocks
