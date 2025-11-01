@@ -1,8 +1,331 @@
-- title: TBD
+- title: Verschiedene Zugangswege
+  level: MUST
+  tags: [ event, messe, museum, park ]
+  description: |
+    Der Einlass kann parallel über personalbesetzte Zutrittsstationen (z.B. mit Handscannern) und autonome
+    Zutrittsstationen (z.B. Drehkreuze) durchgeführt werden. Hierbei wird auf einen gemeinsamen, konsistenten
+    Datenbestand zugegriffen. Alle Ticketarten und Einlasskonfigurationen werden bei beiden Varianten
+    unterstützt.
+
+- title: Einlassregeln
   level: MUST
   description: |
-    TBD
+    Für unterschiedliche Ticketarten können unterschiedliche Einlassregeln festgelegt werden.
+  sub:
+    - title: Einzeleintritt
+      level: MUST
+      description: |
+        Für Ticketarten mit Einzeleintritt wird ein Mehrfacheintritt vom Zutrittssystem wirksam verhindert.
+    - title: Mehrfacheintritt
+      level: MUST
+      tags: [ event, messe, museum, park ]
+      description: |
+        Für Ticketarten mit Mehrfacheintritt kann eine maximale Anzahl der Eintritte festgelegt werden (z.B. Zehnerkarte)
+        oder die Anzahl unbeschränkt sein (z.B. Dauerkarte).
+    - title: Wiedereintritt nur nach Austritt
+      level: MUST
+      tags: [ event, messe, museum, park ]
+      description: |
+        Für Ticketarten mit Wiedereintritt nur nach Austritt kann ein weiterer Eintritt nur erfolgen, wenn zuvor
+        ein Austritt erfasst wurde.
+    - title: Zeitspezifische Regeln
+      level: MUST
+      tags: [ event, messe, museum, park ]
+      description: |
+        Für unterschidliche Ticketarten können zeitabhängige Regeln für den Einlass definiert werden
+        (z.B. Einlass ab 10:00 Uhr, Einlass nur sonntags, etc.).
+    - title: Einschränkung der Eingänge
+      level: MUST
+      description: |
+        Für einzelne Eingänge oder Bereiche können nur ausgewählte Ticketarten zugelassen werden (z.B. VIP-Eingang).
+    - title: Bereichsspezifische Entwertung
+      level: MUST
+      tags: [ event, messe, museum, park ]
+      description: |
+        Für unterschiedliche Bereiche können unterschiedliche Einlassregeln gelten und das Ticket für die
+        unterschiedlichen Bereiche getrennt entwertet werden (z.B. Einlass je einmal pro Bereich möglich).
+
+- title: Offlinefähigkeit
+  level: MUST
+  description: |
+    Die Zutrittskontrolle ist auch ohne Verbindung zum Internet oder zum Server offlinefähig. Hierbei können die
+    gescannten Tickets weiter gegen die Einlassreglen validiert werden. Jedes Einlassgerät kann bis zu 25.000 Scans 
+    zwischenspeichern. Sobald die Verbindung wiederhergestellt ist, werden die zwischengespeicherten Scans
+    schnellstmöglich hochgeladen.
+    
+    Im Offlinemodus müssen Tickets nicht gegen Mehrfachnutzung abgesichert sein, jedoch müssen Tickets gegen eine
+    Liste gesperrter Tickets abgeglichen ewrden können.
+
+- title: Skalierbarkeit
+  level: MUST
+  description: |
+    Das Zutrittskontrollsystem muss auf eine Spitzenlast von bis zu **HIER EINSETZEN** Einlassvorgängen innerhalb von
+    **HIER EINSETZEN** Minuten ausgelegt sein.
+
+- title: Automatischer Austritt
+  level: MUST
+  tags: [ event, messe, museum, park ]
+  description: |
+    Zu einer definierten Uhrzeit (z.B. Tagesende) kann für alle noch eingebuchten Tickets automatisch
+    ein Austritt verbucht werden.
+
+- title: Eingänge
+  level: MUST
+  tags: [ event, messe, museum, park ]
+  description: |
+    Verschiedene Zutrittsstationen (Handscanner, Drehkreuze) können zu Eingängen gruppiert werden, die
+    die Einlassregeln beinflussen können und für statistische Zwecke erfasst werden.
+
+- title: Sprechende Fehlermeldungen
+  level: MUST
+  description: |
+    Bei der Ablehnung eines Tickets gibt das System eine sprechende Fehlermeldung aus, die ohne Einbeziehung weiterer
+    Datenquellen verständlich macht, warum für das Ticket kein Einlass gewährt werden kann.
+
+- title: Ticketarten mit Zusatzkontrolle
+  level: MUST
+  description: |
+    Das System kann abhängig von Ticketart eine Meldung für das Einlasspersonal anzeigen, dass eine Zusatzkontrolle
+    (z.B. Studierendenausweis) notwendig ist. Hierbei kann ein vom Auftraggeber je Ticketart konfigurierter Text
+    mit genauen Anweisungen ausgegeben werden.
+
+- title: Eindeutige Signaltöne
+  level: MUST
+  description: |
+    Das System spielt eindeutig unterscheidbare Signaltöne für die verschiedenen Fälle (z.B. Einlass OK, Auslass OK,
+    Zusatzkontrolle, Fehler) ab, sodass die Kontrolle auch ohne Blick auf das Display des Kontrollgeräts möglich ist.
+
+- title: Parallele Veranstaltungen
+  level: SHOULD
+  tags: [ messe, museum, park, theater ]
+  description: |
+    Mehrere parallele Veranstaltungen, die sich einen Einlassbereich teilen, können mit den gleichen Einlassgeräten 
+    abgewickelt werden.
+
+- title: Einlass per Suche
+  level: MUST
+  description: |
+    An personalbesetzten Zugängen kann neben dem Scan eines Tickets ein Scan auch über Suche nach Bestellnummer, Namen
+    oder E-Mail-Adresse gesucht und eingecheckt werden.
+
+- title: Volle Nachvollziehbarkeit
+  level: MUST
+  description: |
+    Alle erfolgreichen und abgelehnten Einlassvorgänge werden aufgezeichnet und sind in Echtzeit in einem zentralen
+    Backend einseh- und durchsuchbar. Bei abgelehnten Einlassvorgängen ist auch die Ablehnungsursache nachvollziehbar.
+
+- title: Einlass-Simulator
+  level: MAY
+  description: |
+    Ein Einlass-Simulator erlaubt die Verifizierung der konfigurierten Einlassregeln an konkreten Beispielen.
+
+- title: "Hardware: Handscanner"
+  level: MUST
+  description: |
+    Die angebotenen Handscanner erfüllen mindestens folgende Anforderungen:
+    
+    - CPU mit mindestens 4 Kernen und mindestens 2,0 GHz
+    - Mindestens 3 GB RAM
+    - Mindestens 32 GB Flash-Speicher
+    - Kapazitiver Touchscreen
+    - Mindestens 5 Zoll Bildschirmdiagonale
+    - Netzwerkanbindung über WLAN (min. IEEE 802.11 a/b/g/n/ac) und Mobilfunk (min. 4G/LTE)
+    - NFC-Leser (ISO/IEC 14443) geeignet für Apple VAS und Google Smart Tap
+    - Barcode-Scanner für alle gängigen 1D- und 2D-Barcodes (z.B. EAN, Code39, Code128, QR, DataMatrix, PDF417, Aztec, …)  
+    - Android-Betriebssystem mit Sicherheitsupdates für min. 5 Jahre
+    - Akku mit mindestens 5000mAh
+    - Einsetzbar bei Umgebungstemperatur -10°C bis 50°C
+    - Schutzart IP68
+
+- title: Badge-Druck
+  level: MUST
+  tags: [ messe ]
+  description: |
+    Das Einlassystem kann Badges (Namensschilder) für Teilnehnmer drucken.
+  sub:
+    - title: Badge-Druck am Handscanner
+      level: MUST
+      description: |
+        Der Badge-Druck kann von einem Handscanner an einem per Netzwerk verbundenen Badge-Drucker ausgelöst werden.
+
+    - title: Badge-Layout-Editor
+      level: MUST
+      description: |
+        Das Layout der Badges kann für jede Ticketart über einen WYSIWYG-Editor vom Auftraggeber selbst gestaltet werden.
+        Hierbei kann auf alle Personalisierungsfelder des Tickets zurückgegriffen werden.
+
+    - title: Zeichensatz
+      level: MUST
+      description: |
+        Der Badge-Druck unterstützt Textausgabe in Schriftzeichen unterschiedlicher Schriften, inkl. asiatischer Sprachen
+        wie Chinesisch oder Japanisch.
+
+    - title: Performance
+      level: SHOULD
+      description: |
+        Der Badge-Druck ist innerhalb von 2 Sekunden nach erfolgreichem Ticketscan abgeschlossen.
+
+    - title: Nur Erstausgabe
+      level: SHOULD
+      description: |
+        Der Badge-Druck erfolgt für jedes Ticket nur einmal automatisch. Ein wiederholter Druck des selben Badges kann
+        durch das Personal angestoßen werden.
+
+    - title: Badge-Druck am Handscanner
+      level: MUST
+      description: |
+        Der Badge-Druck kann von einem Handscanner an einem per Netzwerk verbundenen Badge-Drucker ausgelöst werden.
+
+    - title: "Hardware: Selfbadging-Station"
+      level: SHOULD
+      description: |
+        Der Badge-Druck kann über eine Self-Service-Station ausgelöst werden. Die angebotene Hardware erfüllt mindestens
+        folgende Anforderungen:
+        
+        - CPU mit mindestens 4 Kernen und mindestens 2,0 GHz
+        - Mindestens 4 GB RAM
+        - Mindestens 32 GB freier nichtflüchtiger Speicher (bei installiertem Betriebssystem)
+        - Kapazitiver Touchscreen
+        - Mindestens 10 Zoll Bildschirmdiagonale
+        - Bildschirmauflösung mindestens 1280x800 Pixel
+        - Netzwerkanbindung über Gigabit-Ethernet und WLAN (min. IEEE 802.11 a/b/g/n/ac)
+        - Aktuelles Betriebssystem mit Sicherheitsupdates für min. 3 Jahre
+        - Mindestens 1 USB-A-Ports
+
+    - title: "Hardware: Badgedrucker"
+      level: MUST
+      description: |
+        Die angebotene Hardware für Badgedrucker erfüllt mindestens folgende Anforderungen:
+    
+        - Thermodirektdruck
+        - Mindestens 200dpi Auflösung
+        - Cutter
+        - 80mm Papierbreite
+        - Blackmark- oder Gap-Detection
+        - Automatische Erkennung der Ticketlänge
+        - Druckgeschwindigkeit bis 200mm/s
+        - Anschluss ans Einlassgerät per USB oder Ethernet
+        - Lebensdauer 100km Papier / 100 Millionen Pixel-Aktivierungen / 1 Million Cuts
+        - Mindestens 1 Jahr Herstellergarantie (exkl. Druckkopf)
+      comment: |
+        Nach Wunsch können die Parameter wie folgt erhöht werden:
+        
+        - Druckgeschwindigkeit bis 250 mm/s
+        - Auflösung bis 300dpi
+        - Papierbreite bis 100mm
+        
+        Diese Parameter sollten jedoch nur erhöht werden, wenn die höheren Anforderungen wirklich benötigt werden, da sie zu
+        höheren Stückkosten führen können.
+
+- title: "Hardware: Drehkreuze"
+  level: MUST
+  tags: [ messe, museum, park, event ]
+  description: |
+    Die angebotene Hardware schließt Drehkreuze oder vergleichbare autonome Einlassanlagen mit ein.
   comment: |
-    TBD
-  tags:
-    - messe
+    Bitte spezifizieren Sie genau, was gewünscht ist, z.B. eine hüfthohe Drehsperre, ein mannshohes Drehkreuz,
+    eine Schwingtür, etc.
+  sub:
+    - title: Lesegerät
+      level: MUST
+      description: |
+        Die Lesegeräte der angebotenen Drehkreuze müssen erfüllen mindestens folgende Anforderungen:
+        
+        - Barcode-Scanner für alle gängigen 1D- und 2D-Barcodes (z.B. EAN, Code39, Code128, QR, DataMatrix, PDF417, Aztec, …) in ergonomischer Platzierung
+        - NFC-Leser (ISO/IEC 14443) geeignet für Apple VAS und Google Smart Tap
+        - Mehrfarbiges Display mit mindestens 5" Bildschirmdiagonale
+        - Netzwerkanbindung über Gigabit-Ethernet, WLAN und Mobilfunk (min. 4G/LTE)
+      comment: |
+        Für Low-Budget-Szenarien empfehlen wir auf das mehrfarbige Display, den NFC-Leser und die WLAN/Mobilfunk-Anbindung 
+        zur Kostenersparnis zu verzichten.
+
+    - title: Offene Systemarchitektur
+      level: SHOULD
+      description: |
+        Das Drehkreuz ist grundsätzlich auch mit anderen Ticketsystemen einsetzbar.
+      comment: |
+        Die Drehkreuze sind in vielen Fällen die teuerste Hardwareinvestition. Diese Anforderung soll diese Investition
+        gegen einen späteren Systemwechsel aus anderen Gründen absichern.
+
+    - title: Kontrollleuchte
+      level: SHOULD
+      tags: [ messe ]
+      description: |
+        Eine gut sichtbare, mehrfarbige Kontrolleuchte mit ausreichender Leuchtstärke erlaubt dem Personal die Überwachung
+        des Zustands des Drehkreuzes und die Rückmeldung zu den gescannten Tickets auf einen Blick.
+
+    - title: Integrierter Badge-Druck
+      level: MUST
+      tags: [ messe ]
+      description: |
+        Das Drehkreuz gibt beim ersten Zutritt direkt am Drehkreuz über einen integrierten Drucker ein Badge aus. Die
+        oben genannten Anforderungen zum Badge-Druck gelten entsprechend.
+
+    - title: Performance
+      level: MUST
+      tags: [ messe ]
+      description: |
+        Die Zeit zwischen Lesen des Barcodes und Freigabe des Drehkreuzes beträgt unter einer Sekunde ohne Badge-Druck
+        und unter drei Sekunden mit Badge-Druck.
+
+    - title: Performance
+      level: MUST
+      tags: [ museum, park, event ]
+      description: |
+        Die Zeit zwischen Lesen des Barcodes und Freigabe des Drehkreuzes beträgt unter einer Sekunde.
+
+    - title: Usability
+      level: MUST
+      description: |
+        Besucher:innen erhalten vom Drehkreuz eindeutiges Feedback darüber, ob ihr Ticket akzeptiert wurde, z.B. über
+        eine enetsprechende Anzeige und einen Signalton. Bei Ablehnung des Tickets wird eine verständliche Fehlermeldung
+        angezeigt.
+
+    - title: Anbindung Brandmeldeanlage
+      level: MUST
+      description: |
+        Das Drehkreuz kann über einen potentialfreien Kontakt aus einer Brandmeldeanlage in eine Fluchtstellung gebracht
+        werden, z.B. bei einer 3-Arm-Drehsperre durch Abklappen eines Arms oder bei einer 2-Arm-Drehsperre durch Drehung in
+        eine Position mit freiem Durchgang. (Gilt nicht für mobile Drehkreuze.)
+      comment: |
+        Bitte streichen Sie diese Anforderung, wenn für den konkreten Aufstellort nicht notwendig.
+
+    - title: Stromversorgung
+      level: MUST
+      description: |
+        Das Drehkreuz wird über eine normale 230V-Stromversorgung versorgt.
+
+    - title: Mobile Variante
+      tags: [ messe ]
+      level: MUST
+      description: |
+        Das Drehkreuz kann auch in einer mobilen Variante angeboten werden, die temporär aufgestellt und mit maximal
+        zwei Personen schnell bewegt, verladen und eingelagert werden kann.
+
+    - title: Umgebungsanforderungen
+      tags: [ museum, messe ]
+      level: MUST
+      description: |
+        Das Drehkreuz ist auf den Einsatz im überdachten Innenbereich bei Temperaturen zwischen 10°C und 40°C ausgelegt.
+      comment: |
+        Bitte passen Sie die Anforderungen auf Ihre tatsächliche Umgebung an.
+
+    - title: Umgebungsanforderungen
+      tags: [ park, event ]
+      level: MUST
+      description: |
+        Das Drehkreuz ist auf den Einsatz im überdachten Außenbereich bei Temperaturen zwischen 0°C und 40°C ausgelegt.
+      comment: |
+        Bitte passen Sie die Anforderungen auf Ihre tatsächliche Umgebung an.
+
+    - title: Dauerfrei
+      level: MUST
+      description: |
+        Das Drehkreuz kann für eine oder beide Richtungen auf dauerfrei/offen gestellt werden.
+
+    - title: Verhalten bei Stromausfall
+      level: MUST
+      description: |
+        Bei Stromausfall ist das Drehkreuz in eine/beide Richtungen frei drehbar.
+      comment: |
+        Bitte passen Sie an, ob das Drehkreuz in eine oder beide Richtungen frei drehbar esin soll.

@@ -328,7 +328,7 @@
 - title: "Hardware: Belegdrucker"
   level: MUST
   description: |
-    Das angebotene Modell für Belegrucker erfüllt mindestens folgende Anforderungen:
+    Das angebotene Modell für Belegdrucker erfüllt mindestens folgende Anforderungen:
     
     - Thermodirektdruck
     - Mindestens 200dpi Auflösung
@@ -346,7 +346,7 @@
 - title: "Hardware: Ticketdrucker"
   level: MUST
   description: |
-    Das angebotene Modell für Belegrucker erfüllt mindestens folgende Anforderungen:
+    Das angebotene Modell für Ticketdrucker erfüllt mindestens folgende Anforderungen:
     
     - Thermodirektdruck
     - Mindestens 200dpi Auflösung
@@ -406,4 +406,4 @@
     Das angebotene Modell für Barcode-Handscanner erfüllt mindestens folgende Anforderungen:
     
     - Anschluss per USB ans Kassensystem
-    - Lesen aller gängigen 1D- und 2D-Barcodes (z.B. EAN, QR, DataMatrix, PDF417, Aztec, …)
+    - Lesen aller gängigen 1D- und 2D-Barcodes (z.B. EAN, Code39, Code128, QR, DataMatrix, PDF417, Aztec, …)
