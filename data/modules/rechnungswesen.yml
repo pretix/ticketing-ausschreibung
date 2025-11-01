@@ -63,6 +63,6 @@
 - title: GoBD
   level: MUST
   description: |
-    Das System erfüllt die Grundsätze Grundsätze zur ordnungsmäßigen Führung und Aufbewahrung von Büchern, Aufzeichnungen und
-    Unterlagen in elektronischer Form sowie zum Datenzugriff (GoBD) in Bezug auf die vom System übernommenen Funktionen,
+    Das System erfüllt die "Grundsätze zur ordnungsmäßigen Führung und Aufbewahrung von Büchern, Aufzeichnungen und
+    Unterlagen in elektronischer Form sowie zum Datenzugriff" (GoBD) in Bezug auf die vom System übernommenen Funktionen,
     insbesondere in Bezug auf die Nachvollziehbarkeit aller Vorgänge.

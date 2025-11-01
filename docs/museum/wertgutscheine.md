@@ -1,3 +1,0 @@
-# Wertgutscheine
-
-::: wertgutscheine museum

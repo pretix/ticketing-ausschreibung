@@ -3,11 +3,9 @@ nav:
   - index.md
   - webshop.md
   - produkte.md
-  - zahlung.md
-  - rechnungswesen.md
   - aussteller.md
-  - marketing.md
-  - crm.md
+  - rechnungswesen.md
+  - backend.md
   - kasse.md
   - zutrittskontrolle.md
   - reporting.md
