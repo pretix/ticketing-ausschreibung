@@ -1,3 +1,5 @@
+title: Webshop
+requirements:
 - title: Responsiveness
   level: MUST
   description: |
@@ -6,9 +8,9 @@
     explizit optimiert und es bietet eine für die jeweilige Geräteklasse angemessene,
     benutzerfreundliche Oberfläche:
     
-    * Desktop-Computer/Laptops
-    * Tablets
-    * Smartphones
+    - Desktop-Computer/Laptops
+    - Tablets
+    - Smartphones
 
 - title: Kompatibilität
   level: MUST
@@ -18,16 +20,16 @@
     
     Dies sind aktuell:
     
-    * Apple Safari (iOS)
-    * Apple Safari (macOS)
-    * Google Chrome (Android)
-    * Google Chrome (Desktop)
-    * Microsoft Edge (Desktop)
-    * Mozilla Firefox (Android)
-    * Mozilla Firefox (Desktop)
+    - Apple Safari (iOS)
+    - Apple Safari (macOS)
+    - Google Chrome (Android)
+    - Google Chrome (Desktop)
+    - Microsoft Edge (Desktop)
+    - Mozilla Firefox (Android)
+    - Mozilla Firefox (Desktop)
     
     Infos zur Baseline-Definition:
-    [https://github.com/web-platform-dx/web-features/blob/main/docs/baseline.md](https://github.com/web-platform-dx/web-features/blob/main/docs/baseline.md)
+    https://github.com/web-platform-dx/web-features/blob/main/docs/baseline.md
 
 - title: Barrierefreiheit
   level: MUST
@@ -36,12 +38,12 @@
     Assistenztechnologien wie z.B. Screenreader voll zugänglich. Hierbei wird auf die Bedürfnisse von
     Ticketkäufer:innen mit unterschiedlichen Beeinträchtigungen eingegangen, unter anderem:
     
-    * Sehbeeinträchtigung und Blindheit
-    * Hörbeeinträchtigung und Gehörlosigkeit
-    * Motorische Beeinträchtigungen
-    * Kognitive Beeinträchtigungen und Lernbehinderungen
-    * Photosensibilität
-    * Mehrfachbeeinträchtigungen
+    - Sehbeeinträchtigung und Blindheit
+    - Hörbeeinträchtigung und Gehörlosigkeit
+    - Motorische Beeinträchtigungen
+    - Kognitive Beeinträchtigungen und Lernbehinderungen
+    - Photosensibilität
+    - Mehrfachbeeinträchtigungen
     
     Der Ticketshop erfüllt bei geeigneter Konfiguration alle Anforderungen des Barrierefreiheitstärkungsgesetzes (BFSG),
     der europäischen Norm EN 301 549 und damit mittelbar auch alle Anforderungen der WCAG 2.1 oder 2.2 Level AA.
@@ -58,9 +60,9 @@
     Der Webshop muss an das Corporate Design des Auftraggebers und auch einzelner Veranstaltungen anpassbar sein. Dies
     umfasst mindestens:
     
-    * Die Einbindung eines oder mehrere Logos und Grafiken
-    * Die Anpassung der verwendeten Farben
-    * Die Auswahl der verwendeten Schriftarten
+    - Die Einbindung eines oder mehrere Logos und Grafiken
+    - Die Anpassung der verwendeten Farben
+    - Die Auswahl der verwendeten Schriftarten
 
 - title: Mehrsprachigkeit
   level: MUST
@@ -156,14 +158,14 @@
 - title: Veranstaltungsdaten
   level: MUST
   description: |
-    Für jede Veranstaltung können separate Stammdaten konfiguriert werden, beispielsweise:
+    Für jede Veranstaltung können separate Stammdaten konfiguriert werden, mindestens:
     
-    * Datum und Uhrzeit Beginn
-    * Datum und Uhrzeit Ende
-    * Datum und Uhrzeit Einlassbeginn
-    * Veranstaltungsort als Text
-    * Veranstaltungsort als geografische Position
-    * Veranstaltungsbeschreibung oder Infotexte
+    - Datum und Uhrzeit Beginn
+    - Datum und Uhrzeit Ende
+    - Datum und Uhrzeit Einlassbeginn
+    - Veranstaltungsort als Text
+    - Veranstaltungsort als geografische Position
+    - Veranstaltungsbeschreibung oder Infotexte
 
 - title: Verkaufszeitraum
   level: MUST

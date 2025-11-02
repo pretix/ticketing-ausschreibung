@@ -1,8 +1,29 @@
-- title: TBD
+title: Schnittstellen
+requirements:
+- title: REST API
   level: MUST
   description: |
-    TBD
+    Das Ticketsystem verfügt über eine REST API, die den lesenden und schreibenden Zugriff auf alle relevanten Daten
+    im System erlaubt. Die Dokumentation der REST API ist vollständig und darf mit Projektpartnern geteilt werden.
+    Die Verwendung der REST API verursacht keine weiteren Kosten.
+
+- title: CRM-Schnittstelle
+  level: SHOULD
+  description: |
+    Das Ticketsystem ist in der Lage, die Daten der Ticketsynchronisierungen mit dem CRM-System **HIER EINFÜGEN** zu
+    synchronisieren. Der Umfang der zu syncronisierenden Datenfelder sowie die Präzedenz der Daten im Verhältnis zu
+    den im CRM bereits bestehenden Daten ist konfigurierbar.
+
+- title: Newsletter-Schnittstelle
+  level: SHOULD
+  description: |
+    Das Ticketsystem ist in der Lage, Newsletteranmeldungen aus dem Webshop mit dem Newslettersystem **HIER EINFÜGEN** zu
+    synchronisieren.
+
+- title: Channel-Schnittstelle GetYourGuide
+  level: SHOULD
+  tags: [ park, museum ]
+  description: |
+    Das Ticketsystem verfügt über eine Schnittstelle zum Ticketverkauf über GetYourGuide.
   comment: |
-    TBD
-  tags:
-    - messe
+    Ergänzen Sie bei Bedarf weitere für Sie reelvante Channels.

@@ -2,7 +2,7 @@
 
 Eine öffentliche Ausschreibung besteht in der Regel neben vielen Formblättern aus zwei Dokumenten, die für die Auswahl passender Angebote zentral sind: 
 Einem Leistungskatalog und einem Preisblatt.
-Einen guten Leistungskatalog zu erarbeiten ist sehr zeitaufwändig und erfordert Fachkompetenz und Marktüberblick.
+Diese zu erarbeiten ist sehr zeitaufwändig und erfordert Fachkompetenz und Marktüberblick.
 Dazu wollen wir mit unserem kostenlosen Internetangebot eine Hilfestellung geben.
 
 ### Ist dieses Angebot neutral?

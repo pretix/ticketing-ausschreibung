@@ -6,7 +6,7 @@ site_description: "Mustervorlage für Leistungsbeschreibungen für Ticketing-Aus
 copyright: |
   <a href="https://pretix.eu/about/de/imprint" target="_blank">Impressum</a> ·
   <a href="https://pretix.eu/about/de/privacy" target="_blank">Datenschutz</a> ·
-  Licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode.de" target="_blank">CC0 1.0 Universal</a>
+  Lizensiert unter <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode.de" target="_blank">CC0 1.0 Universal</a>
 validation:
   omitted_files: info
   absolute_links: warn
@@ -77,11 +77,14 @@ plugins:
   - search
   - privacy
   - awesome-nav
+  - macros:
+      include_dir: include
   - social:
       cards_layout_options:
-        background_color: "#3B1C4A"
+        background_color: "#00a186"
         font_family: "Titillium Web"
 extra:
   generator: false
 hooks:
   - overrides/hooks/path.py
+  - overrides/hooks/excel.py

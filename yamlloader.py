@@ -55,7 +55,7 @@ class YamlDocProcessor(BlockProcessor):
 
     def _blocks(self, file, tags):
         with open("data/modules/" + file + ".yml", "r") as f:
-            data = yaml.safe_load(f.read())
+            data = yaml.safe_load(f.read())["requirements"]
 
         blocks = []
         for l in data:

@@ -1,8 +1,67 @@
-- title: TBD
+title: Aussteller-Management
+requirements:
+- title: Ausstellerdatenbank
   level: MUST
+  tags: [ messe ]
   description: |
-    TBD
-  comment: |
-    TBD
-  tags:
-    - messe
+    Das Ticketsystem kann eine Datenbank aller Aussteller auf der Veranstaltung pflegen.
+
+- title: Ausstellerportal
+  level: MUST
+  tags: [ messe ]
+  description: |
+    Aussteller können sich in ein Ausstellerportal einloggen.
+  sub:
+  - title: Anlage der Zugänge
+    level: MUST
+    description: |
+      Der Zugang zum Ausstellerportal kann über eine Schnittstelle zu einem Ausstellershopsystem automatisch erstellt
+      und an den Aussteller verschickt werden.
+  - title: Ausstellerausweise
+    level: MUST
+    description: |
+      Der Aussteller hat im Ausstellerportal Überblick über seine ihm zugewiesenen Ausstellerausweise und kann
+      diese personalisieren.
+  - title: Einladungscodes
+    level: MUST
+    description: |
+      Der Aussteller hat im Ausstellerportal Überblick über seine ihm zugewiesenen Einladungscodes und kann diese
+      herunterladen.
+  - title: Datenzugriff
+    level: MUST
+    description: |
+      Der Aussteller kann im Ausstellerportal die Personalisierungsdaten der mit seinen Einladungscodes registrierten
+      Tickets einsehen und als Export herunterladen. Der Auftraggeber kann festlegen, welche Datenfelder hierbei
+      zugänglich gemacht werden.
+
+- title: Lead-Tracking-Schnittstelle
+  level: MUST
+  tags: [ messe ]
+  description: |
+    Das Ticketsystem bietet eine Schnittstelle über die gängige Lead-Tracking-Tools angeschlossen werden können.
+
+- title: Integriertes Lead-Tracking
+  level: MAY
+  tags: [ messe ]
+  description: |
+    Das Ticketsystem bietet eine integriertes Lead-Tracking-Tool für Aussteller.
+  sub:
+  - title: Berechtigungsvergabe
+    level: MAY
+    description: |
+      Der Zugang zum Lead-Tracking-Tool kann auf einzelne Aussteller begrenzt werden.
+  - title: App-Funktion
+    level: MAY
+    description: |
+      Der Aussteller kann über eine App für Android und iOS einen Barcode auf den Tickets oder Badges der Besucher:innen
+      scannen und erhält die Daten des Besuchers angezeigt. Der Aussteller kann den Datensatz durch Notizen oder Schlagworte
+      anreichern.
+  - title: Datenauswahl
+    level: MAY
+    description: |
+      Der Auftraggeber kann pro Veranstaltung festlegen, welche Daten mit den Ausstellern über das Lead-Tracking-Tool
+      geteilt werden.
+  - title: Datenexport
+    level: MAY
+    description: |
+      Der Auftraggeber kann alle gesammelten Daten selbstständig exportieren.
