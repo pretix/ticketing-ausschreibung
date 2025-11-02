@@ -8,7 +8,7 @@ Dieser Muster-Leistungskatalog soll als Inspiration und Vorlage dienen, um Ihnen
 
 Laden Sie hier unsere Muster-Unterlagen als bearbeitbare Excel-Datei herunter:
 
-<a href="../download/ausschreibung-museum.xlsx" class="button">
+<a href="../download/ausschreibung-museum.xlsx" class="md-button centered">
     :material-file-excel:
     Download
 </a>

@@ -179,7 +179,7 @@ h1, .md-header__title, .md-typeset .admonition-title, .md-typeset details summar
 }
 
 /* Internal links */
-.md-typeset a:not([href*="//"]):not([href^="mailto:"]):not([href^="tel:"]):not(.glightbox):not(.headerlink) {
+.md-typeset a:not([href*="//"]):not([href^="mailto:"]):not([href^="tel:"]):not(.glightbox):not(.headerlink):not(.md-button) {
     padding-left: 1.1em;
     background-repeat: no-repeat;
     background-position: center left;
@@ -241,23 +241,3 @@ h1 + .banner {
     }
 }
 
-.md-typeset a.button:not([href*="//"]):not([href^="mailto:"]):not([href^="tel:"]):not(.glightbox):not(.headerlink) {
-    display: block;
-    width: 200px;
-    text-align: center;
-    margin: auto;
-    border: 2px solid var(--md-typeset-a-color);
-    background: var(--md-typeset-a-color);
-    box-shadow: var(--md-shadow-z1);
-    color: white;
-    padding: 0.2rem 0.6rem;
-    font-size: 1.1rem;
-    border-radius: 0.2rem;
-    background-image: none;
-    font-weight: bold;
-}
-[data-md-color-scheme="slate"] {
-    .md-typeset a.button:not([href*="//"]):not([href^="mailto:"]):not([href^="tel:"]):not(.glightbox):not(.headerlink) {
-        color: black;
-    }
-}
