@@ -1,10 +1,79 @@
 title: Reporting
 requirements:
-- title: TBD
+- title: Integriertes Reporting
   level: MUST
   description: |
-    TBD
-  comment: |
-    TBD
-  tags:
-    - messe
+    Das System bietet integrierte Reporting-Funktionen mit Zugriff auf Live-Daten aus Verkauf und Zutrittskontrolle.
+- title: Automatisierte Berichte
+  level: SHOULD
+  description: |
+    Das System erlaubt die Automatisierung konfigurierter Berichte, die dann in einem gewählten Rhythmus (z.B. täglich,
+    wöchentlich, monatlich) an konfigurierbare Empfänger verschickt werden.
+- title: Individuelle Berichte (Tool)
+  level: SHOULD
+  description: |
+    Das System bietet ein Tool zur Konfiguration individueller Berichte aus einer Vielzahl vorhandener Datenquellen und Filter.
+- title: Individuelle Berichte (Auftragsarbeit)
+  level: SHOULD
+  description: |
+    Weitere individuelle Berichte können durch den Systemanbieter als Customizing erstellt werden.
+- title: Export von Rohdaten
+  level: MUST
+  description: |
+    Das System erlaubt den Export ungefilterter Datensätze aller wichtigen Datenkategorien (Umsätze, Tickets, Zahlungen,
+    Erstattungen, Rechnungen, etc.) als z.B. Excel/CSV-Datei.
+- title: Standardberichte
+  level: MUST
+  description: |
+    Das System verfügt über zahlreiche Standardberichte, sodass es ab Werk Überblick über zentrale Kennzahlen gibt.
+  sub:
+  - title: Abrechnung
+    level: MUST
+    description: |
+      Das System bietet Standard-Reports zur Abrechnung der Umsätze und Geldflüsse für beliebige Zeiträume mit mit
+      zweifelsfreier Periodenabgrenzung durch Auflistung entsprechender offener Posten o.ä..
+  - title: Kassenberichte
+    level: SHOULD
+    description: |
+      Das System bietet Standard-Reports für die Abrechnung des Kassensystems filterbar nach Kasse, Kassenpersonal oder
+      Eingangsbereich und Zeitraum.
+  - title: Einlassberichte
+    level: SHOULD
+    description: |
+      Das System bietet Standard-Reports für das Besucheraufkommen aus den Daten der Zutrittskontrolle.
+  - title: FKM-Berichte
+    level: SHOULD
+    description: |
+      Das System bietet standardmäßig alle von der Gesellschaft zur Freiwilligen Kontrolle von Messe- und Ausstellungszahlen (FKM)
+      geforderten Berichte, u.a.:
+      
+      - Tagesersteintritten pro Besucherkategorie und Besuchstag
+      - Tagesersteintritten pro Herkunftsland und Besuchstag
+      - Tagesersteintritten pro Kontinent/Region (FKM-Gruppierung) und Besuchstag
+      - Liste der relevanten Ticketarten
+      - Besucherprotokoll ohne personenbezogene Daten
+      - Report zur Gesamtteilnehmendenzahl
+    tags: [ messe ]
+  - title: No-Show-Report
+    level: SHOULD
+    description: |
+      Das System bietet Standard-Reports für die Analyse von No-Show-Zahlen.
+  - title: Anwesenheitszahlen
+    level: SHOULD
+    description: |
+      Das System bietet Standard-Reports für die Analyse der gleichzeitig anwesenden Personen im Zeitverlauf.
+    tags: [ messe, museum, park, event ]
+  - title: Zahlungsarten
+    level: SHOULD
+    description: |
+      Das System bietet Standard-Reports für die Analyse der Nutzung der verschiedenen Zahlungsarten.
+  - title: Fragebogenantworten
+    level: SHOULD
+    description: |
+      Das System bietet Standard-Reports für den Überblick über die per Fragebogen erfassten Besucherdaten.
+
+- title: Verschickbare Berichte
+  level: MAY
+  description: |
+    Das System bietet die möglichkeit, bestimmte Reports ohne personenbezogene Daten, auch Dritten (wie z.B. Partnerveranstaltern)
+    ohne eigenen Zugriff aufs System zur Verfügung zu stellen.

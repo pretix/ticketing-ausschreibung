@@ -202,6 +202,11 @@ requirements:
       level: MUST
       description: |
         Es können mehrere Gutscheincodes im selben Warenkorb eingelöst werden.
+    - title: Bestätigungsschritt
+      level: MUST
+      description: |
+        Vor Abschicken einer Bestellung, erhalten Käufer:innen eine Zusammenfassung aller gewählter Produkte sowie
+        aller getätigten Eingaben zur KOntrolle.
 
 - title: Saalplanbuchung
   level: MUST

@@ -62,6 +62,12 @@ requirements:
     Das System ist in der Lage, Rechnungen automatisiert an die Buchhaltung zu übergeben, z.B. über einen Datenexport oder
     eine Schnittstelle zum Buchhaltungssystem.
 
+- title: Übergabe für Archiv
+  level: MUST
+  description: |
+    Das System ist in der Lage, alle Rechnungen eiens Zeitraums im Originalformat zu exportieren und an ein Rechnungsarchiv
+    zu übergeben.
+
 - title: GoBD
   level: MUST
   description: |

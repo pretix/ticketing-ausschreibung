@@ -211,7 +211,15 @@ requirements:
   description: |
     Das Backend erlaubt die Verwaltung aller Kundenkoten.
 
-- title: Export von Rohdaten
+- title: Barcode-Import
   level: SHOULD
   description: |
-    Das Backend erlaubt den Export ungefilterter Datensätze aller wichtigen Datenkategorien als z.B. Excel/CSV-Datei.
+    Das Backend erlaubt den Import von Barcodes, die in einem Fremdsystem erstellt wurden und bei der Vergabe der Tickets
+    verwendet werden sollen.
+
+- title: Datenlöschung
+  level: MUST
+  description: |
+    Das Backend erlaubt die Umsetzung datenschutzkonformer Datenlöschkonzepte nach der Veranstaltung, die die Unterscheidung
+    zwischen buchhalterisch relevanten Daten und nicht buchhalterisch relevanten, für die ggf. unterschiedliche
+    Aufbewahrungsfristen gelten, berücksichtigen.

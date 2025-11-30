@@ -20,6 +20,14 @@ requirements:
     Das Ticketsystem ist in der Lage, Newsletteranmeldungen aus dem Webshop mit dem Newslettersystem **HIER EINFÜGEN** zu
     synchronisieren.
 
+- title: Event-App-Schnittstelle
+  level: SHOULD
+  tags: [ event, messe ]
+  description: |
+    Das Ticketsystem verfügt über eine Schnittstelle zur Event-App **HIER EINFÜGEN** zur Übertragung von Teilnehmendendaten.
+  comment: |
+    Ergänzen Sie bei Bedarf weitere Details.
+
 - title: Channel-Schnittstelle GetYourGuide
   level: SHOULD
   tags: [ park, museum ]
