@@ -60,3 +60,9 @@ requirements:
     level: MAY
     description: |
       Der Systemanbieter stellt dem Anbieter den Quellcode unter einer anerkannten Open-Source-Lizenz zur Verfügung.
+
+- title: Pentests
+  level: SHOULD
+  description: |
+    Der Systemanbieter führt in regelmäßigen Abständen (mindstens alle 2 Jahre) Penetration Tests durch, um die Sicherheit der
+    Software zu überprüfen.

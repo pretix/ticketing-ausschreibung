@@ -1,10 +1,217 @@
 title: Backend
 requirements:
-- title: TBD
+- title: Webbasierter Zugang
+  level: SHOULD
+  description: |
+    Alle Verwaltungsfunktionen können über einen webbasierten Zugang gesteuert werden.
+
+- title: Mandantenfähigkeit
+  level: SHOULD
+  description: |
+    Im Backend können verschiedene Mandanten/Gesellschaften getrennt voneinander verwaltet werden.
+
+- title: Sichere Authentifizierung
   level: MUST
   description: |
-    TBD
-  comment: |
-    TBD
-  tags:
-    - messe
+    Das Backend verfügt über sichere Authentifizierungsmechanismen.
+  sub:
+  - title: Passwortanforderungen
+    level: MUST
+    description: |
+      Das System stellt durch eine entsprechende Validierung eine Passwortqualität sicher,
+      die dem aktuellen Stand der Technik entspricht, jedoch mindestens den Anforderungen
+      des Payment Card Industry Data Security Standard (PCI DSS), d.h. mindestens 12 Zeichen,
+      sowohl Zahlen als auch Buchstaben und keine Wiederverwendung der letzten vier vorherigen
+      Passwörter-
+  - title: 2-Faktor-Authentifizierung
+    level: SHOULD
+    description: |
+      Das System erlaubt die Verwendung eines zweiten Faktors zur Authentifizierung, z.B. durch
+      eine Smartphone-App (TOTP-Standard) oder einen Passkey (Webauthn-Standard).
+  - title: Verpflichtende 2-Faktor-Authentifizierung
+    level: MAY
+    description: |
+      Die Verwendung von 2-Faktor-Authentifizierung kann vom Auftraggeber für alle Benutzer:innen oder
+      einzelne Gruppen verpflichtend gemacht werden.
+
+- title: Rechtemanagement
+  level: MUST
+  description: |
+    Das System verfügt über ein rollenbasiertes Rechtemanamgent, über das der Zugriff auf einzelne Funktionen
+    im Backend detailliert ausgesteuert werden kann.
+  sub:
+    - title: Need-to-Know-Prinzip
+      level: SHOULD
+      description: |
+        Das System erlaubt die effektive Umsetzung eines Rechtevergabe nach dem "Need-to-Know-Prinzip", bei dem
+        alle Benutzer:innen nur die minimale Menge an Berechtigungen erhalten, die für die Ausübung ihrer Rolle
+        notwendig sind.
+
+- title: Nutzeranzahl (Lizenzen)
+  level: MUST
+  description: |
+    Das Backend kann ohne weitere Kosten von mindestens **ZAHL EINFÜGEN** Benutzer:innen verwendet werden.
+
+- title: Nutzeranzahl (Leistung)
+  level: MUST
+  description: |
+    Das Backend kann Performanceprobleme von mindestens **ZAHL EINFÜGEN** Benutzer:innen gleichzeitig verwendet werden.
+
+- title: Audit-Log
+  level: MUST
+  description: |
+    Das System verfügt über eine detaillierte Protokollierung **aller** Veränderungen, die durch Benutzer:innen
+    vorgenommen werden können, inkl. Zeitstempel, durchführende Benutzer:in und Details der Veränderung.
+
+- title: Usability
+  level: SHOULD
+  description: |
+    Das Backend ist auf eine intuitive Bedienung ausgelegt und kann mit durchschnittlichem Schulungsaufwand von
+    Fachanwender:innen verstanden werden.
+  sub:
+  - title: Tabellensortierung
+    level: SHOULD
+    description: |
+      Bei der Anzeige von Tabellen ist die Auswahl einer benutzerdefinierten Sortierung nach einer beliebigen Spalte möglich.
+  - title: Fehlermeldungen
+    level: SHOULD
+    description: |
+      Bei Fehlbedienung oder Systemfehlern gibt das System eindeutige, aussagekräftige Fehlermeldungen aus, die eine schnelle
+      Analyse und Behebung der Ursache ermöglichen.
+  - title: Fehlervermeidung
+    level: SHOULD
+    description: |
+      Das Backend vermeidet durch seinen Aufbau und zusätzliche Sicherheitsabfragen Fehler, die nicht rückgängig gemacht werden
+      können.
+
+- title: Hardware-Übersicht
+  level: SHOULD
+  description: |
+    Das System verfügt über eine übersichtliche Darstellung aller angeschlossenen Hardware (z.B. Zutrittskontrolle
+    und Kassensysteme) und deren Status.
+  sub:
+  - title: Sperre
+    level: SHOULD
+    description: |
+      Das System verfügt über eine Möglichkeit, den Datenzugriff durch verloren gegangene Hardware schnell zu unterbinden.
+
+- title: Verwaltung der Veranstaltungen
+  level: MUST
+  description: |
+    Das System erlaubt dem Auftraggeber die selbstständige Pflege der im System erfassten Veranstaltungen.
+  sub:
+    - title: Kopieren von Veranstaltungen
+      level: SHOULD
+      description: |
+        Das System erlaubt dem Auftraggeber das vereinfachte Anlegen von Veranstaltungen, indem die Einstellungen
+        und Stammdaten einer Vorveranstaltung kopiert werden können.
+    - title: Vorlagen für Veranstaltungen
+      level: MAY
+      description: |
+        Das System erlaubt dem Auftraggeber das Erstellen von Vorlagen für verschiedene Veranstaltungsformate, die
+        dann für die einzelnen Veranstaltungen angepasst werden können.
+    - title: Absage einer Veranstaltungen
+      level: SHOULD
+      description: |
+        Das System verfügt über einen vorgesehenen Prozess für die Absage einer Veranstaltung, der mindestens die
+        Sperre weiterer Buchungen, die Information aller Ticketinhaber:innen, und die Vorbereitung (oder automatische
+        Durchführung) von Rückerstattungen umfasst.
+    - title: Verschiebung einer Veranstaltungen
+      level: SHOULD
+      description: |
+        Das System erlaubt die Verschiebung eines Veranstaltungstermins, ohne dass die Tickets ihre Gültigkeit verlieren,
+        und ermöglicht die Kontaktaufnahme mit allen Ticketinhaber:innen zur Information.
+
+- title: Testmodus
+  level: SHOULD
+  description: |
+    Nach der Konfiguration eines Ticketshops ist über einen Testmodus der Ticketshop schon vor Veröffentlichung intern
+    zugänglich.
+  sub:
+    - title: Simulation späterer Verkaufsphasen
+      level: MAY
+      description: |
+        Im Testmodus kann auch das Verhalten des Ticketshops zu verschiedenen Zeitpunkten getestet werden, um z.B. die
+        zeitliche Steuerung von Verfügbarkeiten und Rabatten zu überprüfen.
+
+- title: Verwaltung der Bestellungen
+  level: MUST
+  description: |
+    Das Backend erlaubt die Verwaltung aller eingegangenen Ticketbestellungen. Daten aus neuen Ticketbestellungen sind
+    in Echtzeit im Backend verfügbar.
+  sub:
+    - title: Suche
+      level: SHOULD
+      description: |
+        Das System erlaubt die Suche nach Bestellungen anhand von Kriterien wie E-Mail-Adresse, Name, Bestellzeitpunkt, etc.
+    - title: Supportfälle
+      level: SHOULD
+      description: |
+        Das System unterstützt bei der effizienten Bearbeitung typischer Supportfälle wie dem erneuten Versand der Tickets
+        per E-Mail oder auf anderem Wege.
+    - title: Bearbeitung
+      level: SHOULD
+      description: |
+        Das System erlaubt die Bearbeitung bestehender Bestellungen, inkl. der Umbuchung auf andere Ticketarten, andere
+        Veranstaltungstermine, teilweiser Stornos oder Preisänderungen.
+    - title: Storno
+      level: MUST
+      description: |
+        Das System erlaubt die Stornierung bestehender Bestellungen.
+    - title: Automatische Erstattung
+      level: SHOULD
+      description: |
+        Sofern von der Zahlungsmethode unterstützt, bietet das System die automatische Erstattung von Zahlungen in Folge
+        eines Stornos, Teilstornos oder einer Preisänderung an.
+    - title: Sperre
+      level: MAY
+      description: |
+        Das System erlaubt die Sperre eines oder mehrerer Tickets einer Bestellung auch ohne Stornierung oder Rückerstattung
+        der Zahlung (z.B. bei Hausverbot).
+    - title: Neuausstellung
+      level: MAY
+      description: |
+        Das System erlaubt die Neuausstellung eines Tickets bei gleichzeitiger Sperre des ursprünglichen Tickets (z.B. wenn
+        das Ticket verloren wurde).
+    - title: Import
+      level: SHOULD
+      description: |
+        Das System erlaubt den Import von Ticketbestellungen aus einer Excel/CSV-Datei.
+    - title: Historie
+      level: SHOULD
+      description: |
+        Das System zeigt eine Historie aller Ereignisse und Veränderungen innerhalb einer Bestellung an.
+
+- title: Verwaltung der Gutscheine
+  level: MUST
+  description: |
+    Das Backend erlaubt die Verwaltung aller Gutscheincodes.
+  sub:
+    - title: Suche
+      level: SHOULD
+      description: |
+        Das System erlaubt die Suche nach Gutscheincodes anhand des Codes sowie anderer sinnvoller Kriterien.
+    - title: Import
+      level: SHOULD
+      description: |
+        Das System erlaubt den Import von Gutscheinen aus einer Excel/CSV-Datei.
+    - title: Historie
+      level: SHOULD
+      description: |
+        Das System zeigt eine Historie aller Ereignisse (z.B. Einlösungen) und Veränderungen zu einem Gutschein an.
+
+- title: Verwaltung der Produkt- und Ticketarten
+  level: SHOULD
+  description: |
+    Das Backend erlaubt die Verwaltung aller Produkt- und Ticketarten mit denen im entsprechenden Kapitel beschriebenen
+    Eigenschaften.
+
+- title: Verwaltung der Kundenkonten
+  level: SHOULD
+  description: |
+    Das Backend erlaubt die Verwaltung aller Kundenkoten.
+
+- title: Export von Rohdaten
+  level: SHOULD
+  description: |
+    Das Backend erlaubt den Export ungefilterter Datensätze aller wichtigen Datenkategorien als z.B. Excel/CSV-Datei.

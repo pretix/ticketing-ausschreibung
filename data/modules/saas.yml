@@ -93,3 +93,9 @@ requirements:
   level: MUST
   description: |
     Der Systemanbieter verfügt über einen öffentlichen dokumentieren Prozess zur Meldung von Sicherheitslücken.
+
+- title: Pentests
+  level: SHOULD
+  description: |
+    Der Systemanbieter führt in regelmäßigen Abständen (mindstens alle 2 Jahre) Penetration Tests durch, um die Sicherheit der
+    Software zu überprüfen.

@@ -5,6 +5,11 @@ requirements:
   tags: [ messe ]
   description: |
     Das Ticketsystem kann eine Datenbank aller Aussteller auf der Veranstaltung pflegen.
+  sub:
+    - title: Import der Aussteller
+      level: MUST
+      description: |
+        Die Aussteller-Datensätze können massenweise per Import eingelesen werden.
 
 - title: Ausstellerportal
   level: MUST

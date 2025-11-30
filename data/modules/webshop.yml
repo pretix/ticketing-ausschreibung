@@ -536,21 +536,26 @@ requirements:
     können.
   sub:
   - title: Für alle nutzbar
-    level: MUST
+    level: SHOULD
     description: |
       Der Self-Service-Bereich ist auch für Gastbesteller:innen ohne Kundenkonto nutzbar.
   - title: Datenänderung
-    level: MUST
+    level: SHOULD
     description: |
       Der Self-Service-Bereich ermöglicht die Änderung von Namen oder anderen Personalisierungsdaten von Tickets innerhalb der
       vom Auftraggeber definierten Fristen.
   - title: Ticketstorno
-    level: MUST
+    level: SHOULD
     description: |
       Der Self-Service-Bereich ermöglicht die Stornierung einer Bestellung samt Rückerstattung innerhalb der vom Auftraggeber
       definierten Fristen und unter Einbehalt der vom Auftraggeber definierten Stornogebühren.
+  - title: Ticketstorno gegen Gutschein
+    level: MAY
+    description: |
+      Das Self-Service-Ticketstorno kann je nach Konfiguration statt einer Rückerstattung die Ausgabe eines Wertgutscheins
+      auslösen.
   - title: Teilnahmebescheinigung
-    level: MUST
+    level: SHOULD
     description: |
       Der Self-Service-Bereich ermöglicht den Download einer Teilnahmebescheinigung nach erfolgtem Zutritt zur Veranstaltung.
     tags: [ event, messe ]
