@@ -1,10 +1,103 @@
 title: Ressourcen und Guides
 requirements:
-- title: TBD
+- title: Guide-Verwaltung
   level: MUST
   description: |
-    TBD
-  comment: |
-    TBD
-  tags:
-    - messe
+    Das System erlaubt die Verwaltung von Guides.
+  tags: [ museum, park ]
+  sub:
+    - title: Internes und externes Personal
+      level: SHOULD
+      description: |
+        Das System trägt dem Umstand Rechnung, dass es sich um Guides auch um externes Personal (Freiberufler)
+        handeln kann, bei denen die Erbringung einer Leistung stets einzeln angefragt werden muss, da das Personal
+        nicht weisungsgebunden ist und eingeplant werden kann.
+      tags: [ museum, park ]
+    - title: Skills
+      level: SHOULD
+      description: |
+        Das System erlaubt die mehrdimensionale Erfassung von Skills der Guides, z.B. in Bezug auf Sprachkenntnisse,
+        Fachwissen oder zielgruppenspezifische Ausbildung. Einem Guide können beliebig viele Skills zugeordnet werden.
+      tags: [ museum, park ]
+- title: Ressourcen-Verwaltung
+  level: MUST
+  description: |
+    Das System erlaubt die Verwaltung verschiedener Typen von Ressourcen, wie z.B. Räume und
+    Equipment.
+  tags: [ museum, park ]
+  sub:
+    - title: Ausstattung
+      level: SHOULD
+      description: |
+        Das System erlaubt die mehrdimensionale Erfassung von Ausstattungsmerkmalen der Räume oder Gegenstände.
+      tags: [ museum, park ]
+- title: Erfassung von Verfügbarkeiten
+  level: SHOULD
+  description: |
+    Das System erlaubt die Erfassung der grundsätzlichen zeitlichen Verfügbarkeiten der Guides und Ressourcen.
+  tags: [ museum, park ]
+- title: Erfassung von Anforderungen
+  level: SHOULD
+  description: |
+    Das System erlaubt die Erfassung der Anforderungen verschiedener Produkte, z.B. dass ein Produkt eine
+    beliebige Anzahl Guides mit einem bestimmten Umfang von Skills oder eine beliebige Anzahl von
+    Ressourcen (Räumen, Equipment) mit einem bestimmten Umfang von Ausstattungsmerkmalen erfordert (Beispiel:
+    Ein Workshop für Kinder erfordert einen Guide mit deutscher Sprachkenntnis und Erfahrung in der Arbeit mit Kindern
+    sowie einen Raum mit Whiteboard und Beamer).
+  tags: [ museum, park ]
+- title: Disposition im Backend
+  level: MUST
+  description: |
+    Das System erlaubt die Zuordnung von Guides und Ressourcen zu einer Veranstaltung zu einem konkreten Termin
+    durch eine Disponent:in im Bakcend.
+  tags: [ museum, park ]
+  sub:
+  - title: Kalenderübersicht
+    level: SHOULD
+    description: |
+      Das System zeigt die Übersicht aller bestehenden Dispositionen in einer übersichtlichen Kalenderdarstellung
+      für einen Tag oder eine Woche an.
+    tags: [ museum, park ]
+  - title: Fehlerliste
+    level: SHOULD
+    description: |
+      Das System zeigt die Übersicht aller fehlenden oder fehlerhaften Dispositionen (z.B. Doppelbuchung)
+      in einer übersichtlichen Weise an.
+    tags: [ museum, park ]
+- title: Kalenderintegration
+  level: MAY
+  description: |
+    Disponent:innen und Guides können den Buchungskalender als ICS-Feed in einer Kalenderanwendung abonnieren.
+  tags: [ museum, park ]
+- title: Self-service für Guides
+  level: SHOULD
+  description: |
+    Guides können über einen Login ins System ihre Verfügbarkeiten und geplanten Termine einsehen und soweit
+    möglich selbstständig pflegen.
+  tags: [ museum, park ]
+- title: Optimierter Prozess für Turnusführung
+  level: SHOULD
+  description: |
+    Das System verfügt über einen nutzerfreundlichen Prozess zur Erstellungen von Führungen, die in einem bestimmten
+    Turnus stattfinden.
+  tags: [ museum, park ]
+  sub:
+  - title: Buchung erst nach Disposition
+    level: SHOULD
+    description: |
+      Das System kann so eingestellt werden, dass eine Turnusführung erst durch Besucher:innen buchbar ist, wenn ein
+      Guide eingeplant wurde und (falls notwendig) die Buchungsnafrage bestätigt hat.
+    tags: [ museum, park ]
+- title: Optimierter Prozess für individuelle Führung
+  level: SHOULD
+  description: |
+    Das System verfügt über einen nutzerfreundlichen Prozess zur Erstellungen von Führungen, die z.B. telefonisch
+    für einen individuellen Termin angefragt werden. In wenigen Klicks kann ein möglicher Termin gefunden, eine Führun
+    angelegt und disponiert, sowie eine Verkaufsbuchung angelegt werden.
+  tags: [ museum, park ]
+- title: Bericht zur Honorarkontrolle
+  level: SHOULD
+  description: |
+    Das System erlaubt die Erstellung von Berichten, die die Kontrolle der Honorarrechnungen freiberuflicher Guides
+    verwendet werden kann.
+  tags: [ museum, park ]
