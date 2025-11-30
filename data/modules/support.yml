@@ -7,13 +7,13 @@ requirements:
     und per E-Mail erreichbar.
 
 - title: Support außerhalb der Geschäftszeiten
-  level: MUST
+  level: SHOULD
   description: |
     Ein Bereitschaftsdienst des Systemanbieters ist für dringende technische Störungen 365 Tage im Jahr rund um die Uhr
     per Telefon erreichbar.
 
 - title: Ticketsystem
-  level: MUST
+  level: SHOULD
   description: |
     Der Support erfolgt über ein Ticketsystem, über das alle Supportvorgänge nachvollziehbar bleiben.
 
@@ -25,12 +25,12 @@ requirements:
     Der Preis einer Schulung sollte im Preisblatt der Ausschreibung explizit abgefragt werden.
 
 - title: Dokumentation
-  level: MUST
+  level: SHOULD
   description: |
     Für das System ist ein Anwenderhandbuch in deutscher oder englischer Sprache verfügbar.
 
 - title: Fernwartung
-  level: MUST
+  level: SHOULD
   description: |
     Der Systemanbieter kann über Fernwartung auf Anforderung auch direkt auf Geräten (Kassensystemen, Scannern, etc.)
     aktiv werden und den Auftraggeber bei Konfiguration und Problemlösung unterstützen. Die Fernwartung erfolgt hierbei
@@ -51,7 +51,7 @@ requirements:
   tags: [ messe, event ]
 
 - title: Lebenszyklus
-  level: MUST
+  level: SHOULD
   description: |
     Der Systemanbieter wird für das angebotene System noch mindestens 10 Jahre Support, Updates und Weiterentwicklung
     anbieten.

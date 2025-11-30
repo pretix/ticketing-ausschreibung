@@ -37,7 +37,7 @@ requirements:
     enthalten.
 
 - title: Produktbilder
-  level: MUST
+  level: SHOULD
   description: |
     Die Produkt- und Ticketarten können mit Produktbildern versehen werden.
 
@@ -99,12 +99,12 @@ requirements:
         Zeitpunkt in der Zukunft beginnt.
 
 - title: Mengenbeschränkung
-  level: MUST
+  level: SHOULD
   description: |
     Das System erlaubt pro Ticketart eine Einschränkung auf die maximale Anzahl Tickets dieser Art pro Warenkorb.
 
 - title: Gruppenticket
-  level: MUST
+  level: SHOULD
   description: |
     Das System erlaubt pro Ticketart eine Einschränkung auf die minimale Anzahl Tickets dieser Art pro Warenkorb, sodass
     ein Gruppenticket mindestens in einer bestimmten Anzahl erworben werden muss.
@@ -131,12 +131,12 @@ requirements:
     Tickets oder Produkte.
   sub:
     - title: Gemeinsame Kontingente
-      level: MUST
+      level: SHOULD
       description: |
         Das System erlaubt die gemeinsame Kontingentierung mehrerer Produkt- und Ticketarten, d.h. dass die Aufteilung eines
         Gesamtkontingents auf die Produkt- und Ticketarten nicht vorab festgelegt werden muss.
     - title: Mehrere Kontingente pro Produkt
-      level: MUST
+      level: SHOULD
       description: |
         Das System erlaubt die Bindung einer Produkt- oder Ticketart an mehrere Kontingente, sodass beim Kauf des Produkts oder
         Tickets die Verfügbarkeit mehrerer Kontingenten reduziert wird.
@@ -155,12 +155,12 @@ requirements:
       tags: [ park, museum ]
 
 - title: Nicht-Ticket-Produkte
-  level: MUST
+  level: SHOULD
   description: |
     Das System erlaubt den Verkauf von Artikeln (z.B. Merchandise), für die kein Ticket ausgestellt wird.
   sub:
   - title: Varianten
-    level: MUST
+    level: SHOULD
     description: |
       Das System erlaubt die effiziente Verwaltung von Artikeln, die in mehreren Ausführungsarten (z.B. Größen) vorliegen.
 
@@ -181,24 +181,24 @@ requirements:
     Das System erlaubt die Beschränkung des Verkaufs von Produkt- und Ticketarten auf definierte Zeiträume.
 
 - title: Produktpakete
-  level: MUST
+  level: SHOULD
   description: |
     Das System erlaubt die Definition von Produktpaketen, bei denen der Kauf einer Produkt- oder Ticketart automatisch den
     Kauf einer weiteren Produkt- oder Ticketart beinhaltet.
 
 - title: Produktpakete mit Auswahl
-  level: MUST
+  level: SHOULD
   description: |
     Das System erlaubt die Definition von Produktpaketen, bei denen der Kauf einer Produkt- oder Ticketart der Käufer:in
     die Auswahl von weiteren Produkt- oder Ticketarten anbietet.
   sub:
     - title: Auswahl verpflichtend
-      level: MUST
+      level: SHOULD
       description: |
         Die Auswahl einer oder mehrerer der weiteren Produkt- oder Ticketarten kann verpflichtend sein.
 
 - title: Up- und Cross-Selling
-  level: SHOULD
+  level: MAY
   description: |
     Das System erlaubt die Definition von Up- oder Cross-Selling-Regeln, bei denen Käufer:innen beim Kauf einer Produkt- oder
     Ticketart andere Produkt- oder Ticketarten zum Kauf empfohlen werden.
@@ -243,7 +243,7 @@ requirements:
       description: |
         Gutscheincodes können einen prozentualen Rabatt auf alle oder bestimmte Produkt- oder Ticketarten freischalten.
     - title: Absolute Rabatte
-      level: MUST
+      level: SHOULD
       description: |
         Gutscheincodes können einen absoluten Rabatt auf alle oder bestimmte Produkt- oder Ticketarten freischalten.
     - title: Versteckte Produkte
@@ -270,15 +270,15 @@ requirements:
     Das System erlaubt die Definition von Rabattaktionen, die automatisch auf den Warenkorb angewendet werden.
   sub:
     - title: Mengenrabatte
-      level: SHOULD
+      level: MAY
       description: |
         Rabattaktionen der Form "erhalte X % Rabatt ab Y Stück" sind möglich.
     - title: 2-für-1-Rabatte
-      level: SHOULD
+      level: MAY
       description: |
         Rabattaktionen der Form "erhalte N zum Preis für M Stück" sind möglich.
     - title: Bonusartikel
-      level: SHOULD
+      level: MAY
       description: |
         Rabattaktionen der Form "erhalte einen Bonusartikel ab dem Kauf von M Tickets" oder "erhalte einen Bonusartikel 
         ab dem Ticketkauf im Wert von X €" sind möglich.

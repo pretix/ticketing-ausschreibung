@@ -1,39 +1,39 @@
 title: Aussteller-Management
 requirements:
 - title: Ausstellerdatenbank
-  level: MUST
+  level: SHOULD
   tags: [ messe ]
   description: |
     Das Ticketsystem kann eine Datenbank aller Aussteller auf der Veranstaltung pflegen.
   sub:
     - title: Import der Aussteller
-      level: MUST
+      level: SHOULD
       description: |
         Die Aussteller-Datensätze können massenweise per Import eingelesen werden.
 
 - title: Ausstellerportal
-  level: MUST
+  level: SHOULD
   tags: [ messe ]
   description: |
     Aussteller können sich in ein Ausstellerportal einloggen.
   sub:
   - title: Anlage der Zugänge
-    level: MUST
+    level: SHOULD
     description: |
       Der Zugang zum Ausstellerportal kann über eine Schnittstelle zu einem Ausstellershopsystem automatisch erstellt
       und an den Aussteller verschickt werden.
   - title: Ausstellerausweise
-    level: MUST
+    level: SHOULD
     description: |
       Der Aussteller hat im Ausstellerportal Überblick über seine ihm zugewiesenen Ausstellerausweise und kann
       diese personalisieren.
   - title: Einladungscodes
-    level: MUST
+    level: SHOULD
     description: |
       Der Aussteller hat im Ausstellerportal Überblick über seine ihm zugewiesenen Einladungscodes und kann diese
       herunterladen.
   - title: Datenzugriff
-    level: MUST
+    level: SHOULD
     description: |
       Der Aussteller kann im Ausstellerportal die Personalisierungsdaten der mit seinen Einladungscodes registrierten
       Tickets einsehen und als Export herunterladen. Der Auftraggeber kann festlegen, welche Datenfelder hierbei

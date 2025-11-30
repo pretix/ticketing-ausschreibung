@@ -13,7 +13,7 @@ requirements:
     eines der Formate ZUGFeRD oder XRechnung zu unterstützen.
 
 - title: Leitweg-ID
-  level: SHOULD
+  level: MAY
   description: |
     Beim Kauf eines Tickets durch eine öffentliche Stelle kann eine Leitweg-ID eingegeben werden.
 

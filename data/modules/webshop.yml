@@ -55,9 +55,9 @@ requirements:
       belegt werden.
 
 - title: Anpassbarkeit des Designs
-  level: MUST
+  level: SHOULD
   description: |
-    Der Webshop muss an das Corporate Design des Auftraggebers und auch einzelner Veranstaltungen anpassbar sein. Dies
+    Der Webshop ist an das Corporate Design des Auftraggebers und auch einzelner Veranstaltungen anpassbar. Dies
     umfasst mindestens:
     
     - Die Einbindung eines oder mehrere Logos und Grafiken
@@ -72,7 +72,7 @@ requirements:
     Systemtexte sowie auf alle vom Auftraggeber pflegbaren Texte und Inhalte (z.B. Veranstaltungstitel, Produktbeschreibungen, etc.).
   sub:
     - title: "Automatische Erkennung der Sprache"
-      level: MUST
+      level: SHOULD
       description: |
         Der Webshop erkennt automatisch die Sprache der Ticketkäufer:in z.B. anhand von Browser-Einstellungen und stellt diese
         als Standardauswahl ein.
@@ -81,7 +81,7 @@ requirements:
       description: |
         Der Webshop unterstützt die Sprachen Deutsch und Englisch.
     - title: "Sprachen: Weitere"
-      level: SHOULD
+      level: MAY
       description: |
         Der Webshop unterstützt ab Werk weitere Sprachen und kann auf Wunsch des Auftraggebers (ggf. kostenpflichtig) um weitere
         Sprachen erweitert werden.
@@ -122,16 +122,16 @@ requirements:
 - title: Ticketshop als Standalone-Variante
   level: MUST
   description: |
-    Der Ticketshop kann als eigenständie Website über eine URL angesteuert und beworben werden.
+    Der Ticketshop kann als eigenständige Website über eine URL angesteuert und beworben werden.
 
 - title: Ticketshop als Widget/iframe
-  level: MUST
+  level: SHOULD
   description: |
     Der Ticketshop kann in eine andere Website möglichst nahtlos eingebunden werden, z.B. über ein Widget, iFrame, eine Web Component
     oder eine ähnliche Lösung. Der Ticketkauf ist hierbei möglich, ohne die einbindende Website verlassen zu müssen.
 
 - title: Eigene Domain
-  level: MUST
+  level: SHOULD
   description: |
     Der Ticketshop kann unter einer eigenen, auch veranstaltungsspezifischen Domain betrieben werden.
 
@@ -141,7 +141,7 @@ requirements:
     Der Webshop enthält standardmäßig keine Trackingfunktionen, die personenbezogene Daten im Sinne der DSGVO tracken, die für
     den Betrieb des Ticketshops nicht notwendig sind (privacy by default).
 
-- title: Tracking anbindbar
+- title: Tracking einnbindbar
   level: MUST
   description: |
     Der Webshop erlaubt die Einbindung der Trackingcodes gängiger Tools (Google Analytics, Matomo, Google Tag Manager, etc.) und
@@ -168,7 +168,7 @@ requirements:
     - Veranstaltungsbeschreibung oder Infotexte
 
 - title: Verkaufszeitraum
-  level: MUST
+  level: SHOULD
   description: |
     Der Auftraggeber kann einen Verkaufszeitraum definieren, in dem Tickets über den Webshop erworben werden können.
 
@@ -183,7 +183,7 @@ requirements:
     Es können mehrere Tickets verschiedener Ticketarten gleichzeitig erworben werden.
   sub:
     - title: Größenbegrenzung
-      level: MUST
+      level: SHOULD
       description: |
         Die maximale Anzahl der im Warenkorb befindlichen Tickets kann vom Auftraggeber konfiguriert werden.
     - title: Reservierungsdauer
@@ -218,7 +218,7 @@ requirements:
       description: |
         Der Saalplan ist auch auf mobilen Endgeräten einwandfrei bedienbar.
     - title: Barrierefreiheit
-      level: MUST
+      level: SHOULD
       description: |
         Der Saalplan erfüllt die Barrierefreiheitsanforderungen und kann auch von Screenreader-Usern navigiert werden **oder**
         es wird eine angemessen Alternative zur Verfügung gestellt.
@@ -246,7 +246,7 @@ requirements:
       level: SHOULD
       description: Es gibt keine Limitierung der Anzahl der Fragen.
     - title: Fragetypen
-      level: MUST
+      level: SHOULD
       description: |
         Es werden verschiedene Fragetypen angeboten, z.B. Texteingabe, Zahleingabe, Auswahl aus einer Liste,
         Mehrfachauswahl aus einer Liste, Ja/Nein-Frage.
@@ -285,7 +285,7 @@ requirements:
         Die Auswahl von Titeln (z.B. Prof, Dr) kann sowohl aus einer vordefinierten Liste, als auch als Freitextfeld
         gestaltet werden.
     - title: Auswahl der Anrede
-      level: MUST
+      level: SHOULD
       description: |
         Die Auswahl einer Anrede (z.B. Herr, Frau) muss möglich sein und einen geschlechtsneutralen Eintrag zulassen.
         Die Auswahl muss optional sein.
@@ -301,7 +301,7 @@ requirements:
     als solche erkennbar und ermöglichen die komfortable Vorbefüllung durch den Browser.
 
 - title: Kauf als Gast
-  level: MUST
+  level: SHOULD
   description: |
     Der Kauf von Tickets ist ohne Erstellung eines Benutzerkontos möglich.
 
@@ -389,11 +389,11 @@ requirements:
     description: |
       Die Zahlungsarten können auf bestimmte Minimal- oder Maximalbeträge beschränkt werden.
   - title: Rechnungskauf
-    level: MUST
+    level: SHOULD
     description: |
       Der Webshop ermöglicht den Kauf per Vorkasse oder auf Rechnung über die Konten des Auftraggebers.
   - title: PayPal
-    level: MUST
+    level: SHOULD
     description: |
       Der Webshop ermöglicht die Anbindung des PayPal-Händlerkontos des Auftraggebers über eine direkte Schnittstelle zu PayPal.
       Die Abwicklung der Zahlung sowie eventueller Rückerstattungen erfolgt vollautomatisch.
@@ -467,11 +467,11 @@ requirements:
         Die Tickets werden im Format PDF zur Verfügung gestellt. Das Layout der PDF-Datei kann vom Auftraggeber in einem
         WYSIWYG-Editor ohne Mitwirkung des Systemanbieters frei konfiguriert und auf die Veranstaltung angepasst werden.
     - title: Produktabhängige Layouts
-      level: MUST
+      level: SHOULD
       description: |
         Für verschiedene Produkte können unterschiedliche Ticket-Layouts verwendet werden.
     - title: Apple Wallet
-      level: MUST
+      level: SHOULD
       description: |
         Die Tickets werden im Passbook-Format für Apple Wallet und weitere Wallet Apps zur Verfügung gestellt. Die Anbindung ist auf
         eine Weise implementiert, auf die keine personenbezogenen Daten zu Apple oder anderen Drittanbietern übermittelt werden, bevor
@@ -483,7 +483,7 @@ requirements:
         keine personenbezogenen Daten zu Google übermittelt werden, bevor die Ticketkäufer:in die Übertragung in die Google Wallet
         explizit anfordert.
     - title: Versandoptionen
-      level: MUST
+      level: SHOULD
       description: |
         Der Versand von Tickets per Post ist im System als Option vorgesehen. Die Ticketkäufer:in kann eine Auswahl zwischen verschiedenen
         Versand-Methoden oder der Abholung erhalten und eine Versandadresse kann gesondert erfasst werden.
@@ -495,20 +495,20 @@ requirements:
       tags: [ messe, museum, event ]
 
 - title: Freigabeprozesse
-  level: MUST
+  level: SHOULD
   description: |
     Für bestimmte Produkt- und Ticketarten kann ein Freigabe- oder Akkreditierungsprozess zwischengeschaltet werden, bei dem
     der Ticketkauf zunächst vom Auftraggeber geprüft und freigegeben werden muss, bevor ein Ticket ausgestellt werden kann.
   tags: [ event, messe ]
 
 - title: Integration Newslettersystem
-  level: MUST
+  level: SHOULD
   description: |
     Ticketkäufer:innen erhalten die Möglichkeit, im Kaufprozess in dem Empfang eines Newsletters einzuwilligen. Diese Information
     wird automatisch an die Newslettersoftware **HIER EINFÜGEN** übertragen.
 
 - title: Integration ÖPNV-Tickets
-  level: MUST
+  level: SHOULD
   description: |
     Beim Kauf bestimmter Produkt- und Ticketarten wird ein ÖPNV-KombiTicket des Verkehrsverbunds **HIER EINFÜGEN** erstellt.
     Hierzu stellt der Nahverkehrsbetreiber die Schnittstelle **HIER EINFÜGEN** bereit, die vom Ticketingsystem angebunden werden
@@ -566,6 +566,6 @@ requirements:
     Der Webshop ermöglicht den Verkauf von Download-Artikeln oder vergleichbaren digitalen Produkten.
 
 - title: Gutscheinverkauf
-  level: MUST
+  level: SHOULD
   description: |
     Der Webshop ermöglicht den Verkauf von Einzweck- und Mehrzweckgutscheinen.

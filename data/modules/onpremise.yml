@@ -1,7 +1,7 @@
 title: Betrieb On-Premise (streichen für SaaS)
 requirements:
 - title: ISO-Zertifizierung Anbieter
-  level: MUST
+  level: SHOULD
   description: |
     Der Systemanbieter betreibt ein Informationssicherheitsmanagementsystem (ISMS), das nach ISO/IEC 27001 zertifiziert ist.
     Der Anwendungsbereich der Zertifizierung umfasst mindestens die Entwicklungsprozesse der Software sowie den Betrieb
@@ -14,20 +14,20 @@ requirements:
     Verfügbarkeit von 99,9% im Jahresmittel ausgelegt werden kann. Alle Komponenten können bei Bedarf redundant ausgelegt werden.
 
 - title: Datenbank
-  level: MUST
+  level: SHOULD
   description: |
     Das System basiert auf einer etablierten und industrieüblichen SQL-Datenbank, z.B. PostgreSQL, MySQL, MariaDB, Oracle,
     oder MSSQL. Im Fall von Oralce und MSSQL werden die Lizenzen durch den Systemanbieter beschafft und sind in den angebotenen
     Lizenzpreis der Software mit eingerechnet.
 
 - title: Skalierbare Architektur
-  level: MUST
+  level: SHOULD
   description: |
     Das System ist für eine skalierbare Architektur ausgelegt, bei der der Betrieb der Applikation auch sehr kurzfristig
     auf größere Kapazitätsbedarfe angepasst werden kann.
 
 - title: Monitoring- und Backupkonzept
-  level: MUST
+  level: SHOULD
   description: |
     Der Systemanbieter stellt Empfehlungen für ein Monitoring- und Backupkonzept zur Verfügung, das durch den Auftraggeber
     implementiert werden kann.
@@ -40,7 +40,7 @@ requirements:
     Bei dringlichen Sicherheitsupdates weist der Systemanbieter den Anbieter gesondert auf die Dringlichkeit hin.
 
 - title: Responsible Disclosure
-  level: MUST
+  level: SHOULD
   description: |
     Der Systemanbieter verfügt über einen öffentlichen dokumentieren Prozess zur Meldung von Sicherheitslücken in der Software.
 

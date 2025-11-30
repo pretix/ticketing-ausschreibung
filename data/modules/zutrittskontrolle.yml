@@ -37,11 +37,11 @@ requirements:
         Für unterschidliche Ticketarten können zeitabhängige Regeln für den Einlass definiert werden
         (z.B. Einlass ab 10:00 Uhr, Einlass nur sonntags, etc.).
     - title: Einschränkung der Eingänge
-      level: MUST
+      level: SHOULD
       description: |
         Für einzelne Eingänge oder Bereiche können nur ausgewählte Ticketarten zugelassen werden (z.B. VIP-Eingang).
     - title: Bereichsspezifische Entwertung
-      level: MUST
+      level: SHOULD
       tags: [ event, messe, museum, park ]
       description: |
         Für unterschiedliche Bereiche können unterschiedliche Einlassregeln gelten und das Ticket für die
@@ -65,34 +65,34 @@ requirements:
     **HIER EINSETZEN** Minuten ausgelegt sein.
 
 - title: Automatischer Austritt
-  level: MUST
+  level: SHOULD
   tags: [ event, messe, museum, park ]
   description: |
     Zu einer definierten Uhrzeit (z.B. Tagesende) kann für alle noch eingebuchten Tickets automatisch
     ein Austritt verbucht werden.
 
 - title: Eingänge
-  level: MUST
+  level: SHOULD
   tags: [ event, messe, museum, park ]
   description: |
     Verschiedene Zutrittsstationen (Handscanner, Drehkreuze) können zu Eingängen gruppiert werden, die
     die Einlassregeln beinflussen können und für statistische Zwecke erfasst werden.
 
 - title: Sprechende Fehlermeldungen
-  level: MUST
+  level: SHOULD
   description: |
     Bei der Ablehnung eines Tickets gibt das System eine sprechende Fehlermeldung aus, die ohne Einbeziehung weiterer
     Datenquellen verständlich macht, warum für das Ticket kein Einlass gewährt werden kann.
 
 - title: Ticketarten mit Zusatzkontrolle
-  level: MUST
+  level: SHOULD
   description: |
     Das System kann abhängig von Ticketart eine Meldung für das Einlasspersonal anzeigen, dass eine Zusatzkontrolle
     (z.B. Studierendenausweis) notwendig ist. Hierbei kann ein vom Auftraggeber je Ticketart konfigurierter Text
     mit genauen Anweisungen ausgegeben werden.
 
 - title: Eindeutige Signaltöne
-  level: MUST
+  level: SHOULD
   description: |
     Das System spielt eindeutig unterscheidbare Signaltöne für die verschiedenen Fälle (z.B. Einlass OK, Auslass OK,
     Zusatzkontrolle, Fehler) ab, sodass die Kontrolle auch ohne Blick auf das Display des Kontrollgeräts möglich ist.
@@ -151,13 +151,13 @@ requirements:
         Der Badge-Druck kann von einem Handscanner an einem per Netzwerk verbundenen Badge-Drucker ausgelöst werden.
 
     - title: Badge-Layout-Editor
-      level: MUST
+      level: SHOULD
       description: |
         Das Layout der Badges kann für jede Ticketart über einen WYSIWYG-Editor vom Auftraggeber selbst gestaltet werden.
         Hierbei kann auf alle Personalisierungsfelder des Tickets zurückgegriffen werden.
 
     - title: Zeichensatz
-      level: MUST
+      level: SHOULD
       description: |
         Der Badge-Druck unterstützt Textausgabe in Schriftzeichen unterschiedlicher Schriften, inkl. asiatischer Sprachen
         wie Chinesisch oder Japanisch.
@@ -174,7 +174,7 @@ requirements:
         durch das Personal angestoßen werden.
 
     - title: Badge-Druck am Handscanner
-      level: MUST
+      level: SHOULD
       description: |
         Der Badge-Druck kann von einem Handscanner an einem per Netzwerk verbundenen Badge-Drucker ausgelöst werden.
 
@@ -242,7 +242,7 @@ requirements:
         zur Kostenersparnis zu verzichten.
 
     - title: Offene Systemarchitektur
-      level: SHOULD
+      level: MAY
       description: |
         Das Drehkreuz ist grundsätzlich auch mit anderen Ticketsystemen einsetzbar.
       comment: |
@@ -328,6 +328,6 @@ requirements:
     - title: Verhalten bei Stromausfall
       level: MUST
       description: |
-        Bei Stromausfall ist das Drehkreuz in eine/beide Richtungen frei drehbar.
+        Bei Stromausfall ist das Drehkreuz in eine/beide Richtungen frei durchgänglich.
       comment: |
-        Bitte passen Sie an, ob das Drehkreuz in eine oder beide Richtungen frei drehbar esin soll.
+        Bitte passen Sie an, ob das Drehkreuz in eine oder beide Richtungen frei durchgänglich sein soll.

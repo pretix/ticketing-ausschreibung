@@ -13,10 +13,10 @@ requirements:
         Die Synchronisierung von Stammdaten erfolgt vollautomatisch und zeitnah.
 
     - title: Synchronisierung Buchungsdaten
-      level: MUST
+      level: SHOULD
       description: |
         Die Synchronisierung von Buchungsdaten der auf der Kasse erfolgten Buchungen erfolgt vollautomatisch und zeitnah.
-        Über ein Online-Backend sind die Kassenbelege und Kassenabschlüsse aller Kassen jederzeite abrufbar.
+        Über ein Online-Backend sind die Kassenbelege und Kassenabschlüsse aller Kassen jederzeit abrufbar.
 
     - title: Tickets sofort gültig
       level: MUST
@@ -25,13 +25,13 @@ requirements:
         Tickets anerkannt.
 
     - title: Kontingente in Echtzeit
-      level: MUST
+      level: SHOULD
       description: |
         Der Verkauf von kontingentierten Produkten oder die Einlösung von kontingentierten Gutscheinen wird in Echtzeit mit
         den restlichen Systemkomponenten abgestimmt und verhindert eine Überbuchung bzw. Mehrfachnutzung.
 
     - title: Einheitliches Reporting
-      level: MUST
+      level: SHOULD
       description: |
         Reporting (z.B. Umsatzreports) sind sowohl einzeln für das Kassensystem als auch integriert ins Gesamtsystem mit
         Buchungen über alle Kanäle verfügbar.
@@ -79,7 +79,8 @@ requirements:
 - title: Personalisierung
   level: MUST
   description: |
-    Die Personalisierung der Tickets ist im Kassensystem vollumfänglich möglich.
+    Die Personalisierung der Tickets ist im Kassensystem vollumfänglich möglich, sofern sie für die jeweilige
+    Ticketart erforderlich ist.
   sub:
     - title: Personalisierung mit Foto
       level: SHOULD
@@ -94,7 +95,7 @@ requirements:
     Das Kassensystem unterstützt die Verbuchung von Zahlungen mit Bargeld.
   sub:
     - title: Wechselgeldrechner
-      level: MUST
+      level: SHOULD
       description: |
         Das Kassensystem bietet dem Personal eine Möglichkeit zur Eingabe des vom Kunden gegebenen Bargeldbetrags
         und zeigt den errechneten Wechselgeldbetrag an.
@@ -117,7 +118,7 @@ requirements:
     Das Kassensystem unterstützt die Verbuchung von Kartenzahlungen (z.B. girocard, Kreditkarten) über ein entsprechendes Zahlungsterminal.
   sub:
     - title: ZVT-Standard
-      level: MUST
+      level: SHOULD
       description: |
         Das Kassensystem erlaubt die Anbindung aller Zahlungsterminals, die dem ZVT-Standard des  Verband der Terminalhersteller in 
         Deutschland e.V. entsprechen. Die Anbindung erfolgt per TCP/IP, USB oder seriell.
@@ -130,7 +131,7 @@ requirements:
     kasse kassieren.
   sub:
     - title: Berechtigung
-      level: MUST
+      level: SHOULD
       description: |
         Ein Berechtigungssystem ermöglicht die feingranulare Steuerung des Zugriffs auf Kassenfunktionen. Mindestens einzeln gesteuert
         werden können:
@@ -142,12 +143,12 @@ requirements:
         - Den Nachdruck von bereits vorher gedruckten Tickets
 
 - title: Bestelldatenbank / Helpdeskfunktion
-  level: MUST
+  level: SHOULD
   description: |
     Über das Kassensystem ist berechtigungsabhängig auch die Bearbeitung bestehender Ticketbestellungen möglich.
   sub:
     - title: Nachdruck
-      level: MUST
+      level: SHOULD
       description: |
         Über das Kassensystem ist berechtigungsabhängig die Suche nach bestehenden Ticketbestellungen und der erneute Ausdruck
         der Tickets möglich.
@@ -157,17 +158,17 @@ requirements:
         Über das Kassensystem ist berechtigungsabhängig die Rückname (Retoure) eines Tickets gegen Barauszahlung des
         Ticketpreises möglich.
     - title: Namensänderung
-      level: SHOULD
+      level: MAY
       description: |
         Über das Kassensystem ist berechtigungsabhängig die Änderung der Personalisierungsdaten eines Tickets möglich.
     - title: Bezahlung Ticketrechnung
-      level: SHOULD
+      level: MAY
       description: |
         Über das Kassensystem ist die Bezahlung einer z.B. online aufgegebenen und noch nicht bezahlten Bestellung (z.B. Rechnungszahlung)
         möglich.
 
 - title: Verkauf mit sofortiger Entwertung
-  level: MUST
+  level: SHOULD
   description: |
     Tickets können einstellungsabhängig beim Kauf sofort wie beim Einlass entwertet werden.
 
@@ -188,20 +189,20 @@ requirements:
     Das Kassensystem ist in der Lage, die verkauften Tickets auszudrucken.
   sub:
     - title: Thermobelege
-      level: MUST
+      level: SHOULD
       description: |
         Das Kassensystem ist in der Lage, Ticket-Barcodes über den Kassenbelegdrucker zusammen mit dem Kassenbeleg auszugeben.
     - title: Thermotickets
-      level: MUST
+      level: SHOULD
       description: |
         Das Kassensystem ist in der Lage, Tickets über einen Thermodirekt-Ticketdrucker anzusteuern.
     - title: Plastikkarten
-      level: MUST
+      level: SHOULD
       tags: [ museum, park, event ]
       description: |
         Das Kassensystem ist in der Lage, Tickets über einen Plastikkartendrucker anzusteuern.
     - title: Layout-Editor
-      level: MUST
+      level: SHOULD
       description: |
         Das Layout der ausgegebenen Tickets kann vom Auftraggeber über einen WYSIWYG-Editor frei konfiguriert werden. Für unterschiedliche
         Produkte können unterschiedliche Layouts konfiguriert werden.
@@ -232,7 +233,7 @@ requirements:
     letzten Kassenabschluss zu erstellen ("X-Bericht").
 
 - title: Bedienbarkeit per Touch oder Tastatur
-  level: MUST
+  level: SHOULD
   description: |
     Das Kassensystem ist mit einer intuitiven Bedienoberfläche für die Bedienung per Touchscreen ausgestattet, kann jedoch
     auch per Tastatur bedient werden.
@@ -299,7 +300,7 @@ requirements:
     - Mindestens 16 GB freier nichtflüchtiger Speicher (bei installiertem Betriebssystem)
     - Kapazitiver Touchscreen
     - Mindestens 10 Zoll Bildschirmdiagonale
-    - Bildschirmauflösung mindestens 1200x800 Pixel
+    - Bildschirmauflösung mindestens 1200x600 Pixel
     - Netzwerkanbindung über WLAN (min. IEEE 802.11 a/b/g/n/ac) und Mobilfunk (min. 4G/LTE)
     - Bluetooth 4.2+ inkl. BLE
     - Integrierter Akku mit mindestens 2500mAh
@@ -319,7 +320,7 @@ requirements:
     - Mindestens 32 GB freier nichtflüchtiger Speicher (bei installiertem Betriebssystem)
     - Kapazitiver Touchscreen
     - Mindestens 15 Zoll Bildschirmdiagonale
-    - Bildschirmauflösung mindestens 1920x1080 Pixel
+    - Bildschirmauflösung mindestens Full HD (1920x1080 Pixel)
     - Netzwerkanbindung über Gigabit-Ethernet und WLAN (min. IEEE 802.11 a/b/g/n/ac)
     - Bluetooth 5.0+ inkl. BLE
     - Aktuelles Betriebssystem mit Sicherheitsupdates für min. 3 Jahre
@@ -336,11 +337,10 @@ requirements:
     - Mindestens 200dpi Auflösung
     - Cutter
     - 80mm Papierbreite
-    - Druckgeschwindigkeit min. 300mm/s
+    - Druckgeschwindigkeit bis min. 300mm/s
     - Anschluss ans Kassensystem per USB oder Ethernet
     - kompatibel mit 80mm Rollendurchmesser
     - kompatibel mit umweltfreundlichem Papier (z.B. Blue4est, Ökobon)
-    - Mindestens 1 Jahr Herstellergarantie (exkl. Druckkopf)
   comment: |
     Bei sehr hohem Verkaufsvolumen kann die Anforderung an die Druckgeschwindigkeit auf 500mm/s angepasst werden, damit
     nur Höchstleistungs-Belegdrucker angeboten werden.
@@ -356,10 +356,9 @@ requirements:
     - 80mm Papierbreite
     - Blackmark- oder Gap-Detection
     - Automatische Erkennung der Ticketlänge
-    - Druckgeschwindigkeit bis 200mm/s
+    - Druckgeschwindigkeit bis min. 200mm/s
     - Anschluss ans Kassensystem per USB oder Ethernet
-    - Lebensdauer 100km Papier / 100 Millionen Pixel-Aktivierungen / 1 Million Cuts
-    - Mindestens 1 Jahr Herstellergarantie (exkl. Druckkopf)
+    - Lebensdauer ca. 100km Papier / c.a 100 Millionen Pixel-Aktivierungen / ca. 1 Million Cuts
   comment: |
     Nach Wunsch können die Parameter wie folgt erhöht werden:
     

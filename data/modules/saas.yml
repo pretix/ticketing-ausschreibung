@@ -1,7 +1,7 @@
 title: Betrieb SaaS (streichen für on-premise)
 requirements:
 - title: ISO-Zertifizierung Anbieter
-  level: MUST
+  level: SHOULD
   description: |
     Der Systemanbieter betreibt ein Informationssicherheitsmanagementsystem (ISMS), das nach ISO/IEC 27001 zertifiziert ist.
     Der Anwendungsbereich der Zertifizierung umfasst mindestens die Entwicklungsprozesse der Software sowie den Betrieb
@@ -53,7 +53,7 @@ requirements:
     Komponenten redundant aus.
 
 - title: Georedundanz
-  level: MUST
+  level: SHOULD
   description: |
     Der Systemanbieter speichert die Daten des Auftraggebers georedundant, d.h. in mehr als einem Rechenzentrum.
 
@@ -68,7 +68,7 @@ requirements:
   description: |
     Der Systemanbieter implementiert ein Backupkonzept, mit dem er die Verfügbarhaltung der Daten des Auftraggebers auch
     bei Datenverlusten im Produktivsystem sicherstellt. Backups werden mehrfach täglich angefertigt und mindestens 4 Wochen
-    gespeichert.
+    georedundant gespeichert.
 
 - title: Wartungsarbeiten
   level: MUST
@@ -78,7 +78,7 @@ requirements:
     bzw. den Öffnungszeiten des Auftraggebers überschneiden.
 
 - title: Statusinformationen
-  level: MUST
+  level: SHOULD
   description: |
     Der Systemanbieter verfügt über eine öffentliche Statusseite, über die bei Systemstörungen Details zu Ursachen und 
     voraussichtlicher Dauer kommuniziert werden **oder** verfügt über einen Mechanismus, den Auftraggeber in solchen Fällen
@@ -90,7 +90,7 @@ requirements:
     Der Systemanbieter patcht alle Sicherheitslücken in beteiligten Softwarekomponenten risikogerecht und schnellstmöglich.
 
 - title: Responsible Disclosure
-  level: MUST
+  level: SHOULD
   description: |
     Der Systemanbieter verfügt über einen öffentlichen dokumentieren Prozess zur Meldung von Sicherheitslücken.
 
