@@ -1,6 +1,6 @@
 # Ticketing-Leistungskatalog für Museen
 
-Willkommen in unserem Muster-Leistungskatalog für Museen.
+Willkommen in unserem Muster-Leistungskatalog für Museen und vergleichbare Kultur- und Bildungseinrichtungen.
 Wenn Sie eine Ausschreibung für ein Ticketing-System vorbereiten, muss an vieles gedacht werden.
 Dieser Muster-Leistungskatalog soll als Inspiration und Vorlage dienen, um Ihnen Zeit zu sparen.
 

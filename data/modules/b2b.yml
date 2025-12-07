@@ -1,10 +1,23 @@
 title: B2B-Verkauf
 requirements:
-- title: TBD
-  level: MUST
+- title: B2B-Verkauf
+  level: SHOULD
   description: |
-    TBD
-  comment: |
-    TBD
-  tags:
-    - messe
+    Das System ermöglicht die Einrichtung von B2B-Großkundenaccounts für z.B.
+    Busreiseveranstalter.
+  tags: [ park, event ]
+  sub:
+  - title: Produktauswahl
+    level: SHOULD
+    description: |
+      Den B2B-Kunden können abweichende Produkte oder Preise freigeschaltet werden, die nicht
+      im öffentlichen Verkauf verfügbar sind.
+  - title: Individuelle Preisstaffel
+    level: MAY
+    description: |
+      Für einzelne B2B-Kunden kann eine abweichende Preisstaffel hinterlegt werden.
+  - title: Zahlung auf Rechnung
+    level: SHOULD
+    description: |
+      Für B2B-Kunden kann die Zahlung auf Rechnung ermöglicht werden, selbst wenn sie ansonsten
+      nicht aktiv ist.

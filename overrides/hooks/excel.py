@@ -23,6 +23,7 @@ FILES = [
     "ressourcen.yml",
     "kasse.yml",
     "zutrittskontrolle.yml",
+    "automat.yml",
     "reporting.yml",
     "schnittstellen.yml",
     "saas.yml",
@@ -132,7 +133,11 @@ def build_price_sheet(wb, tag):
         *([["Hardware", "Badgedrucker lt. Anforderungskatalog", "10", "Stück", ""]] if tag in ("messe",) else []),
         *([["Hardware", "Stationäres Drehkreuz lt. Anforderungskatalog", "2", "Stück", ""]] if tag in ("messe", "museum", "park", "event") else []),
         *([["Hardware", "Stationäres Drehkreuz inkl. Badgedrucker lt. Anforderungskatalog", "15", "Stück", ""]] if tag in ("messe",) else []),
-        *([["Hardware", "Mobiles Drehkreuz lt. Anforderungskatalog", "10", "Stück", ""]] if tag in ("messe") else []),
+        *([["Hardware", "Mobiles Drehkreuz lt. Anforderungskatalog", "10", "Stück", ""]] if tag in ("messe",) else []),
+        *([["Hardware", "Ticketautomat outdoor cashless", "1", "Stück", ""]] if tag in ("park",) else []),
+        *([["Hardware", "Ticketautomat outdoor mit Bargeld", "1", "Stück", ""]] if tag in ("park",) else []),
+        *([["Hardware", "Ticketautomat indoor cashless", "1", "Stück", ""]] if tag in ("museum", "park") else []),
+        *([["Hardware", "Ticketautomat indoor mit Bargeld", "1", "Stück", ""]] if tag in ("park",) else []),
     ]
 
     for r in rows:
@@ -281,6 +286,8 @@ def on_files(files, config, *args, **kwargs):
             dest_dir,
             f"ausschreibung-{t}"
         ))
+        print("Building xlsx for", t)
         wb = build_xlsx(t)
         wb.save(cache_path)
         copyfile(cache_path, dest_path)
+        print("Built xlsx for", t)

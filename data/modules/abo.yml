@@ -1,10 +1,58 @@
 title: Abo-Verkauf
 requirements:
-- title: TBD
+- title: Fest-Abos
   level: MUST
   description: |
-    TBD
-  comment: |
-    TBD
-  tags:
-    - messe
+    Das System erlaubt den Verkauf von Fest-Abos, bei denen eine festgelegte Auswahl von Vorstellungen
+    für einen Gesamtpreis verkauft wird.
+  tags: [ theater ]
+  sub:
+    - title: Gleicher Sitzplatz
+      level: SHOULD
+      description: |
+        Sofern möglich, wird der Kund:in beim Kauf eines Fest-Abos bei allen Vorstellungen, die im gleichen Saal
+        stattfinden, der gleiche Sitzplatz zugewiesen.
+    - title: Unbegrenzte Anzahl Pakete
+      level: SHOULD
+      description: |
+        Es können unbegrenzt viele unterschiedliche Abo-Pakete angeboten werden.
+    - title: Verkauf jederzeit möglich
+      level: SHOULD
+      description: |
+        Der Verkauf von Abos ist jederzeit möglich, auch wenn der Verkauf von Einzelkarten bereits begonnen hat.
+- title: Wahl-Abos
+  level: SHOULD
+  description: |
+    Das System erlaubt den Verkauf von Wahl-Abos, bei denen die Kund:in zum Zeitpunkt des Abo-Kaufs eine bestimmte
+    Anzahl von Vorstellungen aus einer vorgegebenen Auswahl zu einem festen Gesamtpreis auswählen kann.
+  tags: [ theater ]
+- title: Scheckheft-Abos
+  level: SHOULD
+  description: |
+    Das System erlaubt den Verkauf von Scheckheft-Abos, bei denen die Kund:in eine bestimmte Anzahl Vorstellungen
+    zu einem Gesamtpreis erwirbt und diese zu einem späteren Zeitpunkt selbstständig über den Online-Shop auswählen
+    kann.
+  tags: [ theater ]
+- title: Abos online kaufbar
+  level: SHOULD
+  description: |
+    Alle Abos können nicht nur telefonisch oder schriftlich, sondern über den Onlineshop selbstständig erworben werden.
+  tags: [ theater ]
+- title: Abo-Tausch
+  level: SHOULD
+  description: |
+    Das System erlaubt den Umtausch eines Abo-Termins in einen Tauschgutschein oder eine andere Vorstellung über den
+    Kundenservice.
+  tags: [ theater ]
+  sub:
+  - title: Abo-Tausch im Self-Service
+    level: MAY
+    description: |
+      Der Abo-Tausch ist auch im Selfservice möglich.
+    tags: [ theater ]
+- title: Abo-Verlängerung
+  level: SHOULD
+  description: |
+    Die Übernahme eines Abos einer Vorsaison in eine neue Saison mit Zustimmung der Abonnent:in ist als optimierter
+    Prozess vorgesehen und mit wenig Aufwand möglich.
+  tags: [ theater ]

@@ -1,10 +1,182 @@
 title: Ticketautomat
 requirements:
-- title: TBD
-  level: MUST
-  description: |
-    TBD
-  comment: |
-    TBD
-  tags:
-    - messe
+  - title: Integrierte Komponente
+    level: MUST
+    description: |
+      Der Ticketautomat ist integrierte Komponente des Gesamtsystems und bezieht seine Konfiguration, z.B. in Bezug auf
+      Produkt- und Ticketarten, speist sich mit den anderen Komponenten (z.B. Webshop) aus einer einheitlichen Datenquelle.
+      Es findet keine Doppelpflege von Stammdaten statt.
+    tags: [ park, museum ]
+    sub:
+      - title: Synchronisierung Stammdaten
+        level: MUST
+        description: |
+          Die Synchronisierung von Stammdaten erfolgt vollautomatisch und zeitnah.
+
+      - title: Synchronisierung Buchungsdaten
+        level: SHOULD
+        description: |
+          Die Synchronisierung von Buchungsdaten der auf dem Ticketautomat erfolgten Buchungen erfolgt vollautomatisch und zeitnah.
+          Über ein Online-Backend sind die Kassenbelege und Kassenabschlüsse aller Kassen jederzeit abrufbar.
+
+      - title: Tickets sofort gültig
+        level: MUST
+        description: |
+          Am Ticketautomat erworbene Tickets werden innerhalb weniger als 10 Sekunden an allen Zutrittspunkten als gültige
+          Tickets anerkannt.
+
+      - title: Kontingente in Echtzeit
+        level: SHOULD
+        description: |
+          Der Verkauf von kontingentierten Produkten wird in Echtzeit mit
+          den restlichen Systemkomponenten abgestimmt und verhindert eine Überbuchung bzw. Mehrfachnutzung.
+
+      - title: Einheitliches Reporting
+        level: SHOULD
+        description: |
+          Reporting (z.B. Umsatzreports) sind sowohl einzeln für den Kassenautomaten als auch integriert ins Gesamtsystem mit
+          Buchungen über alle Kanäle verfügbar.
+          Die Synchronisierung von Buchungsdaten der auf der Kasse erfolgten Buchungen erfolgt vollautomatisch und zeitnah.
+
+  - title: Warenkorbfunktion
+    level: MUST
+    description: |
+      Der Verkauf verschiedener Produkte in einer Transaktion mit einer Zahlung ist am Ticketautomat möglich.
+    tags: [ park, museum ]
+
+  - title: Belegdruck
+    level: MUST
+    description: |
+      Der Ticketautomat ist in der Lage, Kassenbelege auszudrucken, die alle Merkmale einer gültigen Kleinbetragsrechnung nach § 14 UStG
+      i.V.m. § 33 UStDV aufweisen.
+    tags: [ park, museum ]
+
+  - title: Ticketdruck
+    level: MUST
+    description: |
+      Der Ticketautomat ist in der Lage, die verkauften Tickets auszudrucken.
+    tags: [ park, museum ]
+
+  - title: Bedienbarkeit per Touch
+    level: SHOULD
+    description: |
+      Der Ticketautomat ist mit einer intuitiven Bedienoberfläche für die Bedienung per Touchscreen ausgestattet.
+    tags: [ park, museum ]
+
+  - title: Monitoring
+    level: SHOULD
+    description: |
+      Der Zustand des Ticketautomaten inkl. eventueller Störmeldungen und Füllstände ist im Backend sichtbar.
+    tags: [ park, museum ]
+
+  - title: Barrierefreiheit
+    level: SHOULD
+    description: |
+      Die Anordnung der Bedienelemente des Ticketautomats erfüllt standardisierte Anforderungen an die Barrierefreiheit
+      z.B. durch eine für Rollstuhlfahrer geeignete Bedienhöhe.
+    tags: [ park, museum ]
+    sub:
+      - title: Zweiter sensorischer Kanal
+        level: SHOULD
+        description: |
+          Die Bedienung zentraler Funktionen ist auch ohne Sehvermögen möglich, z.B. über eine Tastenbedienung mit
+          Sprachausgabe.
+
+  - title: "Hardware: Ticketautomat outdoor cashless"
+    level: MUST
+    description: |
+      Die angebotene Hardware für Ticketautomaten ohne Bargeldzahlung im Außenbereich erfüllt mindestens folgende Anforderungen:
+      
+      - Geeignet für den Außenbereich
+      - CPU mit mindestens 4 Kernen und mindestens 2,0 GHz
+      - Mindestens 8 GB RAM
+      - Mindestens 32 GB freier nichtflüchtiger Speicher (bei installiertem Betriebssystem)
+      - Kapazitiver Touchscreen
+      - Mindestens 15 Zoll Bildschirmdiagonale
+      - Integriertes Kartenzahlungsterminal (girocard, Kreditkarte)
+      - Integrierter Kassenbelegdrucker
+      - Integrierter Ticketdrucker
+      - Integrierter Barcode-Präsentationsscanner
+      - Bildschirmauflösung mindestens 1280x1024 Pixel
+      - Netzwerkanbindung über LAN, WLAN oder Mobilfunk nachrüstbar
+      - Aktuelles Betriebssystem mit Sicherheitsupdates für min. 5 Jahre
+      - Ausbruchsicherer Kioskmodus der Applikation
+      - Einsetzbar bei Umgebungstemperatur -15°C bis +40°C, Luftfeuchtigkeit 30%-90% rel. Feuchte
+      - 230V-Stromanschluss
+    comment: |
+      Übernehmen Sie die Hardwareanforderungen nur für die von Ihnen benötigten Automatentypen.
+    tags: [ park ]
+
+  - title: "Hardware: Ticketautomat outdoor mit Bargeld"
+    level: MUST
+    description: |
+      Die angebotene Hardware für Ticketautomaten mit Bargeldzahlung im Außenbereich erfüllt mindestens folgende Anforderungen:
+      
+      - Geeignet für den überdachten Außenbereich
+      - CPU mit mindestens 4 Kernen und mindestens 2,0 GHz
+      - Mindestens 8 GB RAM
+      - Mindestens 32 GB freier nichtflüchtiger Speicher (bei installiertem Betriebssystem)
+      - Kapazitiver Touchscreen
+      - Mindestens 15 Zoll Bildschirmdiagonale
+      - Münzverarbeitung mit Rückbefüllung (Akzeptanz aller Euro-Münzen, Rückgeld in min. 4 Münzsorten)
+      - Banknotenrecycler (Akzeptanz Euro-Banknotzen bis 50€, Rückgeld in min. 2 Banknoten)
+      - Integriertes Kartenzahlungsterminal (girocard, Kreditkarte)
+      - Integrierter Kassenbelegdrucker
+      - Integrierter Ticketdrucker
+      - Integrierter Barcode-Präsentationsscanner
+      - Öffnungsalarm bei unberechtigter Öffnung
+      - Bildschirmauflösung mindestens 1280x1024 Pixel
+      - Netzwerkanbindung über LAN, WLAN oder Mobilfunk nachrüstbar
+      - Aktuelles Betriebssystem mit Sicherheitsupdates für min. 5 Jahre
+      - Ausbruchsicherer Kioskmodus der Applikation
+      - Einsetzbar bei Umgebungstemperatur -15°C bis +40°C, Luftfeuchtigkeit 30%-90% rel. Feuchte
+      - 230V-Stromanschluss
+    tags: [ park ]
+
+  - title: "Hardware: Ticketautomat indoor cashless"
+    level: MUST
+    description: |
+      Die angebotene Hardware für Ticketautomaten ohne Bargeldzahlung im Innenbereich erfüllt mindestens folgende Anforderungen:
+      
+      - Geeignet für den Innenbereich
+      - CPU mit mindestens 4 Kernen und mindestens 2,0 GHz
+      - Mindestens 8 GB RAM
+      - Mindestens 32 GB freier nichtflüchtiger Speicher (bei installiertem Betriebssystem)
+      - Kapazitiver Touchscreen
+      - Mindestens 15 Zoll Bildschirmdiagonale
+      - Integriertes Kartenzahlungsterminal (girocard, Kreditkarte)
+      - Integrierter Kassenbelegdrucker
+      - Integrierter Ticketdrucker oder Ticketdruck über Kassenbelegdrucker
+      - Integrierter Barcode-Präsentationsscanner
+      - Bildschirmauflösung mindestens 1280x1024 Pixel
+      - Netzwerkanbindung über LAN, WLAN oder Mobilfunk nachrüstbar
+      - Aktuelles Betriebssystem mit Sicherheitsupdates für min. 5 Jahre
+      - Ausbruchsicherer Kioskmodus der Applikation
+      - Einsetzbar bei Umgebungstemperatur +15°C bis +35°C, Luftfeuchtigkeit 30%-90% rel. Feuchte
+      - 230V-Stromanschluss
+    tags: [ park, museum ]
+
+  - title: "Hardware: Ticketautomat indoor mit Bargeld"
+    level: MUST
+    description: |
+      Die angebotene Hardware für Ticketautomaten mit Bargeldzahlung im Innenbereich erfüllt mindestens folgende Anforderungen:
+      
+      - Geeignet für den Innenbereich
+      - CPU mit mindestens 4 Kernen und mindestens 2,0 GHz
+      - Mindestens 8 GB RAM
+      - Mindestens 32 GB freier nichtflüchtiger Speicher (bei installiertem Betriebssystem)
+      - Kapazitiver Touchscreen
+      - Mindestens 15 Zoll Bildschirmdiagonale
+      - Münzverarbeitung mit Rückbefüllung (Akzeptanz aller Euro-Münzen, Rückgeld in min. 4 Münzsorten)
+      - Banknotenrecycler (Akzeptanz Euro-Banknotzen bis 50€, Rückgeld in min. 2 Banknoten)
+      - Integriertes Kartenzahlungsterminal (girocard, Kreditkarte)
+      - Integrierter Kassenbelegdrucker
+      - Integrierter Ticketdrucker
+      - Integrierter Barcode-Präsentationsscanner
+      - Bildschirmauflösung mindestens 1280x1024 Pixel
+      - Netzwerkanbindung über LAN, WLAN oder Mobilfunk nachrüstbar
+      - Aktuelles Betriebssystem mit Sicherheitsupdates für min. 5 Jahre
+      - Ausbruchsicherer Kioskmodus der Applikation
+      - Einsetzbar bei Umgebungstemperatur +15°C bis +35°C, Luftfeuchtigkeit 30%-90% rel. Feuchte
+      - 230V-Stromanschluss
+    tags: [ park ]
