@@ -22,7 +22,7 @@ requirements:
       die dem aktuellen Stand der Technik entspricht, jedoch mindestens den Anforderungen
       des Payment Card Industry Data Security Standard (PCI DSS), d.h. mindestens 12 Zeichen,
       sowohl Zahlen als auch Buchstaben und keine Wiederverwendung der letzten vier vorherigen
-      Passwörter-
+      Passwörter.
   - title: 2-Faktor-Authentifizierung
     level: SHOULD
     description: |
@@ -31,19 +31,19 @@ requirements:
   - title: Verpflichtende 2-Faktor-Authentifizierung
     level: MAY
     description: |
-      Die Verwendung von 2-Faktor-Authentifizierung kann vom Auftraggeber für alle Benutzer:innen oder
+      Die Verwendung von 2-Faktor-Authentifizierung kann von der Auftraggeberin für alle Benutzer:innen oder
       einzelne Gruppen verpflichtend gemacht werden.
 
 - title: Rechtemanagement
   level: MUST
   description: |
-    Das System verfügt über ein rollenbasiertes Rechtemanamgent, über das der Zugriff auf einzelne Funktionen
+    Das System verfügt über ein rollenbasiertes Rechtemanagement, über das der Zugriff auf einzelne Funktionen
     im Backend detailliert ausgesteuert werden kann.
   sub:
     - title: Need-to-Know-Prinzip
       level: SHOULD
       description: |
-        Das System erlaubt die effektive Umsetzung eines Rechtevergabe nach dem "Need-to-Know-Prinzip", bei dem
+        Das System erlaubt die effektive Umsetzung einer Rechtevergabe nach dem "Need-to-Know-Prinzip", bei dem
         alle Benutzer:innen nur die minimale Menge an Berechtigungen erhalten, die für die Ausübung ihrer Rolle
         notwendig sind.
 
@@ -55,7 +55,7 @@ requirements:
 - title: Nutzeranzahl (Leistung)
   level: MUST
   description: |
-    Das Backend kann Performanceprobleme von mindestens **ZAHL EINFÜGEN** Benutzer:innen gleichzeitig verwendet werden.
+    Das Backend kann ohne Performanceprobleme von mindestens **ZAHL EINFÜGEN** Benutzer:innen gleichzeitig verwendet werden.
 
 - title: Audit-Log
   level: MUST
@@ -66,7 +66,7 @@ requirements:
 - title: Usability
   level: SHOULD
   description: |
-    Das Backend ist auf eine intuitive Bedienung ausgelegt und kann mit durchschnittlichem Schulungsaufwand von
+    Das Backend ist auf eine intuitive Bedienung ausgelegt und kann ohne intensiven Schulungsaufwand von
     Fachanwender:innen verstanden werden.
   sub:
   - title: Tabellensortierung
@@ -98,25 +98,25 @@ requirements:
 - title: Verwaltung der Veranstaltungen
   level: MUST
   description: |
-    Das System erlaubt dem Auftraggeber die selbstständige Pflege der im System erfassten Veranstaltungen.
+    Das System erlaubt der Auftraggeberin die selbstständige Pflege der im System erfassten Veranstaltungen.
   sub:
     - title: Kopieren von Veranstaltungen
       level: SHOULD
       description: |
-        Das System erlaubt dem Auftraggeber das vereinfachte Anlegen von Veranstaltungen, indem die Einstellungen
+        Das System erlaubt der Auftraggeberin das vereinfachte Anlegen von Veranstaltungen, indem die Einstellungen
         und Stammdaten einer Vorveranstaltung kopiert werden können.
     - title: Vorlagen für Veranstaltungen
       level: MAY
       description: |
-        Das System erlaubt dem Auftraggeber das Erstellen von Vorlagen für verschiedene Veranstaltungsformate, die
+        Das System erlaubt der Auftraggeberin das Erstellen von Vorlagen für verschiedene Veranstaltungsformate, die
         dann für die einzelnen Veranstaltungen angepasst werden können.
-    - title: Absage einer Veranstaltungen
+    - title: Absage einer Veranstaltung
       level: SHOULD
       description: |
         Das System verfügt über einen vorgesehenen Prozess für die Absage einer Veranstaltung, der mindestens die
         Sperre weiterer Buchungen, die Information aller Ticketinhaber:innen, und die Vorbereitung (oder automatische
         Durchführung) von Rückerstattungen umfasst.
-    - title: Verschiebung einer Veranstaltungen
+    - title: Verschiebung einer Veranstaltung
       level: SHOULD
       description: |
         Das System erlaubt die Verschiebung eines Veranstaltungstermins, ohne dass die Tickets ihre Gültigkeit verlieren,
@@ -209,7 +209,7 @@ requirements:
 - title: Verwaltung der Kundenkonten
   level: SHOULD
   description: |
-    Das Backend erlaubt die Verwaltung aller Kundenkoten.
+    Das Backend erlaubt die Verwaltung aller Kundenkonten.
 
 - title: Barcode-Import
   level: SHOULD

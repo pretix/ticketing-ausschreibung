@@ -249,7 +249,7 @@ def build_xlsx(tag):
 
     ws = wb.create_sheet("Einleitung", index=0)
     ws["A1"].value = dedent("""
-    Dies ist eine Ausschreibungs-Vorlage für Ticketing-Ausschreibungen für öffentliche Einrichtungen, die auf www.ticketing-ausschreibung.de herungergeladen wurde.
+    Dies ist eine Ausschreibungsvorlage für Ticketing-Ausschreibungen für öffentliche Einrichtungen, die auf www.ticketing-ausschreibung.de herungergeladen wurde.
     
     Die Inhalte stehen unter der Lizenz CC0 1.0 Universal, was bedeutet, dass sie komplett frei verwendet werden dürfen, auch ohne Nennung der Urheber.
     

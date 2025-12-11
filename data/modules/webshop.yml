@@ -57,19 +57,19 @@ requirements:
 - title: Anpassbarkeit des Designs
   level: SHOULD
   description: |
-    Der Webshop ist an das Corporate Design des Auftraggebers und auch einzelner Veranstaltungen anpassbar. Dies
+    Der Webshop ist an das Corporate Design der Auftraggeberin und auch einzelner Veranstaltungen anpassbar. Dies
     umfasst mindestens:
     
-    - Die Einbindung eines oder mehrere Logos und Grafiken
+    - Die Einbindung eines oder mehrerer Logos und Grafiken
     - Die Anpassung der verwendeten Farben
     - Die Auswahl der verwendeten Schriftarten
 
 - title: Mehrsprachigkeit
   level: MUST
   description: |
-    Der Webshop unterstützt mehrere Sprachen, zwischen denen Ticketkäufer*innen jederzeit wechseln können, ohne den aktuellen
-    Kaufvorgang abzubrechen. Die verfügbaren Sprachen werden vom Auftraggeber ausgewählt. Die Mehrsprachigkeit bezieht sich auf die
-    Systemtexte sowie auf alle vom Auftraggeber pflegbaren Texte und Inhalte (z.B. Veranstaltungstitel, Produktbeschreibungen, etc.).
+    Der Webshop unterstützt mehrere Sprachen, zwischen denen Ticketkäufer:innen jederzeit wechseln können, ohne den aktuellen
+    Kaufvorgang abzubrechen. Die verfügbaren Sprachen werden von der Auftraggeberin ausgewählt. Die Mehrsprachigkeit bezieht sich auf die
+    Systemtexte sowie auf alle von der Auftraggeberin pflegbaren Texte und Inhalte (z.B. Veranstaltungstitel, Produktbeschreibungen, etc.).
   sub:
     - title: "Automatische Erkennung der Sprache"
       level: SHOULD
@@ -83,7 +83,7 @@ requirements:
     - title: "Sprachen: Weitere"
       level: MAY
       description: |
-        Der Webshop unterstützt ab Werk weitere Sprachen und kann auf Wunsch des Auftraggebers (ggf. kostenpflichtig) um weitere
+        Der Webshop unterstützt ab Werk weitere Sprachen und kann auf Wunsch der Auftraggeberin (ggf. kostenpflichtig) um weitere
         Sprachen erweitert werden.
     - title: "Sprachen mit RTL-Leserichtung"
       level: MAY
@@ -111,7 +111,7 @@ requirements:
 - title: Währungen
   level: SHOULD
   description: |
-    Für unterschiedliche Veranstaltungen können unterschiedliche Währungen zum Eisnatz kommen.
+    Für unterschiedliche Veranstaltungen können unterschiedliche Währungen zum Einsatz kommen.
 
 - title: Validierung der E-Mail-Adresse
   level: SHOULD
@@ -127,13 +127,13 @@ requirements:
 - title: Ticketshop als Widget/iframe
   level: SHOULD
   description: |
-    Der Ticketshop kann in eine andere Website möglichst nahtlos eingebunden werden, z.B. über ein Widget, iFrame, eine Web Component
+    Der Ticketshop kann in eine andere Website möglichst nahtlos eingebunden werden, z.B. über ein Widget, iframe, eine Web Component
     oder eine ähnliche Lösung. Der Ticketkauf ist hierbei möglich, ohne die einbindende Website verlassen zu müssen.
 
 - title: Eigene Domain
   level: SHOULD
   description: |
-    Der Ticketshop kann unter einer eigenen, auch veranstaltungsspezifischen Domain betrieben werden.
+    Der Ticketshop kann unter einer Domain der Auftraggeberin oder einer veranstaltungsspezifischen Domain betrieben werden.
 
 - title: Kein Tracking vom Anbieter
   level: MUST
@@ -141,11 +141,11 @@ requirements:
     Der Webshop enthält standardmäßig keine Trackingfunktionen, die personenbezogene Daten im Sinne der DSGVO tracken, die für
     den Betrieb des Ticketshops nicht notwendig sind (privacy by default).
 
-- title: Tracking einnbindbar
+- title: Tracking einbindbar
   level: MUST
   description: |
     Der Webshop erlaubt die Einbindung der Trackingcodes gängiger Tools (Google Analytics, Matomo, Google Tag Manager, etc.) und
-    Werbeplattformen (Google Ads, Meta, LinkedIn, …) und ermöglicht hierbei auch die Übermittlung von E-Commerce-Events zum
+    Werbeplattformen (Google Ads, Meta, LinkedIn, etc.) und ermöglicht hierbei auch die Übermittlung von E-Commerce-Events zum
     Conversion-Tracking.
 
   sub:
@@ -170,12 +170,12 @@ requirements:
 - title: Verkaufszeitraum
   level: SHOULD
   description: |
-    Der Auftraggeber kann einen Verkaufszeitraum definieren, in dem Tickets über den Webshop erworben werden können.
+    Die Auftraggeberin kann einen Verkaufszeitraum definieren, in dem Tickets über den Webshop erworben werden können.
 
 - title: Shop-Aktivierung
   level: MUST
   description: |
-    Der Webshop kann vom Auftraggeber jederzeit aktiviert oder deaktiviert werden.
+    Der Webshop kann von der Auftraggeberin jederzeit aktiviert oder deaktiviert werden.
 
 - title: Warenkorbfunktion
   level: MUST
@@ -185,18 +185,18 @@ requirements:
     - title: Größenbegrenzung
       level: SHOULD
       description: |
-        Die maximale Anzahl der im Warenkorb befindlichen Tickets kann vom Auftraggeber konfiguriert werden.
+        Die maximale Anzahl der im Warenkorb befindlichen Tickets kann von der Auftraggeberin konfiguriert werden.
     - title: Reservierungsdauer
       level: MUST
       description: |
-        Die im Warenkorb befindlichen Tickets sind für die Ticketkäufer:in für einen vom Auftraggeber konfigurierbaren
-        Zeitraum reserveriert.
+        Die im Warenkorb befindlichen Tickets sind für die Ticketkäufer:in für einen von der Auftraggeberin konfigurierbaren
+        Zeitraum reserviert.
     - title: Kauf für Dritte
       level: MUST
       description: |
         Der Warenkorb ermöglicht den Kauf für Tickets auf den Namen Dritter, z.B. den zentralen Einkauf von Tickets
         für mehrere Teilnehmer:innen eines Unternehmens oder einer Besuchergruppe. Hierbei unterscheidet das System
-        übersichtlich und konsistent in die Daten der kaufenden Person und der ticketnutzenden Person.
+        übersichtlich und konsistent zwischen den Daten der kaufenden Person und der ticketnutzenden Person.
       tags: [ messe, event ]
     - title: Gutscheincodes
       level: MUST
@@ -206,7 +206,7 @@ requirements:
       level: MUST
       description: |
         Vor Abschicken einer Bestellung, erhalten Käufer:innen eine Zusammenfassung aller gewählter Produkte sowie
-        aller getätigten Eingaben zur KOntrolle.
+        aller getätigten Eingaben zur Kontrolle.
 
 - title: Saalplanbuchung
   level: MUST
@@ -230,7 +230,7 @@ requirements:
     - title: Saalplanerstellung
       level: SHOULD
       description: |
-        Der Saalplan kann vom Auftraggeber über einen WYSIWYG-Editor eigenständig erstellt und bearbeitet werden.
+        Der Saalplan kann von der Auftraggeberin über einen WYSIWYG-Editor eigenständig erstellt und bearbeitet werden.
     - title: Verhinderung der Mehrfachbuchung
       level: MUST
       description: |
@@ -243,7 +243,7 @@ requirements:
 - title: Datenerfassung
   level: MUST
   description: |
-    Bei der Ticketbuchung müssen Ticketkäufer:innen Fragen beantworten, die vom Auftraggeber je nach Veranstaltung
+    Bei der Ticketbuchung müssen Ticketkäufer:innen Fragen beantworten, die von der Auftraggeberin je nach Veranstaltung
     und gewählter Ticketart frei konfiguriert werden können.
 
   sub:
@@ -267,7 +267,7 @@ requirements:
         weiter verständlich machen.
     - title: Sortierung
       level: SHOULD
-      description: Die Reihenfolge Fragefelder kann von der Aufttraggeberin frei konfiguriert werden.
+      description: Die Reihenfolge der Fragefelder kann von der Auftraggeberin frei konfiguriert werden.
     - title: Abhängigkeiten
       level: SHOULD
       description: |
@@ -282,7 +282,7 @@ requirements:
     - title: Namensformat
       level: SHOULD
       description: |
-        Der Name wird in einem strukturierten Format (z.B. Anrede, Titel, Vorname, Nachname) erfasst, das vom Auftraggeber
+        Der Name wird in einem strukturierten Format (z.B. Anrede, Titel, Vorname, Nachname) erfasst, das von der Auftraggeberin
         definiert werden kann.
     - title: Auswahl von Titeln
       level: SHOULD
@@ -302,7 +302,7 @@ requirements:
 - title: Autofill-Funktion
   level: SHOULD
   description: |
-    Alle Namens-, Adress-, Telefon- und E-Mail-Felder beim Kauf sind für die "Autofill"-Funktionen der kompatiblen Browser
+    Alle Namens-, Address-, Telefon- und E-Mail-Felder beim Kauf sind für die "Autofill"-Funktionen der kompatiblen Browser
     als solche erkennbar und ermöglichen die komfortable Vorbefüllung durch den Browser.
 
 - title: Kauf als Gast
@@ -327,8 +327,8 @@ requirements:
   - title: Authentifizierung mit IdP
     level: SHOULD
     description: |
-      Für die Authentifizierung von Kundenkonten kann ein bestehender Identity Provider (IdP) des Auftraggebers über eine
-      brachenübliche Schnittstelle (OpenID Connect, OAuth2 oder SAML) angebunden werden.
+      Für die Authentifizierung von Kundenkonten kann ein bestehender Identity Provider (IdP) der Auftraggeberin über eine
+      branchenübliche Schnittstelle (OpenID Connect, OAuth2 oder SAML) angebunden werden.
   - title: Authentifizierung mit Social Login
     level: SHOULD
     description: |
@@ -354,7 +354,7 @@ requirements:
 - title: Rechnungsadresse
   level: MUST
   description: |
-    Das System erlaubt die Erfassung einer Rechnungsadresse für den Kaufvorgang. Der Auftraggeber kann konfigurieren, ob diese
+    Das System erlaubt die Erfassung einer Rechnungsadresse für den Kaufvorgang. Die Auftraggeberin kann konfigurieren, ob diese
     ein Pflichtfeld darstellt.
   sub:
   - title: Keine Erfassung für kostenlose Tickets
@@ -396,17 +396,17 @@ requirements:
   - title: Rechnungskauf
     level: SHOULD
     description: |
-      Der Webshop ermöglicht den Kauf per Vorkasse oder auf Rechnung über die Konten des Auftraggebers.
+      Der Webshop ermöglicht den Kauf per Vorkasse oder auf Rechnung über die Konten der Auftraggeberin.
   - title: PayPal
     level: SHOULD
     description: |
-      Der Webshop ermöglicht die Anbindung des PayPal-Händlerkontos des Auftraggebers über eine direkte Schnittstelle zu PayPal.
+      Der Webshop ermöglicht die Anbindung des PayPal-Händlerkontos der Auftraggeberin über eine direkte Schnittstelle zu PayPal.
       Die Abwicklung der Zahlung sowie eventueller Rückerstattungen erfolgt vollautomatisch.
   - title: Payment Service Provider
     level: MUST
     description: |
-      Der Webshop verfügt über direkte Schnittstellen zu mindestens zwei weiteren Payment Service Providern, die Kreditkartenzahlung
-      sowie weitere Zahlungsarten (z.B. Wero, Lastschrift, Klarna, etc.) anbieten.
+      Der Webshop verfügt über direkte Schnittstellen zu mindestens zwei Payment Service Providern, die unabhängig von einander
+      Kreditkartenzahlung sowie weitere Zahlungsarten (z.B. Wero, Lastschrift, Klarna, etc.) anbieten.
       Mindestens einer der angebundenen Payment Service Provider sitzt in Europa.
       Die Abwicklung der Zahlung sowie eventueller Rückerstattungen erfolgt vollautomatisch.
     comment: |
@@ -415,12 +415,12 @@ requirements:
   - title: PCI DSS
     level: MUST
     description: |
-      Die Einbindung von Kreditkartenformularen erfolgt so, dass für den Auftraggeber keine höhere Zertifizierung nach dem
+      Die Einbindung von Kreditkartenformularen erfolgt so, dass für die Auftraggeberin keine höhere Zertifizierung nach dem
       Payment Card Industry Data Security Standard (PCI DSS) notwendig ist als der Self-Assessment Questionnaire A (SAQ-A).
   - title: Lastschrift
     level: MAY
     description: |
-      Der Webshop ermöglicht den Kauf per SEPA-Lastschrift über die Konten des Auftraggebers.
+      Der Webshop ermöglicht den Kauf per SEPA-Lastschrift über die Konten der Auftraggeberin.
 
 - title: Versand von E-Mails
   level: MUST
@@ -435,26 +435,25 @@ requirements:
       level: SHOULD
       description: |
         Der Versand von E-Mails erfolgt nach Wahl entweder über einen Mailserver des Ticketsystemanbieters oder über einen
-        Mailserver des Auftraggebers.
+        Mailserver der Auftraggeberin.
     - title: Anpassbarkeit der Texte
       level: SHOULD
       description: |
-        Die Texte aller E-Mails, die vom System verschickt werden, können vom Auftraggeber frei angepasst werden,
+        Die Texte aller E-Mails, die vom System verschickt werden, können von der Auftraggeberin frei angepasst werden,
         auch spezifisch für einzelne Veranstaltungen.
     - title: Signatur
       level: SHOULD
       description: |
-        Eine E-Mail-Signatur, die an alle E-Mails angehängt wird, kann vom Auftraggeber zentral definiert werden.
+        Eine E-Mail-Signatur, die an alle E-Mails angehängt wird, kann von der Auftraggeberin zentral definiert werden.
     - title: Kalendereinladung
       level: SHOULD
       description: |
-        Das System kann eine Kalendereinladung für die Versanstaltung an Ticketkäufer:innen verschicken.
+        Das System kann eine Kalendereinladung für die Veranstaltung an Ticketkäufer:innen verschicken.
       tags: [ messe, event, theater ]
     - title: Ticketversand an Ticketinhaber
       level: SHOULD
       description: |
         Beim Kauf für Dritte (s.o.) ist der Versand der Tickets an die jeweiligen Ticketinhaber:innen ebenfalls möglich.
-        Der Absender aller vom System verwendeten E-Mails kann frei eingestellt werden.
       tags: [ messe, event ]
 
 - title: Ticketerstellung
@@ -469,7 +468,7 @@ requirements:
     - title: PDF-Tickets
       level: MUST
       description: |
-        Die Tickets werden im Format PDF zur Verfügung gestellt. Das Layout der PDF-Datei kann vom Auftraggeber in einem
+        Die Tickets werden im Format PDF zur Verfügung gestellt. Das Layout der PDF-Datei kann von der Auftraggeberin in einem
         WYSIWYG-Editor ohne Mitwirkung des Systemanbieters frei konfiguriert und auf die Veranstaltung angepasst werden.
     - title: Produktabhängige Layouts
       level: SHOULD
@@ -482,11 +481,15 @@ requirements:
         eine Weise implementiert, auf die keine personenbezogenen Daten zu Apple oder anderen Drittanbietern übermittelt werden, bevor
         die Ticketkäufer:in die Übertragung in die Apple Wallet explizit anfordert oder die Wallet-Datei selbstständig in eine Wallet-App lädt.
     - title: Google Wallet
-      level: SHOULD
+      level: MAY
       description: |
         Die Tickets werden für Google Wallet zur Verfügung gestellt. Die Anbindung ist auf eine Weise implementiert, auf die
         keine personenbezogenen Daten zu Google übermittelt werden, bevor die Ticketkäufer:in die Übertragung in die Google Wallet
         explizit anfordert.
+      comment: |
+        Diese Anforderung ist nur ein Kann-Kriterium, da Google Wallet seit 2024 auch in der Lage ist, das Passbook-Format von Apple zu lesen
+        und somit eine Direktintegration zu Google nicht zwingend notwendig ist – und immer mit größeren datenschutzrechtlichen Kompromissen
+        einhergeht.
     - title: Versandoptionen
       level: SHOULD
       description: |
@@ -503,7 +506,7 @@ requirements:
   level: SHOULD
   description: |
     Für bestimmte Produkt- und Ticketarten kann ein Freigabe- oder Akkreditierungsprozess zwischengeschaltet werden, bei dem
-    der Ticketkauf zunächst vom Auftraggeber geprüft und freigegeben werden muss, bevor ein Ticket ausgestellt werden kann.
+    der Ticketkauf zunächst von der Auftraggeberin geprüft und freigegeben werden muss, bevor ein Ticket ausgestellt werden kann.
   tags: [ event, messe ]
 
 - title: Integration Newslettersystem
@@ -548,12 +551,12 @@ requirements:
     level: SHOULD
     description: |
       Der Self-Service-Bereich ermöglicht die Änderung von Namen oder anderen Personalisierungsdaten von Tickets innerhalb der
-      vom Auftraggeber definierten Fristen.
+      von der Auftraggeberin definierten Fristen.
   - title: Ticketstorno
     level: SHOULD
     description: |
-      Der Self-Service-Bereich ermöglicht die Stornierung einer Bestellung samt Rückerstattung innerhalb der vom Auftraggeber
-      definierten Fristen und unter Einbehalt der vom Auftraggeber definierten Stornogebühren.
+      Der Self-Service-Bereich ermöglicht die Stornierung einer Bestellung samt Rückerstattung innerhalb der von der Auftraggeberin
+      definierten Fristen und unter Einbehalt der von der Auftraggeberin definierten Stornogebühren.
   - title: Ticketstorno gegen Gutschein
     level: MAY
     description: |

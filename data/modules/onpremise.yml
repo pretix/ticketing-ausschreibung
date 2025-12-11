@@ -17,7 +17,7 @@ requirements:
   level: SHOULD
   description: |
     Das System basiert auf einer etablierten und industrieüblichen SQL-Datenbank, z.B. PostgreSQL, MySQL, MariaDB, Oracle,
-    oder MSSQL. Im Fall von Oralce und MSSQL werden die Lizenzen durch den Systemanbieter beschafft und sind in den angebotenen
+    oder MSSQL. Im Fall von Oracle und MSSQL werden die Lizenzen durch den Systemanbieter beschafft und sind in den angebotenen
     Lizenzpreis der Software mit eingerechnet.
 
 - title: Skalierbare Architektur
@@ -29,20 +29,20 @@ requirements:
 - title: Monitoring- und Backupkonzept
   level: SHOULD
   description: |
-    Der Systemanbieter stellt Empfehlungen für ein Monitoring- und Backupkonzept zur Verfügung, das durch den Auftraggeber
-    implementiert werden kann.
+    Der Systemanbieter stellt Empfehlungen für ein Monitoring- und Backupkonzept zur Verfügung, die durch die Auftraggeberin
+    implementiert werden können.
 
 - title: Updates
   level: MUST
   description: |
-    Updates werden durch den Systemanbieter regelmäßig zur Verfügung gestellt und enthalten einen Changelog, aus dem der
-    Auftraggeber den Aufwand des Updates abschätzen kann. Die Terminierung der Updates obliegt dem Auftraggeber.
+    Updates werden durch den Systemanbieter regelmäßig zur Verfügung gestellt und enthalten einen Changelog, aus dem die
+    Auftraggeberin den Aufwand des Updates abschätzen kann. Die Terminierung der Updates obliegt dem Auftraggeber.
     Bei dringlichen Sicherheitsupdates weist der Systemanbieter den Anbieter gesondert auf die Dringlichkeit hin.
 
 - title: Responsible Disclosure
   level: SHOULD
   description: |
-    Der Systemanbieter verfügt über einen öffentlichen dokumentieren Prozess zur Meldung von Sicherheitslücken in der Software.
+    Der Systemanbieter verfügt über einen öffentlich dokumentierten Prozess zur Meldung von Sicherheitslücken in der Software.
 
 - title: Quellcode
   level: MAY
@@ -64,5 +64,5 @@ requirements:
 - title: Pentests
   level: SHOULD
   description: |
-    Der Systemanbieter führt in regelmäßigen Abständen (mindstens alle 2 Jahre) Penetration Tests durch, um die Sicherheit der
+    Der Systemanbieter führt in regelmäßigen Abständen (mindestens alle 2 Jahre) Penetration Tests durch, um die Sicherheit der
     Software zu überprüfen.

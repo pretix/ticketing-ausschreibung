@@ -4,7 +4,7 @@ requirements:
   level: MUST
   description: |
     Das Kassensystem ist integrierte Komponente des Gesamtsystems und bezieht seine Konfiguration, z.B. in Bezug auf
-    Produkt- und Ticketarten, speist sich mit den anderen Komponenten (z.B. Webshop) aus einer einheitlichen Datenquelle.
+    Produkt- und Ticketarten, zusammen mit den anderen Komponenten (z.B. Webshop) aus einer einheitlichen Datenquelle.
     Es findet keine Doppelpflege von Stammdaten statt.
   sub:
     - title: Synchronisierung Stammdaten
@@ -126,9 +126,9 @@ requirements:
 - title: Kassiereridentifikation
   level: MUST
   description: |
-    Die Kassierer:innen werden über personenbezogene Accounts identifiziert und meldet sich mit dem persönlichen Account an der Kasse an.
+    Die Kassierer:innen werden über personenbezogene Accounts identifiziert und melden sich mit dem persönlichen Account an der Kasse an.
     Zum Login wird eine individuelle PIN und/oder ein Hardware-Token/Schlüssel verwendet. Grundsätzlich kann jede Kassierer:in an jeder
-    kasse kassieren.
+    Kasse kassieren.
   sub:
     - title: Berechtigung
       level: SHOULD
@@ -142,7 +142,7 @@ requirements:
         - Die Erstellung von Kassenabschlüssen
         - Den Nachdruck von bereits vorher gedruckten Tickets
 
-- title: Bestelldatenbank / Helpdeskfunktion
+- title: Bestelldatenbank / Helpdesk-Funktion
   level: SHOULD
   description: |
     Über das Kassensystem ist berechtigungsabhängig auch die Bearbeitung bestehender Ticketbestellungen möglich.
@@ -191,20 +191,20 @@ requirements:
     - title: Thermobelege
       level: SHOULD
       description: |
-        Das Kassensystem ist in der Lage, Ticket-Barcodes über den Kassenbelegdrucker zusammen mit dem Kassenbeleg auszugeben.
+        Das Kassensystem ist in der Lage, Ticket-Barcodes über den Kassenbelegdrucker zusammen mit dem Kassenbeleg auszudrucken.
     - title: Thermotickets
       level: SHOULD
       description: |
-        Das Kassensystem ist in der Lage, Tickets über einen Thermodirekt-Ticketdrucker anzusteuern.
+        Das Kassensystem ist in der Lage, Tickets über einen Thermodirekt-Ticketdrucker auszudrucken.
     - title: Plastikkarten
       level: SHOULD
       tags: [ museum, park, event ]
       description: |
-        Das Kassensystem ist in der Lage, Tickets über einen Plastikkartendrucker anzusteuern.
+        Das Kassensystem ist in der Lage, Tickets über einen Plastikkartendrucker auszudrucken.
     - title: Layout-Editor
       level: SHOULD
       description: |
-        Das Layout der ausgegebenen Tickets kann vom Auftraggeber über einen WYSIWYG-Editor frei konfiguriert werden. Für unterschiedliche
+        Das Layout der ausgegebenen Tickets kann von der Auftraggeberin über einen WYSIWYG-Editor frei konfiguriert werden. Für unterschiedliche
         Produkte können unterschiedliche Layouts konfiguriert werden.
 
 - title: Kundendisplay
@@ -247,7 +247,7 @@ requirements:
 - title: Trainingsmodus
   level: MUST
   description: |
-    Das Kassensystem verfügt über einen Trainingsmodus zur Einlernung neuer Kassierer, in dem keine echten Transaktionen
+    Das Kassensystem verfügt über einen Trainingsmodus zur Einlernung neuer Kassierer:innen, in dem keine echten Transaktionen
     verbucht werden, aber dennoch alle gesetzlichen Anforderungen erfüllt sind.
 
 - title: Gesetzliche Anforderungen
@@ -260,12 +260,12 @@ requirements:
     description: |
       Das Kassensystem erfüllt die "Grundsätze zur ordnungsmäßigen Führung und Aufbewahrung von Büchern, Aufzeichnungen und
       Unterlagen in elektronischer Form sowie zum Datenzugriff" (GoBD) in Bezug auf die vom System übernommenen Funktionen,
-      insbesondere in Bezug auf die Nachvollziehbarkeit aller Vorgänge und die unveränderbarkeit von Belegen und Protokollen.
+      insbesondere in Bezug auf die Nachvollziehbarkeit aller Vorgänge und die Unveränderbarkeit von Belegen und Protokollen.
   - title: TSE
     level: MUST
     description: |
       Das Kassensystem ermöglicht die Anbindung einer Technischen Sicherheitseinrichtung (TSE), die nach der BSI-Richtlinie TR-03153
-      zeritifziert ist (§ 146a Abs. 1 AO, § 5 KassenSichV). Die Wahl zwischen einer Hardware-TSE oder Cloud-TSE kann vom Systemanbieter
+      zertifiziert ist (§ 146a Abs. 1 AO, § 5 KassenSichV). Die Wahl zwischen einer Hardware-TSE oder Cloud-TSE kann vom Systemanbieter
       getroffen werden, solange alle anderen Anforderungen in Bezug auf Offline-Betrieb und Performance erfüllt werden.
   - title: Beleganforderungen
     level: MUST
@@ -275,12 +275,12 @@ requirements:
   - title: Einheitliche digitale Schnittstelle
     level: MUST
     description: |
-      Die vom Kassensystem unterstützt den Datenexport entsprechend der Digitalen Schnittstelle der Finanzverwaltung für
+      Das Kassensystem unterstützt den Datenexport entsprechend der Digitalen Schnittstelle der Finanzverwaltung für
       Kassensysteme (DSFinV-K, § 146a Abs. 1 AO, § 4 KassenSichV).
   - title: Kassenanmeldung
     level: SHOULD
     description: |
-      Die vom Kassensystem unterstützt den Auftraggeber bei der Anmeldung der Kasse beim Finanzamt gemäß § 146a Abs. 4 mindestens
+      Das Kassensystem unterstützt die Auftraggeberin bei der Anmeldung der Kasse beim Finanzamt gemäß § 146a Abs. 4 mindestens
       durch Bereitstellung aller notwendigen Informationen, idealerweise jedoch durch ein Tool, das auch die Anmeldung einer größeren
       Anzahl Kassen mit geringem Aufwand ermöglicht.
 
@@ -308,7 +308,7 @@ requirements:
     - Mindestens 1 USB-A oder USB-C Port zusätzlich zum Ladeanschluss
     - Integrierter Kassenbelegdrucker (min. 58mm Druckbreite, min. 70 mm/s Druckgeschwindigkeit)
     - Einsetzbar bei Umgebungstemperatur 0°C bis 40°C
-    - Dockingstation verfügbar
+    - Ladestation verfügbar
 
 - title: "Hardware: Stationäre Kassensysteme"
   level: MUST
@@ -322,7 +322,7 @@ requirements:
     - Mindestens 15 Zoll Bildschirmdiagonale
     - Bildschirmauflösung mindestens Full HD (1920x1080 Pixel)
     - Netzwerkanbindung über Gigabit-Ethernet und WLAN (min. IEEE 802.11 a/b/g/n/ac)
-    - Bluetooth 5.0+ inkl. BLE
+    - Bluetooth 4.2+ inkl. BLE
     - Aktuelles Betriebssystem mit Sicherheitsupdates für min. 3 Jahre
     - Mindestens 3 USB-A-Ports
     - Integriertes Kundendisplay mit mindestens 7" Bildschirmdiagonale
@@ -358,7 +358,7 @@ requirements:
     - Automatische Erkennung der Ticketlänge
     - Druckgeschwindigkeit bis min. 200mm/s
     - Anschluss ans Kassensystem per USB oder Ethernet
-    - Lebensdauer ca. 100km Papier / c.a 100 Millionen Pixel-Aktivierungen / ca. 1 Million Cuts
+    - Angegebene Lebensdauer mindestens ca. 100km Papier / c.a 100 Millionen Pixel-Aktivierungen / ca. 1 Million Cuts
   comment: |
     Nach Wunsch können die Parameter wie folgt erhöht werden:
     

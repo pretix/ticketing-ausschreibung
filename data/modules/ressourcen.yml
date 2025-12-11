@@ -49,7 +49,7 @@ requirements:
   level: MUST
   description: |
     Das System erlaubt die Zuordnung von Guides und Ressourcen zu einer Veranstaltung zu einem konkreten Termin
-    durch eine Disponent:in im Bakcend.
+    durch eine Disponent:in im Backend.
   tags: [ museum, park ]
   sub:
   - title: Kalenderübersicht
@@ -86,13 +86,13 @@ requirements:
     level: SHOULD
     description: |
       Das System kann so eingestellt werden, dass eine Turnusführung erst durch Besucher:innen buchbar ist, wenn ein
-      Guide eingeplant wurde und (falls notwendig) die Buchungsnafrage bestätigt hat.
+      Guide eingeplant wurde und (falls notwendig) die Buchungsanfrage bestätigt hat.
     tags: [ museum, park ]
 - title: Optimierter Prozess für individuelle Führung
   level: SHOULD
   description: |
     Das System verfügt über einen nutzerfreundlichen Prozess zur Erstellungen von Führungen, die z.B. telefonisch
-    für einen individuellen Termin angefragt werden. In wenigen Klicks kann ein möglicher Termin gefunden, eine Führun
+    für einen individuellen Termin angefragt werden. In wenigen Klicks kann ein möglicher Termin gefunden, eine Führung
     angelegt und disponiert, sowie eine Verkaufsbuchung angelegt werden.
   tags: [ museum, park ]
 - title: Bericht zur Honorarkontrolle

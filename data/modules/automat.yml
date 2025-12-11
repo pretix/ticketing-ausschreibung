@@ -4,7 +4,7 @@ requirements:
     level: MUST
     description: |
       Der Ticketautomat ist integrierte Komponente des Gesamtsystems und bezieht seine Konfiguration, z.B. in Bezug auf
-      Produkt- und Ticketarten, speist sich mit den anderen Komponenten (z.B. Webshop) aus einer einheitlichen Datenquelle.
+      Produkt- und Ticketarten, zusammen mit den anderen Komponenten (z.B. Webshop) aus einer einheitlichen Datenquelle.
       Es findet keine Doppelpflege von Stammdaten statt.
     tags: [ park, museum ]
     sub:
@@ -72,7 +72,7 @@ requirements:
   - title: Barrierefreiheit
     level: SHOULD
     description: |
-      Die Anordnung der Bedienelemente des Ticketautomats erfüllt standardisierte Anforderungen an die Barrierefreiheit
+      Die Anordnung der Bedienelemente des Ticketautomaten erfüllt standardisierte Anforderungen an die Barrierefreiheit
       z.B. durch eine für Rollstuhlfahrer geeignete Bedienhöhe.
     tags: [ park, museum ]
     sub:
@@ -119,7 +119,7 @@ requirements:
       - Kapazitiver Touchscreen
       - Mindestens 15 Zoll Bildschirmdiagonale
       - Münzverarbeitung mit Rückbefüllung (Akzeptanz aller Euro-Münzen, Rückgeld in min. 4 Münzsorten)
-      - Banknotenrecycler (Akzeptanz Euro-Banknotzen bis 50€, Rückgeld in min. 2 Banknoten)
+      - Banknotenrecycler (Akzeptanz Euro-Banknoten bis 50€, Rückgeld in min. 2 Banknoten)
       - Integriertes Kartenzahlungsterminal (girocard, Kreditkarte)
       - Integrierter Kassenbelegdrucker
       - Integrierter Ticketdrucker
@@ -168,7 +168,7 @@ requirements:
       - Kapazitiver Touchscreen
       - Mindestens 15 Zoll Bildschirmdiagonale
       - Münzverarbeitung mit Rückbefüllung (Akzeptanz aller Euro-Münzen, Rückgeld in min. 4 Münzsorten)
-      - Banknotenrecycler (Akzeptanz Euro-Banknotzen bis 50€, Rückgeld in min. 2 Banknoten)
+      - Banknotenrecycler (Akzeptanz Euro-Banknoten bis 50€, Rückgeld in min. 2 Banknoten)
       - Integriertes Kartenzahlungsterminal (girocard, Kreditkarte)
       - Integrierter Kassenbelegdrucker
       - Integrierter Ticketdrucker

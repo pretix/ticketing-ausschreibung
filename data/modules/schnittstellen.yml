@@ -11,7 +11,7 @@ requirements:
   level: SHOULD
   description: |
     Das Ticketsystem ist in der Lage, die Daten der Ticketsynchronisierungen mit dem CRM-System **HIER EINFÜGEN** zu
-    synchronisieren. Der Umfang der zu syncronisierenden Datenfelder sowie die Präzedenz der Daten im Verhältnis zu
+    synchronisieren. Der Umfang der zu synchronisierenden Datenfelder sowie die Präzedenz der Daten im Verhältnis zu
     den im CRM bereits bestehenden Daten ist konfigurierbar.
 
 - title: Newsletter-Schnittstelle
@@ -34,4 +34,4 @@ requirements:
   description: |
     Das Ticketsystem verfügt über eine Schnittstelle zum Ticketverkauf über GetYourGuide.
   comment: |
-    Ergänzen Sie bei Bedarf weitere für Sie reelvante Channels.
+    Ergänzen Sie bei Bedarf weitere für Sie relevante Channels.

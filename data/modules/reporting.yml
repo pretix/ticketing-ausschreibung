@@ -31,7 +31,7 @@ requirements:
     level: MUST
     description: |
       Das System bietet Standard-Reports zur Abrechnung der Umsätze und Geldflüsse für beliebige Zeiträume mit mit
-      zweifelsfreier Periodenabgrenzung durch Auflistung entsprechender offener Posten o.ä..
+      zweifelsfreier Periodenabgrenzung durch Auflistung entsprechender offener Posten o.ä.
   - title: Kassenberichte
     level: SHOULD
     description: |
@@ -75,5 +75,5 @@ requirements:
 - title: Verschickbare Berichte
   level: MAY
   description: |
-    Das System bietet die möglichkeit, bestimmte Reports ohne personenbezogene Daten, auch Dritten (wie z.B. Partnerveranstaltern)
+    Das System bietet die Möglichkeit, bestimmte Reports ohne personenbezogene Daten, auch Dritten (wie z.B. Partnerveranstaltern)
     ohne eigenen Zugriff aufs System zur Verfügung zu stellen.

@@ -36,7 +36,7 @@ requirements:
     level: SHOULD
     description: |
       Der Aussteller kann im Ausstellerportal die Personalisierungsdaten der mit seinen Einladungscodes registrierten
-      Tickets einsehen und als Export herunterladen. Der Auftraggeber kann festlegen, welche Datenfelder hierbei
+      Tickets einsehen und als Export herunterladen. Die Auftraggeberin kann festlegen, welche Datenfelder hierbei
       zugänglich gemacht werden.
 
 - title: Lead-Tracking-Schnittstelle
@@ -59,14 +59,14 @@ requirements:
     level: MAY
     description: |
       Der Aussteller kann über eine App für Android und iOS einen Barcode auf den Tickets oder Badges der Besucher:innen
-      scannen und erhält die Daten des Besuchers angezeigt. Der Aussteller kann den Datensatz durch Notizen oder Schlagworte
+      scannen und erhält die Daten der Besucher:in angezeigt. Der Aussteller kann den Datensatz durch Notizen oder Schlagworte
       anreichern.
   - title: Datenauswahl
     level: MAY
     description: |
-      Der Auftraggeber kann pro Veranstaltung festlegen, welche Daten mit den Ausstellern über das Lead-Tracking-Tool
+      Die Auftraggeberin kann pro Veranstaltung festlegen, welche Daten mit den Ausstellern über das Lead-Tracking-Tool
       geteilt werden.
   - title: Datenexport
     level: MAY
     description: |
-      Der Auftraggeber kann alle gesammelten Daten selbstständig exportieren.
+      Die Auftraggeberin kann alle gesammelten Daten selbstständig exportieren.

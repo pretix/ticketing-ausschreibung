@@ -4,7 +4,7 @@ requirements:
   level: MUST
   description: |
     Die Produkt- und Ticketarten dürfen nur an einer Stelle gepflegt werden und müssen dann automatisch
-    auf allen Verkaufswegen (z.B. Webshop, Kassensystem, Self-Service-Terminsls oder Automaten, etc.)
+    auf allen Verkaufswegen (z.B. Webshop, Kassensystem, Self-Service-Terminals oder Automaten, etc.)
     zur Verfügung stehen.
 
   sub:
@@ -27,7 +27,7 @@ requirements:
 - title: Produktkategorien
   level: SHOULD
   description: |
-    Die Produkt- und Ticketarten können zur Übersichtlichkeit sowohl für Käufer:innen als auch für den Auftraggeber in 
+    Die Produkt- und Ticketarten können zur Übersichtlichkeit sowohl für Käufer:innen als auch für die Auftraggeberin in 
     Produktkategorien eingeteilt werden.
 
 - title: Produktbeschreibung
@@ -167,7 +167,7 @@ requirements:
 - title: Preisstufen
   level: MUST
   description: |
-    Das System erlaubt den Verkauf des gleichen Tickets zu verschiedenen Preisstufen (z.B. reduzierter Eintritt für Schüler).
+    Das System erlaubt den Verkauf des gleichen Tickets zu verschiedenen Preisstufen (z.B. reduzierter Eintritt für Schüler:innen).
 
 - title: Frühbucherrabatt
   level: MUST
@@ -224,13 +224,13 @@ requirements:
 - title: Versteckte Produkte
   level: MUST
   description: |
-    Das System erlaubt die Definition versteckter Produkten, die nur bei Verwendung eines bestimmten Gutscheincodes oder Links
+    Das System erlaubt die Definition versteckter Produkte, die nur bei Verwendung eines bestimmten Gutscheincodes oder Links
     sichtbar und kaufbar sind.
 
 - title: Eingeschränkter Personenkreis
   level: SHOULD
   description: |
-    Das System erlaubt die Definition versteckter Produkten, die nur für Kundenkonten mit bestimmten Eigenschaften (z.B. bestimmter
+    Das System erlaubt die Definition versteckter Produkte, die nur für Kundenkonten mit bestimmten Eigenschaften (z.B. bestimmter
     Status) sichtbar und kaufbar sind.
 
 - title: Gutscheincodes

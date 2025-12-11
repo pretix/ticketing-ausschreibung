@@ -30,12 +30,12 @@ requirements:
 - title: Gestaltung der Inhalte
   level: MUST
   description: |
-    Die Inhalte der Rechnung (Absender, Fußzeile, wichtige Texte, etc.) können vom Auftraggeber angepasst werden.
+    Die Inhalte der Rechnung (Absender, Fußzeile, wichtige Texte, etc.) können von der Auftraggeberin angepasst werden.
 
 - title: Nummernkreis
   level: MUST
   description: |
-    Der Nummernkreis der Rechnungen kann vom Auftraggeber vorgegeben werden.
+    Der Nummernkreis der Rechnungen kann von der Auftraggeberin vorgegeben werden.
 
 - title: Leistungsdatum
   level: MUST
@@ -65,7 +65,7 @@ requirements:
 - title: Übergabe für Archiv
   level: MUST
   description: |
-    Das System ist in der Lage, alle Rechnungen eiens Zeitraums im Originalformat zu exportieren und an ein Rechnungsarchiv
+    Das System ist in der Lage, alle Rechnungen eines Zeitraums im Originalformat zu exportieren und an ein Rechnungsarchiv
     zu übergeben.
 
 - title: GoBD

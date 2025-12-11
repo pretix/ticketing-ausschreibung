@@ -6,7 +6,7 @@ site_description: "Mustervorlage für Leistungsbeschreibungen für Ticketing-Aus
 copyright: |
   <a href="https://pretix.eu/about/de/imprint" target="_blank">Impressum</a> ·
   <a href="https://pretix.eu/about/de/privacy" target="_blank">Datenschutz</a> ·
-  Lizensiert unter <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode.de" target="_blank">CC0 1.0 Universal</a>
+  Lizenziert unter <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode.de" target="_blank">CC0 1.0 Universal</a>
 validation:
   omitted_files: info
   absolute_links: warn

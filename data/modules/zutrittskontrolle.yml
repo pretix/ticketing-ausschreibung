@@ -28,13 +28,13 @@ requirements:
       level: MUST
       tags: [ event, messe, museum, park ]
       description: |
-        Für Ticketarten mit Wiedereintritt nur nach Austritt kann ein weiterer Eintritt nur erfolgen, wenn zuvor
+        Für Ticketarten mit "Wiedereintritt nur nach Austritt" kann ein weiterer Eintritt nur erfolgen, wenn zuvor
         ein Austritt erfasst wurde.
     - title: Zeitspezifische Regeln
       level: MUST
       tags: [ event, messe, museum, park ]
       description: |
-        Für unterschidliche Ticketarten können zeitabhängige Regeln für den Einlass definiert werden
+        Für unterschiedliche Ticketarten können zeitabhängige Regeln für den Einlass definiert werden
         (z.B. Einlass ab 10:00 Uhr, Einlass nur sonntags, etc.).
     - title: Einschränkung der Eingänge
       level: SHOULD
@@ -56,7 +56,7 @@ requirements:
     schnellstmöglich hochgeladen.
     
     Im Offlinemodus müssen Tickets nicht gegen Mehrfachnutzung abgesichert sein, jedoch müssen Tickets gegen eine
-    Liste gesperrter Tickets abgeglichen ewrden können.
+    Liste gesperrter Tickets abgeglichen werden können.
 
 - title: Skalierbarkeit
   level: MUST
@@ -76,7 +76,7 @@ requirements:
   tags: [ event, messe, museum, park ]
   description: |
     Verschiedene Zutrittsstationen (Handscanner, Drehkreuze) können zu Eingängen gruppiert werden, die
-    die Einlassregeln beinflussen können und für statistische Zwecke erfasst werden.
+    die Einlassregeln beeinflussen können und für statistische Zwecke erfasst werden.
 
 - title: Sprechende Fehlermeldungen
   level: SHOULD
@@ -88,7 +88,7 @@ requirements:
   level: SHOULD
   description: |
     Das System kann abhängig von Ticketart eine Meldung für das Einlasspersonal anzeigen, dass eine Zusatzkontrolle
-    (z.B. Studierendenausweis) notwendig ist. Hierbei kann ein vom Auftraggeber je Ticketart konfigurierter Text
+    (z.B. Studierendenausweis) notwendig ist. Hierbei kann ein von der Auftraggeberin je Ticketart konfigurierter Text
     mit genauen Anweisungen ausgegeben werden.
 
 - title: Eindeutige Signaltöne
@@ -143,7 +143,7 @@ requirements:
   level: MUST
   tags: [ messe ]
   description: |
-    Das Einlassystem kann Badges (Namensschilder) für Teilnehnmer drucken.
+    Das Einlassystem kann Badges (Namensschilder) für Teilnehmer drucken.
   sub:
     - title: Badge-Druck am Handscanner
       level: MUST
@@ -153,7 +153,7 @@ requirements:
     - title: Badge-Layout-Editor
       level: SHOULD
       description: |
-        Das Layout der Badges kann für jede Ticketart über einen WYSIWYG-Editor vom Auftraggeber selbst gestaltet werden.
+        Das Layout der Badges kann für jede Ticketart über einen WYSIWYG-Editor von der Auftraggeberin selbst gestaltet werden.
         Hierbei kann auf alle Personalisierungsfelder des Tickets zurückgegriffen werden.
 
     - title: Zeichensatz
@@ -231,7 +231,7 @@ requirements:
     - title: Lesegerät
       level: MUST
       description: |
-        Die Lesegeräte der angebotenen Drehkreuze müssen erfüllen mindestens folgende Anforderungen:
+        Die Lesegeräte der angebotenen Drehkreuze erfüllen mindestens folgende Anforderungen:
         
         - Barcode-Scanner für alle gängigen 1D- und 2D-Barcodes (z.B. EAN, Code39, Code128, QR, DataMatrix, PDF417, Aztec, …) in ergonomischer Platzierung
         - NFC-Leser (ISO/IEC 14443) geeignet für Apple VAS und Google Smart Tap
@@ -253,7 +253,7 @@ requirements:
       level: SHOULD
       tags: [ messe ]
       description: |
-        Eine gut sichtbare, mehrfarbige Kontrolleuchte mit ausreichender Leuchtstärke erlaubt dem Personal die Überwachung
+        Eine gut sichtbare, mehrfarbige Kontrollleuchte mit ausreichender Leuchtstärke erlaubt dem Personal die Überwachung
         des Zustands des Drehkreuzes und die Rückmeldung zu den gescannten Tickets auf einen Blick.
 
     - title: Integrierter Badge-Druck
@@ -280,7 +280,7 @@ requirements:
       level: MUST
       description: |
         Besucher:innen erhalten vom Drehkreuz eindeutiges Feedback darüber, ob ihr Ticket akzeptiert wurde, z.B. über
-        eine enetsprechende Anzeige und einen Signalton. Bei Ablehnung des Tickets wird eine verständliche Fehlermeldung
+        eine entsprechende Anzeige und einen Signalton. Bei Ablehnung des Tickets wird eine verständliche Fehlermeldung
         angezeigt.
 
     - title: Anbindung Brandmeldeanlage

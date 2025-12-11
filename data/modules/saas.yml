@@ -29,16 +29,16 @@ requirements:
 - title: Mandantentrennung
   level: MUST
   description: |
-    Der Systemanbieter hat eine wirksame Mandantentrennung umgesetzt, durch die die Daten des Auftraggebers von anderen
+    Der Systemanbieter hat eine wirksame Mandantentrennung umgesetzt, durch die die Daten der Auftraggeberin von anderen
     Auftraggebern getrennt gehalten werden. Die technische Umsetzung dieser Mandantentrennung ist dokumentiert und wurde
     z.B. durch externe Pentests überprüft.
 
 - title: Auftragsverarbeitung
   level: MUST
   description: |
-    Der Systemanbieter verarbeitet die Daten als weisungsgebundener Auftragsverarbeiter im Auftrag des Auftraggebers im Sinne
-    von Art. 28 DSGVO und verwendet die Daten zu keinen eigenen Zwecken. Der Systemanbieter ist bereitet, einen entsprechenden
-    Vertrag zur Auftragsverarbeitung (AVV) mit dem Auftraggeber zu verhandeln und stellt dafür auch eine Vorlage bereit.
+    Der Systemanbieter verarbeitet die Daten als weisungsgebundener Auftragsverarbeiter im Auftrag der Auftraggeberin im Sinne
+    von Art. 28 DSGVO und verwendet die Daten zu keinen eigenen Zwecken. Der Systemanbieter ist bereit, einen entsprechenden
+    Vertrag zur Auftragsverarbeitung (AVV) mit der Auftraggeberin zu verhandeln und stellt dafür auch eine Vorlage bereit.
 
 - title: Skalierbare Architektur
   level: MUST
@@ -55,7 +55,7 @@ requirements:
 - title: Georedundanz
   level: SHOULD
   description: |
-    Der Systemanbieter speichert die Daten des Auftraggebers georedundant, d.h. in mehr als einem Rechenzentrum.
+    Der Systemanbieter speichert die Daten der Auftraggeberin georedundant, d.h. in mehr als einem Rechenzentrum.
 
 - title: Monitoring
   level: MUST
@@ -66,22 +66,22 @@ requirements:
 - title: Backups
   level: MUST
   description: |
-    Der Systemanbieter implementiert ein Backupkonzept, mit dem er die Verfügbarhaltung der Daten des Auftraggebers auch
+    Der Systemanbieter implementiert ein Backupkonzept, mit dem er die Verfügbarhaltung der Daten der Auftraggeberin auch
     bei Datenverlusten im Produktivsystem sicherstellt. Backups werden mehrfach täglich angefertigt und mindestens 4 Wochen
     georedundant gespeichert.
 
 - title: Wartungsarbeiten
   level: MUST
   description: |
-    Geplante Wartungsarbeiten werden, wenn nicht aus Gründen der IT-Sicherheit kurzfristiger notwendig, dem Auftraggeber
+    Geplante Wartungsarbeiten werden, wenn nicht aus Gründen der IT-Sicherheit kurzfristiger notwendig, der Auftraggeberin
     mindestens eine Woche vorher angekündigt und nach Möglichkeit so terminiert, dass diese nicht mit dem Veranstaltungsbetrieb
-    bzw. den Öffnungszeiten des Auftraggebers überschneiden.
+    bzw. den Öffnungszeiten der Auftraggeberin überschneiden.
 
 - title: Statusinformationen
   level: SHOULD
   description: |
     Der Systemanbieter verfügt über eine öffentliche Statusseite, über die bei Systemstörungen Details zu Ursachen und 
-    voraussichtlicher Dauer kommuniziert werden **oder** verfügt über einen Mechanismus, den Auftraggeber in solchen Fällen
+    voraussichtlicher Dauer kommuniziert werden **oder** verfügt über einen Mechanismus, die Auftraggeberin in solchen Fällen
     per E-Mail zu informieren.
 
 - title: Patching
@@ -92,10 +92,10 @@ requirements:
 - title: Responsible Disclosure
   level: SHOULD
   description: |
-    Der Systemanbieter verfügt über einen öffentlichen dokumentieren Prozess zur Meldung von Sicherheitslücken.
+    Der Systemanbieter verfügt über einen öffentlich dokumentierten Prozess zur Meldung von Sicherheitslücken.
 
 - title: Pentests
   level: SHOULD
   description: |
-    Der Systemanbieter führt in regelmäßigen Abständen (mindstens alle 2 Jahre) Penetration Tests durch, um die Sicherheit der
+    Der Systemanbieter führt in regelmäßigen Abständen (mindestens alle 2 Jahre) Penetration Tests durch, um die Sicherheit der
     Software zu überprüfen.

@@ -33,19 +33,19 @@ requirements:
   level: SHOULD
   description: |
     Der Systemanbieter kann über Fernwartung auf Anforderung auch direkt auf Geräten (Kassensystemen, Scannern, etc.)
-    aktiv werden und den Auftraggeber bei Konfiguration und Problemlösung unterstützen. Die Fernwartung erfolgt hierbei
+    aktiv werden und die Auftraggeberin bei Konfiguration und Problemlösung unterstützen. Die Fernwartung erfolgt hierbei
     über sichere Kanäle nach Stand der Technik.
 
 - title: Hardware-Reparatur
   level: SHOULD
   description: |
     Die Reparatur oder der Austausch von Hardware kann zentral über den Systemanbieter vorgenommen werden.
-    Die Kosten für Reparatur oder Austausch außerhalb der Gewährleistungs- und Garantiefristen trägt der Auftraggeber.
+    Die Kosten für Reparatur oder Austausch außerhalb der Gewährleistungs- und Garantiefristen trägt die Auftraggeberin.
 
 - title: On-Site-Support
   level: SHOULD
   description: |
-    Der Systemanbieter bietet auf Anfrage auch den Support in Person vor Ort auf der Veranstaltung an.
+    Der Systemanbieter bietet auf Anfrage auch technischen Support vor Ort auf der Veranstaltung an.
   comment: |
     Der Preis hierfür sollte im Preisblatt der Ausschreibung explizit abgefragt werden.
   tags: [ messe, event ]
