@@ -11,7 +11,7 @@ Nein.
 Da wollen wir ganz transparent sein: Diese Website wurde vom Hersteller eines [Ticketing-Systems](https://pretix.eu/) erstellt.
 Wir haben uns jedoch große Mühe gegeben, die Inhalte offen, fair und technologieneutral zu gestalten. 
 Auch wenn er natürlich vor dem Hintergrund unserer Erfahrungen entstanden ist, ist der Leistungskatalog also kein produktspezifischer Leistungskatalog, der genau auf unser Produkt passt, sondern ist inspiriert aus dutzenden Ausschreibungen, an denen wir uns in den letzten Jahren beteiligt haben.
-Alle Anforderungen werden unserer Ansicht nach auch von mehreren unserer Konkurrenten erfüllt und auch Anforderungen, die unser Produkt nicht erfüllt, sind teilweise enthalten.
+Alle Anforderungen werden unserer Ansicht nach auch von mehreren unserer Konkurrenten erfüllt und auch Anforderungen, die unser Produkt nicht erfüllt, sind enthalten.
 Alle Anforderungen sind weitestmöglich so formuliert, dass sie auf den inhaltlichen Nutzen der jeweiligen Funktion abzielen und nicht auf eine konkrete Umsetzungsweise.
 Wir nehmen [auf GitHub](https://github.com/pretix/ticketing-ausschreibung) auch Verbesserungsvorschläge und Beiträge zu den Anforderungen entgegen.
 
