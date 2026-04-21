@@ -577,3 +577,15 @@ requirements:
   level: SHOULD
   description: |
     Der Webshop ermöglicht den Verkauf von Einzweck- und Mehrzweckgutscheinen.
+
+- title: Performance
+  level: MUST
+  description: |
+    Der Webshop ist auf mindestens **ZAHL EINFÜGEN** Ticketkäufe pro Minute ausgelegt, ohne dass es zu spürbaren Einschränkungen der Bedienung kommt.
+  sub:
+    - title: Last-Management
+      level: SHOULD
+      description: |
+        Der Webshop verfügt über ein Konzept zum Management von Lastspitzen, bei denen eine höhere Anzahl Benutzer gleichzeitig ein Ticket erwerben will, als der Ticketshop ermöglicht.
+        Hierbei wird z.B. durch ein Warteschlangensystem oder gleichwertige Lösungen sichergestellt, dass der Shop weiter stabil funktioniert.
+        In der Spitze wird mit bis zu **ZAHL EINFÜGEN** weiteren parallelen Besuchern gerechnet.

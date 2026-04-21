@@ -99,3 +99,10 @@ requirements:
   description: |
     Der Systemanbieter führt in regelmäßigen Abständen (mindestens alle 2 Jahre) Penetration Tests durch, um die Sicherheit der
     Software zu überprüfen.
+
+- title: Daten-Portabilität
+  level: MUST
+  description: |
+    Bei Beendigung der Zusammenarbeit stellt der Systemanbieter alle nötigen Daten in industrieüblichen Datenformaten zur
+    Verfügung, die die Möglichkeit zur Datenportierung in ein neues System ermöglichen. Der Systemanbieter berechnet für
+    die Herausgabe der Daten sowie den minimal notwendigen Beratungsumfang zur Verwendbarkeit der Daten keine weiteren Kosten.
